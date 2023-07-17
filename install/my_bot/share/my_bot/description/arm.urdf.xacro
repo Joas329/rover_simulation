@@ -19,15 +19,6 @@
         <color rgba="0 0 0 1"/>
     </material>
 
-	<link name="base_link">
-
-	</link>
-
-	<joint name="dummy_joint" type="fixed">
-     <parent link="base_link"/>
-     <child link="arm_a1"/>
-   </joint>
-
 	<link name="arm_a1">
 		<xacro:sw_visual file="ARM-A01"/>
 		<xacro:sw_inertial
@@ -46,7 +37,7 @@
 
 	<joint name="arm_j1" type="revolute">
 		<xacro:sw_origin x="-3.50000000" y="0.51712500" z="0"/>
-		<parent link="base_link"/>
+		<parent link="arm_a1"/>
 		<child link="arm_a2" />
 		<axis xyz="0 0 1"/>
 		<limit lower="${radians(-180)}" upper="${radians(180)}" effort="40" velocity="30"/>

@@ -1,3 +1,1 @@
-source;share/pointcloud_to_laserscan/environment/ament_prefix_path.sh
-source;share/pointcloud_to_laserscan/environment/library_path.sh
-source;share/pointcloud_to_laserscan/environment/path.sh
+/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan/ament_cmake_environment_hooks/local_setup.dsv

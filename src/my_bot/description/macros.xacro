@@ -148,7 +148,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="${radians(90)} 0 0"/>
             <geometry>
-                <mesh filename="package://my_bot/description/mesh/${file}.STL"/>
+                <mesh filename="file://$(find my_bot)/description/mesh/${file}.STL"/>
             </geometry>
             <material name="white"/>
         </visual>

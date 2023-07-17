@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan/pointcloud_to_laserscan_node" "TARGETS" "pointcloud_to_laserscan_node" "DESTINATION" "lib/pointcloud_to_laserscan")

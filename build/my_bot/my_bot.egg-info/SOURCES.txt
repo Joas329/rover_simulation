@@ -30,7 +30,11 @@ launch/arm_sim.launch.py
 launch/launch_sim.launch.py
 launch/rsp.launch.py
 my_bot/__init__.py
+my_bot.egg-info/PKG-INFO
+my_bot.egg-info/SOURCES.txt
+my_bot.egg-info/dependency_links.txt
+my_bot.egg-info/entry_points.txt
+my_bot.egg-info/requires.txt
+my_bot.egg-info/top_level.txt
+my_bot.egg-info/zip-safe
 resource/my_bot
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

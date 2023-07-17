@@ -14,10 +14,6 @@ import xacro
 
 
 def generate_launch_description():
-    # robot model to option m1013 or a0912
-
-    robot_model = 'arm'
-    # robot_model = 'm1013'
 
     gazebo_params_file = os.path.join(get_package_share_directory('my_bot'),'config','gazebo_params.yaml')
 
@@ -36,10 +32,10 @@ def generate_launch_description():
     )
 
     # Spawn the robot in Gazebo
-    spawn_entity_robot = Node(package='gazebo_ros',
-                              executable='spawn_entity.py',
-                              arguments=['-entity', 'my_bot', '-topic', 'robot_description'],
-                              output='screen')
+    spawn_entity_robot = Node(package='gazebo_ros', executable='spawn_entity.py',
+                        arguments=['-topic', 'robot_description',
+                                   '-entity', 'my_bot'],
+                        output='screen')
 
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -48,15 +44,25 @@ def generate_launch_description():
              )
    
    # Start Gazebo with my empty world
-    world_file_name = 'my_empty_world.world'
-    world = os.path.join(get_package_share_directory('my_bot'))
+    world_file_name = 'empty.world'
+    world = os.path.join(get_package_share_directory('my_bot'), 'worlds', world_file_name)
     gazebo_node = ExecuteProcess(cmd=['gazebo', '--verbose', world, '-s', 'libgazebo_ros_factory.so'], output='screen')
 
+    joint_state_publisher_gui = Node(package  ='joint_state_publisher_gui',
+									executable='joint_state_publisher_gui',
+									output    ='screen',
+									name      ='joint_state_publisher_gui')
+
+    
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
             default_value='false',
             description='Use sim time if true'),
         robot_state_publisher,
-        spawn_entity_robot,
-        gazebo])
+        joint_state_publisher_gui,
+        #spawn_entity_robot,
+        #joint_broad_spawner,
+        #gazebo
+    
+    ])
