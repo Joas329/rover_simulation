@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/**",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/yurs_hardware/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/joas329/Desktop/rover_simulation/src/pointcloud_to_laserscan/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

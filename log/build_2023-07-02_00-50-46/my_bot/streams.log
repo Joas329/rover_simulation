@@ -1,0 +1,20 @@
+[0.731s] Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[0.991s] running egg_info
+[0.992s] writing ../../build/my_bot/my_bot.egg-info/PKG-INFO
+[0.992s] writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt
+[0.992s] writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt
+[1.007s] writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt
+[1.007s] writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt
+[1.007s] reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[1.007s] writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[1.007s] running build
+[1.007s] running build_py
+[1.007s] running install
+[1.007s] running install_lib
+[1.007s] running install_data
+[1.021s] running install_egg_info
+[1.021s] removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[1.030s] Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info
+[1.030s] running install_scripts
+[1.048s] writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'
+[1.151s] Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed

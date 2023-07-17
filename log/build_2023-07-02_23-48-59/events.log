@@ -1,0 +1,49 @@
+[0.000000] (-) TimerEvent: {}
+[0.003416] (my_bot) JobQueued: {'identifier': 'my_bot', 'dependencies': OrderedDict()}
+[0.003486] (zed_components) JobQueued: {'identifier': 'zed_components', 'dependencies': OrderedDict()}
+[0.003527] (zed_wrapper) JobQueued: {'identifier': 'zed_wrapper', 'dependencies': OrderedDict([('zed_components', '/home/joas329/Desktop/rover_simulation/install/zed_components')])}
+[0.003539] (zed_ros2) JobQueued: {'identifier': 'zed_ros2', 'dependencies': OrderedDict([('zed_components', '/home/joas329/Desktop/rover_simulation/install/zed_components'), ('zed_wrapper', '/home/joas329/Desktop/rover_simulation/install/zed_wrapper')])}
+[0.003549] (zed_components) JobStarted: {'identifier': 'zed_components'}
+[0.008861] (my_bot) JobStarted: {'identifier': 'my_bot'}
+[0.014475] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'cmake'}
+[0.014894] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '/home/joas329/Desktop/rover_simulation/src/zed-ros2-wrapper/zed_components', '-DCMAKE_INSTALL_PREFIX=/home/joas329/Desktop/rover_simulation/install/zed_components'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/zed_components', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop/rover_simulation/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1841'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu:@/tmp/.ICE-unix/1809,unix/Ubuntu:/tmp/.ICE-unix/1809'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8252503d_ff5f_4838_a7b4_761c2bda87a4'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.MGAI71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/zed_components'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble')]), 'shell': False}
+[0.100624] (-) TimerEvent: {}
+[0.130849] (zed_components) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[0.198920] (zed_components) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[0.201711] (-) TimerEvent: {}
+[0.210445] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.282419] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.286128] (zed_components) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.287515] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.288248] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.293287] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.303479] (-) TimerEvent: {}
+[0.355252] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.359724] (zed_components) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.359938] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.365397] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.370382] (zed_components) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:78 (find_package):\n'}
+[0.370565] (zed_components) StderrLine: {'line': b'  By not providing "FindZED.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.370632] (zed_components) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "ZED", but\n'}
+[0.370662] (zed_components) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.370688] (zed_components) StderrLine: {'line': b'\n'}
+[0.370713] (zed_components) StderrLine: {'line': b'  Could not find a package configuration file provided by "ZED" (requested\n'}
+[0.370736] (zed_components) StderrLine: {'line': b'  version 3) with any of the following names:\n'}
+[0.370760] (zed_components) StderrLine: {'line': b'\n'}
+[0.370783] (zed_components) StderrLine: {'line': b'    ZEDConfig.cmake\n'}
+[0.370806] (zed_components) StderrLine: {'line': b'    zed-config.cmake\n'}
+[0.370829] (zed_components) StderrLine: {'line': b'\n'}
+[0.370853] (zed_components) StderrLine: {'line': b'  Add the installation prefix of "ZED" to CMAKE_PREFIX_PATH or set "ZED_DIR"\n'}
+[0.370878] (zed_components) StderrLine: {'line': b'  to a directory containing one of the above files.  If "ZED" provides a\n'}
+[0.370904] (zed_components) StderrLine: {'line': b'  separate development package or SDK, be sure it has been installed.\n'}
+[0.370929] (zed_components) StderrLine: {'line': b'\n'}
+[0.370955] (zed_components) StderrLine: {'line': b'\x1b[0m\n'}
+[0.370978] (zed_components) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.371009] (zed_components) StdoutLine: {'line': b'See also "/home/joas329/Desktop/rover_simulation/build/zed_components/CMakeFiles/CMakeOutput.log".\n'}
+[0.374341] (zed_components) CommandEnded: {'returncode': 1}
+[0.390870] (zed_components) JobEnded: {'identifier': 'zed_components', 'rc': 1}
+[0.403578] (-) TimerEvent: {}
+[0.427175] (my_bot) JobEnded: {'identifier': 'my_bot', 'rc': 'SIGINT'}
+[0.436066] (zed_wrapper) JobSkipped: {'identifier': 'zed_wrapper'}
+[0.436139] (zed_ros2) JobSkipped: {'identifier': 'zed_ros2'}
+[0.436151] (-) EventReactorShutdown: {}

@@ -1,0 +1,311 @@
+[0.000000] (-) TimerEvent: {}
+[0.000190] (my_bot) JobQueued: {'identifier': 'my_bot', 'dependencies': OrderedDict()}
+[0.000244] (pointcloud_to_laserscan) JobQueued: {'identifier': 'pointcloud_to_laserscan', 'dependencies': OrderedDict()}
+[0.001311] (my_bot) JobStarted: {'identifier': 'my_bot'}
+[0.029462] (pointcloud_to_laserscan) JobStarted: {'identifier': 'pointcloud_to_laserscan'}
+[0.103146] (-) TimerEvent: {}
+[0.204091] (-) TimerEvent: {}
+[0.232814] (pointcloud_to_laserscan) JobProgress: {'identifier': 'pointcloud_to_laserscan', 'progress': 'cmake'}
+[0.238448] (pointcloud_to_laserscan) JobProgress: {'identifier': 'pointcloud_to_laserscan', 'progress': 'build'}
+[0.238548] (pointcloud_to_laserscan) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan', '--', '-j11', '-l11'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1860'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu:@/tmp/.ICE-unix/1809,unix/Ubuntu:/tmp/.ICE-unix/1809'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7168b614_b1bc_4445_b788_0d1aafb48fc9'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.3VRI71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble')]), 'shell': False}
+[0.307953] (-) TimerEvent: {}
+[0.387372] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.4 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.408695] (-) TimerEvent: {}
+[0.509268] (-) TimerEvent: {}
+[0.613033] (-) TimerEvent: {}
+[0.721949] (-) TimerEvent: {}
+[0.831583] (-) TimerEvent: {}
+[0.878310] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.883751] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.895985] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.912978] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.932463] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.932599] (-) TimerEvent: {}
+[0.988900] (my_bot) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/my_bot', 'build', '--build-base', '/home/joas329/Desktop/rover_simulation/build/my_bot/build', 'install', '--record', '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log', '--single-version-externally-managed'], 'cwd': '/home/joas329/Desktop/rover_simulation/src/my_bot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'joas329', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/joas329', 'OLDPWD': '/home/joas329', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1860', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/joas329/Desktop/rover_simulation/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'joas329', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'joas329', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/Ubuntu:@/tmp/.ICE-unix/1809,unix/Ubuntu:/tmp/.ICE-unix/1809', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/7168b614_b1bc_4445_b788_0d1aafb48fc9', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.3VRI71', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/joas329/Desktop/rover_simulation/build/my_bot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan'}, 'shell': False}
+[1.003050] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.006886] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.033884] (-) TimerEvent: {}
+[1.109923] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.119229] (my_bot) StdoutLine: {'line': b'running egg_info\n'}
+[1.119624] (my_bot) StdoutLine: {'line': b'writing ../../build/my_bot/my_bot.egg-info/PKG-INFO\n'}
+[1.119861] (my_bot) StdoutLine: {'line': b'writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt\n'}
+[1.120375] (my_bot) StdoutLine: {'line': b'writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt\n'}
+[1.120741] (my_bot) StdoutLine: {'line': b'writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt\n'}
+[1.120799] (my_bot) StdoutLine: {'line': b'writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt\n'}
+[1.121989] (my_bot) StdoutLine: {'line': b"reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'\n"}
+[1.123095] (my_bot) StdoutLine: {'line': b"writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'\n"}
+[1.123405] (my_bot) StdoutLine: {'line': b'running build\n'}
+[1.123532] (my_bot) StdoutLine: {'line': b'running build_py\n'}
+[1.123628] (my_bot) StdoutLine: {'line': b'running install\n'}
+[1.123844] (my_bot) StdoutLine: {'line': b'running install_lib\n'}
+[1.124248] (my_bot) StdoutLine: {'line': b'running install_data\n'}
+[1.124857] (my_bot) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.125843] (my_bot) StdoutLine: {'line': b"removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.126167] (my_bot) StdoutLine: {'line': b'Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info\n'}
+[1.126981] (my_bot) StdoutLine: {'line': b'running install_scripts\n'}
+[1.134631] (-) TimerEvent: {}
+[1.137673] (my_bot) StdoutLine: {'line': b"writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'\n"}
+[1.150048] (my_bot) CommandEnded: {'returncode': 0}
+[1.179134] (my_bot) JobEnded: {'identifier': 'my_bot', 'rc': 0}
+[1.236557] (-) TimerEvent: {}
+[1.337648] (-) TimerEvent: {}
+[1.441524] (-) TimerEvent: {}
+[1.547148] (-) TimerEvent: {}
+[1.651483] (-) TimerEvent: {}
+[1.669261] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.697298] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.697613] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/joas329/Desktop/rover_simulation/src/pointcloud_to_laserscan/include\n'}
+[1.697682] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.699161] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.699267] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.699996] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.700846] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.701591] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.702970] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.703058] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.703754] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.713129] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.751705] (-) TimerEvent: {}
+[1.756486] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Generating done\n'}
+[1.758982] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Build files have been written to: /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan\n'}
+[1.786487] (pointcloud_to_laserscan) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target laserscan_to_pointcloud_node\x1b[0m\n'}
+[1.786639] (pointcloud_to_laserscan) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pointcloud_to_laserscan_node\x1b[0m\n'}
+[1.806884] (pointcloud_to_laserscan) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target laserscan_to_pointcloud\x1b[0m\n'}
+[1.852334] (-) TimerEvent: {}
+[1.919331] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 40%] Built target pointcloud_to_laserscan_node\n'}
+[1.919502] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 40%] Built target laserscan_to_pointcloud_node\n'}
+[1.943920] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud.dir/src/laserscan_to_pointcloud_node.cpp.o\x1b[0m\n'}
+[1.952403] (-) TimerEvent: {}
+[2.061212] (-) TimerEvent: {}
+[2.168475] (-) TimerEvent: {}
+[2.272194] (-) TimerEvent: {}
+[2.376398] (-) TimerEvent: {}
+[2.493070] (-) TimerEvent: {}
+[2.595765] (-) TimerEvent: {}
+[2.704455] (-) TimerEvent: {}
+[2.807241] (-) TimerEvent: {}
+[2.909199] (-) TimerEvent: {}
+[3.012008] (-) TimerEvent: {}
+[3.118664] (-) TimerEvent: {}
+[3.219870] (-) TimerEvent: {}
+[3.328491] (-) TimerEvent: {}
+[3.440731] (-) TimerEvent: {}
+[3.545807] (-) TimerEvent: {}
+[3.647211] (-) TimerEvent: {}
+[3.754459] (-) TimerEvent: {}
+[3.866310] (-) TimerEvent: {}
+[3.987516] (-) TimerEvent: {}
+[4.089668] (-) TimerEvent: {}
+[4.191979] (-) TimerEvent: {}
+[4.301098] (-) TimerEvent: {}
+[4.407131] (-) TimerEvent: {}
+[4.526552] (-) TimerEvent: {}
+[4.632748] (-) TimerEvent: {}
+[4.736901] (-) TimerEvent: {}
+[4.841329] (-) TimerEvent: {}
+[4.953144] (-) TimerEvent: {}
+[5.054397] (-) TimerEvent: {}
+[5.159663] (-) TimerEvent: {}
+[5.267167] (-) TimerEvent: {}
+[5.371464] (-) TimerEvent: {}
+[5.484524] (-) TimerEvent: {}
+[5.587253] (-) TimerEvent: {}
+[5.703862] (-) TimerEvent: {}
+[5.815196] (-) TimerEvent: {}
+[5.926322] (-) TimerEvent: {}
+[6.027436] (-) TimerEvent: {}
+[6.141553] (-) TimerEvent: {}
+[6.260028] (-) TimerEvent: {}
+[6.364888] (-) TimerEvent: {}
+[6.466659] (-) TimerEvent: {}
+[6.573927] (-) TimerEvent: {}
+[6.677819] (-) TimerEvent: {}
+[6.782399] (-) TimerEvent: {}
+[6.886801] (-) TimerEvent: {}
+[6.994846] (-) TimerEvent: {}
+[7.105583] (-) TimerEvent: {}
+[7.207828] (-) TimerEvent: {}
+[7.315670] (-) TimerEvent: {}
+[7.435074] (-) TimerEvent: {}
+[7.541262] (-) TimerEvent: {}
+[7.650414] (-) TimerEvent: {}
+[7.751271] (-) TimerEvent: {}
+[7.851956] (-) TimerEvent: {}
+[7.957006] (-) TimerEvent: {}
+[8.058480] (-) TimerEvent: {}
+[8.166520] (-) TimerEvent: {}
+[8.272332] (-) TimerEvent: {}
+[8.394042] (-) TimerEvent: {}
+[8.496388] (-) TimerEvent: {}
+[8.607436] (-) TimerEvent: {}
+[8.709546] (-) TimerEvent: {}
+[8.813664] (-) TimerEvent: {}
+[8.915819] (-) TimerEvent: {}
+[9.017861] (-) TimerEvent: {}
+[9.124566] (-) TimerEvent: {}
+[9.226085] (-) TimerEvent: {}
+[9.327438] (-) TimerEvent: {}
+[9.442545] (-) TimerEvent: {}
+[9.544222] (-) TimerEvent: {}
+[9.645320] (-) TimerEvent: {}
+[9.747601] (-) TimerEvent: {}
+[9.851234] (-) TimerEvent: {}
+[9.963661] (-) TimerEvent: {}
+[10.072506] (-) TimerEvent: {}
+[10.173043] (-) TimerEvent: {}
+[10.278351] (-) TimerEvent: {}
+[10.379890] (-) TimerEvent: {}
+[10.483505] (-) TimerEvent: {}
+[10.584946] (-) TimerEvent: {}
+[10.597676] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library liblaserscan_to_pointcloud.so\x1b[0m\n'}
+[10.688005] (-) TimerEvent: {}
+[10.793211] (-) TimerEvent: {}
+[10.901960] (-) TimerEvent: {}
+[11.003011] (-) TimerEvent: {}
+[11.020187] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 60%] Built target laserscan_to_pointcloud\n'}
+[11.029233] (pointcloud_to_laserscan) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pointcloud_to_laserscan\x1b[0m\n'}
+[11.056325] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_node.cpp.o\x1b[0m\n'}
+[11.104126] (-) TimerEvent: {}
+[11.206106] (-) TimerEvent: {}
+[11.311858] (-) TimerEvent: {}
+[11.422489] (-) TimerEvent: {}
+[11.527797] (-) TimerEvent: {}
+[11.630367] (-) TimerEvent: {}
+[11.733678] (-) TimerEvent: {}
+[11.839004] (-) TimerEvent: {}
+[11.944069] (-) TimerEvent: {}
+[12.044528] (-) TimerEvent: {}
+[12.153036] (-) TimerEvent: {}
+[12.256888] (-) TimerEvent: {}
+[12.358533] (-) TimerEvent: {}
+[12.466292] (-) TimerEvent: {}
+[12.567404] (-) TimerEvent: {}
+[12.668033] (-) TimerEvent: {}
+[12.771637] (-) TimerEvent: {}
+[12.881752] (-) TimerEvent: {}
+[12.984845] (-) TimerEvent: {}
+[13.088447] (-) TimerEvent: {}
+[13.190755] (-) TimerEvent: {}
+[13.295017] (-) TimerEvent: {}
+[13.399941] (-) TimerEvent: {}
+[13.504056] (-) TimerEvent: {}
+[13.623179] (-) TimerEvent: {}
+[13.731147] (-) TimerEvent: {}
+[13.840859] (-) TimerEvent: {}
+[13.943851] (-) TimerEvent: {}
+[14.050627] (-) TimerEvent: {}
+[14.152007] (-) TimerEvent: {}
+[14.253223] (-) TimerEvent: {}
+[14.354765] (-) TimerEvent: {}
+[14.455568] (-) TimerEvent: {}
+[14.558148] (-) TimerEvent: {}
+[14.668206] (-) TimerEvent: {}
+[14.776413] (-) TimerEvent: {}
+[14.886032] (-) TimerEvent: {}
+[14.989801] (-) TimerEvent: {}
+[15.091749] (-) TimerEvent: {}
+[15.208314] (-) TimerEvent: {}
+[15.310775] (-) TimerEvent: {}
+[15.413899] (-) TimerEvent: {}
+[15.517006] (-) TimerEvent: {}
+[15.618039] (-) TimerEvent: {}
+[15.722916] (-) TimerEvent: {}
+[15.826172] (-) TimerEvent: {}
+[15.932007] (-) TimerEvent: {}
+[16.033239] (-) TimerEvent: {}
+[16.135779] (-) TimerEvent: {}
+[16.239242] (-) TimerEvent: {}
+[16.344512] (-) TimerEvent: {}
+[16.449586] (-) TimerEvent: {}
+[16.557842] (-) TimerEvent: {}
+[16.666536] (-) TimerEvent: {}
+[16.770991] (-) TimerEvent: {}
+[16.872974] (-) TimerEvent: {}
+[16.976686] (-) TimerEvent: {}
+[17.079527] (-) TimerEvent: {}
+[17.180260] (-) TimerEvent: {}
+[17.286687] (-) TimerEvent: {}
+[17.389582] (-) TimerEvent: {}
+[17.490685] (-) TimerEvent: {}
+[17.600161] (-) TimerEvent: {}
+[17.626703] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libpointcloud_to_laserscan.so\x1b[0m\n'}
+[17.700807] (-) TimerEvent: {}
+[17.803228] (-) TimerEvent: {}
+[17.906316] (-) TimerEvent: {}
+[17.979764] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 80%] Built target pointcloud_to_laserscan\n'}
+[17.994068] (pointcloud_to_laserscan) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dummy_pointcloud_publisher\x1b[0m\n'}
+[18.006031] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/dummy_pointcloud_publisher.dir/src/dummy_pointcloud_publisher.cpp.o\x1b[0m\n'}
+[18.007240] (-) TimerEvent: {}
+[18.108540] (-) TimerEvent: {}
+[18.217503] (-) TimerEvent: {}
+[18.322791] (-) TimerEvent: {}
+[18.428324] (-) TimerEvent: {}
+[18.532314] (-) TimerEvent: {}
+[18.641166] (-) TimerEvent: {}
+[18.747080] (-) TimerEvent: {}
+[18.849212] (-) TimerEvent: {}
+[18.955045] (-) TimerEvent: {}
+[19.064379] (-) TimerEvent: {}
+[19.165327] (-) TimerEvent: {}
+[19.271478] (-) TimerEvent: {}
+[19.381343] (-) TimerEvent: {}
+[19.504269] (-) TimerEvent: {}
+[19.607794] (-) TimerEvent: {}
+[19.709051] (-) TimerEvent: {}
+[19.821419] (-) TimerEvent: {}
+[19.923795] (-) TimerEvent: {}
+[20.028188] (-) TimerEvent: {}
+[20.136066] (-) TimerEvent: {}
+[20.241792] (-) TimerEvent: {}
+[20.346579] (-) TimerEvent: {}
+[20.448050] (-) TimerEvent: {}
+[20.532338] (pointcloud_to_laserscan) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable dummy_pointcloud_publisher\x1b[0m\n'}
+[20.548204] (-) TimerEvent: {}
+[20.651552] (-) TimerEvent: {}
+[20.688248] (pointcloud_to_laserscan) StdoutLine: {'line': b'[100%] Built target dummy_pointcloud_publisher\n'}
+[20.695943] (pointcloud_to_laserscan) CommandEnded: {'returncode': 0}
+[20.750143] (pointcloud_to_laserscan) JobProgress: {'identifier': 'pointcloud_to_laserscan', 'progress': 'install'}
+[20.751619] (-) TimerEvent: {}
+[20.755896] (pointcloud_to_laserscan) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1860'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu:@/tmp/.ICE-unix/1809,unix/Ubuntu:/tmp/.ICE-unix/1809'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7168b614_b1bc_4445_b788_0d1aafb48fc9'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.3VRI71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble')]), 'shell': False}
+[20.760829] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.767712] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node\n'}
+[20.768375] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node\n'}
+[20.768560] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include\n'}
+[20.768663] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan\n'}
+[20.768776] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/laserscan_to_pointcloud_node.hpp\n'}
+[20.769202] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/pointcloud_to_laserscan_node.hpp\n'}
+[20.769247] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/visibility_control.h\n'}
+[20.769273] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.sh\n'}
+[20.769306] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.dsv\n'}
+[20.770831] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so\n'}
+[20.776152] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Set runtime path of "/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so" to ""\n'}
+[20.776519] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so\n'}
+[20.782127] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Set runtime path of "/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so" to ""\n'}
+[20.783231] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher\n'}
+[20.784424] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Set runtime path of "/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher" to ""\n'}
+[20.784487] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch\n'}
+[20.784517] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py\n'}
+[20.784543] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_pointcloud_to_laserscan_launch.py\n'}
+[20.784824] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/ament_index/resource_index/package_run_dependencies/pointcloud_to_laserscan\n'}
+[20.784873] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/ament_index/resource_index/parent_prefix_path/pointcloud_to_laserscan\n'}
+[20.784899] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.sh\n'}
+[20.784940] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.dsv\n'}
+[20.786561] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.sh\n'}
+[20.786612] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.dsv\n'}
+[20.786640] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.bash\n'}
+[20.787470] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.sh\n'}
+[20.787636] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.zsh\n'}
+[20.787682] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.dsv\n'}
+[20.787710] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv\n'}
+[20.787844] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/ament_index/resource_index/packages/pointcloud_to_laserscan\n'}
+[20.787949] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/ament_index/resource_index/rclcpp_components/pointcloud_to_laserscan\n'}
+[20.788292] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[20.788396] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[20.788461] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[20.788518] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake\n'}
+[20.788575] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig-version.cmake\n'}
+[20.788706] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.xml\n'}
+[20.799726] (pointcloud_to_laserscan) CommandEnded: {'returncode': 0}
+[20.852807] (-) TimerEvent: {}
+[20.877131] (pointcloud_to_laserscan) JobEnded: {'identifier': 'pointcloud_to_laserscan', 'rc': 0}
+[20.878047] (-) EventReactorShutdown: {}

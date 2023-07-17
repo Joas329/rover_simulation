@@ -1,0 +1,208 @@
+[0.505s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.505s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=11, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7faa3fb17d00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7faa3fb17820>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7faa3fb17820>>)
+[0.538s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.544s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.549s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/joas329/Desktop/rover_simulation'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['ignore', 'ignore_ament_install']
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ignore'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ignore_ament_install'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['colcon_pkg']
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'colcon_pkg'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['colcon_meta']
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'colcon_meta'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['ros']
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ros'
+[0.577s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_bot' with type 'ros.ament_python' and name 'my_bot'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ignore', 'ignore_ament_install']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore_ament_install'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_pkg']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_pkg'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_meta']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_meta'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ros']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ros'
+[0.584s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pointcloud_to_laserscan' with type 'ros.ament_cmake' and name 'pointcloud_to_laserscan'
+[0.584s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.585s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.585s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.585s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.585s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.612s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.616s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.617s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/joas329/Desktop/rover_simulation/install
+[0.622s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 387 installed packages in /opt/ros/humble
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.734s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_args' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_target' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_clean_first' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_force_configure' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'ament_cmake_args' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.737s] DEBUG:colcon.colcon_core.verb:Building package 'my_bot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/my_bot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/my_bot', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/my_bot', 'symlink_install': False, 'test_result_base': None}
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_args' from command line to 'None'
+[0.740s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target' from command line to 'None'
+[0.742s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.742s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_cache' from command line to 'False'
+[0.742s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_first' from command line to 'False'
+[0.742s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_force_configure' from command line to 'False'
+[0.742s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'ament_cmake_args' from command line to 'None'
+[0.742s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_cmake_args' from command line to 'None'
+[0.742s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.742s] DEBUG:colcon.colcon_core.verb:Building package 'pointcloud_to_laserscan' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/pointcloud_to_laserscan', 'symlink_install': False, 'test_result_base': None}
+[0.752s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.781s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.781s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/my_bot' with build type 'ament_python'
+[0.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_bot', 'ament_prefix_path')
+[0.795s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.ps1'
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.dsv'
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.sh'
+[0.805s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.806s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.848s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/pointcloud_to_laserscan' with build type 'ament_cmake'
+[0.848s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joas329/Desktop/rover_simulation/src/pointcloud_to_laserscan'
+[0.849s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.857s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.324s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/joas329/Desktop/rover_simulation/src/my_bot'
+[1.325s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.338s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan -- -j11 -l11
+[2.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[3.027s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[3.050s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot' for CMake module files
+[3.064s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot' for CMake config files
+[3.064s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib'
+[3.065s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/bin'
+[3.065s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/pkgconfig/my_bot.pc'
+[3.065s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages'
+[3.065s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_bot', 'pythonpath')
+[3.069s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.ps1'
+[3.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.dsv'
+[3.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.sh'
+[3.087s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/bin'
+[3.089s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_bot)
+[3.101s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.ps1'
+[3.181s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.dsv'
+[3.229s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.sh'
+[3.273s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.bash'
+[3.296s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.zsh'
+[3.300s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/my_bot/share/colcon-core/packages/my_bot)
+[3.422s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan -- -j11 -l11
+[4.369s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan
+[4.561s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[4.569s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan' for CMake module files
+[4.569s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan' for CMake config files
+[4.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[4.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[4.592s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan
+[4.692s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[4.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[4.887s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib'
+[4.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[4.888s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[4.964s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[5.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[5.077s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/bin'
+[5.077s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[5.077s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/python3.10/site-packages'
+[5.077s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/bin'
+[5.078s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[5.127s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[5.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[5.254s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[5.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[5.361s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[6.382s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[6.401s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan' for CMake module files
+[6.402s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan' for CMake config files
+[6.402s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[6.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[6.449s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[6.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[6.506s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib'
+[6.506s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[6.507s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[6.553s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[6.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[6.601s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/bin'
+[6.601s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[6.602s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/python3.10/site-packages'
+[6.602s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/bin'
+[6.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[6.655s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[6.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[6.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[6.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[6.750s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[6.818s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.842s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.842s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.842s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.981s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.997s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.013s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.194s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.197s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.ps1'
+[7.198s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/joas329/Desktop/rover_simulation/install/_local_setup_util_ps1.py'
+[7.200s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.ps1'
+[7.213s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.sh'
+[7.245s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/joas329/Desktop/rover_simulation/install/_local_setup_util_sh.py'
+[7.273s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.sh'
+[7.317s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.bash'
+[7.347s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.bash'
+[7.392s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.zsh'
+[7.434s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.zsh'

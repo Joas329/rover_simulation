@@ -1,0 +1,27 @@
+[0.598s] Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[0.824s] running egg_info
+[0.824s] writing ../../build/my_bot/my_bot.egg-info/PKG-INFO
+[0.824s] writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt
+[0.825s] writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt
+[0.825s] writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt
+[0.825s] writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt
+[0.826s] reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[0.827s] writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[0.827s] running build
+[0.827s] running build_py
+[0.827s] running install
+[0.827s] running install_lib
+[0.828s] running install_data
+[0.829s] creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[0.829s] copying description/mesh/ARM-A03.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[3.536s] copying description/mesh/ARM-A05.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[4.568s] copying description/mesh/ARM-A01.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[5.894s] copying description/mesh/ARM-A04.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[7.024s] copying description/mesh/ARM-A06.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[7.996s] copying description/mesh/ARM-A02.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[8.149s] running install_egg_info
+[8.151s] removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[8.152s] Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info
+[8.152s] running install_scripts
+[8.180s] writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'
+[8.224s] Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed

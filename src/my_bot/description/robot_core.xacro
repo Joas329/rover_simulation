@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  >
 
-     <xacro:include filename="macros.xacro"/>
+    <xacro:include filename="macros.xacro"/>
 
     <!-- Declaring Constants -->
     <xacro:property name="wheel_radius" value="0.05" />
@@ -10,7 +10,7 @@
 
     <!-- <xacro:include filename="inertial_macros.xacro"/> -->
 
-    <material name="white">
+    <!-- <material name="white">
         <color rgba="1 1 1 1"/>
     </material>
 
@@ -24,7 +24,7 @@
 
     <material name="black">
         <color rgba="0 0 0 1"/>
-    </material>
+    </material> -->
    
 
     <!-- WHEELS -->
@@ -47,6 +47,16 @@
     
     </link>
 
+    <!--BASE_FOOTPRINT LINK-->
+
+    <joint name ="base_footprint_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz ="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name ="base_footprint">
+    </link>
 
     <!--CHASSIS LINK-->
 
@@ -79,6 +89,46 @@
         <material>Gazebo/Black</material>
         <mu1 value="0.001"/>   
         <mu2 value="0.001"/>  
+    </gazebo>
+
+
+    <!--IMU Sensor-->
+    <link name="imu">
+        <sensor name="my_imu" type="imu">
+            <always_on>true</always_on>
+            <!--Publish at 30 hz-->
+            <update_rate>30</update_rate>
+            <plugin name="my_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+                <ros>
+                    <!--Will publish to /imu/data-->
+                    <namespace>/imu</namespace>
+                    <remapping>~/out:=data</remapping>
+                </ros>
+                <!--frame_name ommited, will be "my_link"-->
+            
+            </plugin>
+        </sensor>
+    </link>
+
+    <link name ="imu_sensor">
+
+    </link>
+
+    <gazebo reference="imu_sensor">
+        <sensor name="my_imu" type="imu">
+            <always_on>true</always_on>
+            <!--Publish at 30 hz-->
+            <update_rate>30</update_rate>
+            <plugin name="my_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+                <ros>
+                    <!--Will publish to /imu/data-->
+                    <namespace>/imu</namespace>
+                    <remapping>~/out:=data</remapping>
+                </ros>
+                <!--frame_name ommited, will be "my_link"-->
+            
+            </plugin>
+        </sensor>
     </gazebo>
 
 </robot>
