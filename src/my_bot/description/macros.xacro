@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  >
 
-    <!-- <xacro:include filename="robot_core.xacro"/> -->
+
 
     <!--ROS2_CONTROL MACROS-->
 
@@ -18,6 +18,18 @@
             <state_interface name="position"/>
 
         </joint>
+    </xacro:macro>
+
+    <xacro:macro name="arm_joint_creator" params="name">
+            <joint name="${name}">
+                <command_interface name="position"/>
+                
+                <state_interface name="position">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+
+            </joint>
     </xacro:macro>
 
     <!--ROBOT_CORE MACROS-->
@@ -148,14 +160,14 @@
         <visual>
             <origin xyz="0 0 0" rpy="${radians(90)} 0 0"/>
             <geometry>
-                <mesh filename="file://$(find my_bot)/description/mesh/${file}.STL"/>
+                <mesh filename="file://$(find my_bot)/description/mesh/${file}.STL" />
             </geometry>
             <material name="white"/>
         </visual>
     </xacro:macro>
 
     <!-- Units: lb, in, lb*in^2 -->
-    <xacro:macro name="sw_inertial" params="m X Y Z Lxx Lxy Lxz Lyy Lyz Lzz">
+    <xacro:macro name="sw_inertial" params="m X Y Z Lxx Lxy Lxz Lyy Lyz Lzz file">
         <inertial>
             <mass value="${m*lbtokg}"/>
             <xacro:sw_origin x="${X}" y="${Y}" z="${Z}"/>
@@ -164,6 +176,12 @@
                 iyy="${Lzz*lbsqintokgsqm}" iyz="${-Lyz*lbsqintokgsqm}"
                 izz="${Lyy*lbsqintokgsqm}"/>
         </inertial>
+        <collision>
+            <xacro:sw_origin x="${X}" y="${Y}" z="${Z}"/>
+            <geometry>
+                <mesh filename="file://$(find my_bot)/description/mesh/${file}.STL" />
+            </geometry>
+        </collision>
     </xacro:macro>
 
 </robot>
