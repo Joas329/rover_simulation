@@ -1,0 +1,54 @@
+[0.400s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos': CMAKE_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /home/joas329/.local/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos -- -j12 -l12
+[0.622s] [ 33%] Built target example_position
+[0.633s] [ 33%] Built target example_effort
+[0.672s] [ 50%] Built target example_diff_drive
+[0.672s] [ 66%] Built target example_tricycle_drive
+[0.735s] [ 83%] Built target example_gripper
+[0.736s] [100%] Built target example_velocity
+[0.812s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos' returned '0': CMAKE_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /home/joas329/.local/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos -- -j12 -l12
+[1.380s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos': CMAKE_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /home/joas329/.local/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos
+[1.403s] -- Install configuration: ""
+[1.403s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//launch
+[1.404s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//launch/cart_example_velocity.launch.py
+[1.404s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//launch/gripper_mimic_joint_example.launch.py
+[1.404s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//launch/cart_example_effort.launch.py
+[1.404s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//launch/cart_example_position.launch.py
+[1.404s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//launch/tricycle_drive.launch.py
+[1.404s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//launch/diff_drive.launch.py
+[1.404s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//config
+[1.404s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//config/cartpole_controller.yaml
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//config/cartpole_controller_velocity.yaml
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//config/config.rviz
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//config/cartpole_controller_effort.yaml
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//config/gripper_controller.yaml
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//config/tricycle_drive_controller.yaml
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//config/diff_drive_controller.yaml
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//urdf
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//urdf/test_cart_velocity.xacro.urdf
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//urdf/test_cart_effort.xacro.urdf
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//urdf/test_cart_position.xacro.urdf
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//urdf/test_diff_drive.xacro.urdf
+[1.405s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//urdf/test_gripper_mimic_joint.xacro.urdf
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos//urdf/test_tricycle_drive.xacro.urdf
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/gazebo_ros2_control_demos/example_position
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/gazebo_ros2_control_demos/example_velocity
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/gazebo_ros2_control_demos/example_effort
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/gazebo_ros2_control_demos/example_diff_drive
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/gazebo_ros2_control_demos/example_tricycle_drive
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/gazebo_ros2_control_demos/example_gripper
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/ament_index/resource_index/package_run_dependencies/gazebo_ros2_control_demos
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/ament_index/resource_index/parent_prefix_path/gazebo_ros2_control_demos
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/environment/ament_prefix_path.sh
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/environment/ament_prefix_path.dsv
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/environment/path.sh
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/environment/path.dsv
+[1.407s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/local_setup.bash
+[1.415s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/local_setup.sh
+[1.426s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/local_setup.zsh
+[1.426s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/local_setup.dsv
+[1.426s] -- Installing: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.dsv
+[1.426s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/ament_index/resource_index/packages/gazebo_ros2_control_demos
+[1.426s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/cmake/gazebo_ros2_control_demosConfig.cmake
+[1.426s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/cmake/gazebo_ros2_control_demosConfig-version.cmake
+[1.426s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.xml
+[1.431s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos' returned '0': CMAKE_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /home/joas329/.local/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos

@@ -20,8 +20,8 @@
     </material>
 
 	<!--Dummy Link-->
-	<link name="dummy">
-	</link>
+	<!-- <link name="world">
+	</link> -->
 
 	<!--Arm Links-->
 
@@ -51,10 +51,10 @@
 		<limit lower="${radians(-180)}" upper="${radians(180)}" effort="40" velocity="30"/>
 	</joint>
 
-	<joint name="dummy_joint" type="fixed">
+	<!-- <joint name="dummy_joint" type="fixed">
 		<parent link="dummy"/>   
 		<child link="arm_a1"/>
-	</joint>
+	</joint> -->
 	
 	<!--Arm 2-->
 
@@ -184,8 +184,8 @@
 
 	<joint name="arm_j6" type="continuous">
 		<xacro:sw_origin x="2.98622047" y="0" z="0"/>
-		<parent link="arm_a5"/>
-		<child link="arm_a6"/>
+		<parent link="arm_a6"/>
+		<child link="arm_a7"/>
 		<axis xyz="1 0 0"/>
 		<limit effort="30" velocity="30"/>
 	</joint>

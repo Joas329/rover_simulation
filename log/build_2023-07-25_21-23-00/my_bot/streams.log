@@ -1,0 +1,29 @@
+[1.962s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/joas329/Desktop/rover_simulation/build/my_bot/build
+[2.170s] running develop
+[2.295s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/joas329/Desktop/rover_simulation/build/my_bot/build
+[2.298s] Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[2.465s] running egg_info
+[2.465s] writing ../../build/my_bot/my_bot.egg-info/PKG-INFO
+[2.466s] writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt
+[2.466s] writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt
+[2.466s] writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt
+[2.467s] writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt
+[2.468s] reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[2.470s] writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[2.470s] running build
+[2.470s] running build_py
+[2.470s] copying my_bot/joint_points_topic.py -> /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot
+[2.470s] copying my_bot/joint_points_act_service.py -> /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot
+[2.470s] running install
+[2.471s] running install_lib
+[2.471s] copying /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot/joint_points_topic.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot
+[2.471s] copying /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot/joint_points_act_service.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot
+[2.472s] byte-compiling /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/joint_points_topic.py to joint_points_topic.cpython-310.pyc
+[2.472s] byte-compiling /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/joint_points_act_service.py to joint_points_act_service.cpython-310.pyc
+[2.473s] running install_data
+[2.473s] running install_egg_info
+[2.475s] removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[2.479s] Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info
+[2.479s] running install_scripts
+[2.491s] writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'
+[2.526s] Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed

@@ -2,14 +2,14 @@ controller_manager:
   ros__parameters:
     update_rate: 1000
 
-    arm_controller:
+    joint_trajectory_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster  
 
 
-arm_controller:
+joint_trajectory_controller:
   ros__parameters:
     command_interfaces:
       - position
@@ -23,3 +23,14 @@ arm_controller:
       - arm_j4
       - arm_j5
       - arm_j6
+
+  gains:
+      arm_j1: {p: 100, d: 1, i: 1, i_clamp: 1}
+      arm_j2: {p: 100, d: 1, i: 1, i_clamp: 1}
+      arm_j3: {p: 100, d: 1, i: 1, i_clamp: 1}
+      arm_j4: {p: 100, d: 1, i: 1, i_clamp: 1}
+      arm_j5: {p: 100, d: 1, i: 1, i_clamp: 1}
+      arm_j6: {p: 100, d: 1, i: 1, i_clamp: 1}
+
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
