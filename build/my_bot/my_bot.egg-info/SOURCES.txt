@@ -32,8 +32,6 @@ launch/arm_sim.launch.py
 launch/launch_sim.launch.py
 launch/rsp.launch.py
 my_bot/__init__.py
-my_bot/joint_points_act_service.py
-my_bot/joint_points_topic.py
 resource/my_bot
 test/test_copyright.py
 test/test_flake8.py

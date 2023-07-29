@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 300000000
+    update_rate: 1000
 
     effort_controllers:
       type: effort_controllers/JointGroupEffortController
@@ -22,23 +22,54 @@ effort_controllers:
       - arm_j5
       - arm_j6    
     command_interfaces:
-       - efort
+       - effort
     state_interfaces:
        - position
        - velocity
        - effort
     
 
-  # open_loop_control: false
-  # allow_integration_in_goal_trajectory: true
+    # open_loop_control: false
+    # allow_integration_in_goal_trajectory: true
 
-  # gains:
-  #     arm_j1:
-  #       p: 2.0
-  #       i: 1.0
-  #       d: 1.0
-  #       i_clamp: 1.0
-  #       ff_velocity_scale: 2.0
+    # gains:
+    #     arm_j1:
+    #       p: 2.0
+    #       i: 1.0
+    #       d: 1.0
+    #       i_clamp: 1.0
+    #       ff_velocity_scale: 2.0
+    #     arm_j2:
+    #       p: 2.0
+    #       i: 1.0
+    #       d: 1.0
+    #       i_clamp: 1.0
+    #       ff_velocity_scale: 2.0
+    #     arm_j3:
+    #       p: 2.0
+    #       i: 1.0
+    #       d: 1.0
+    #       i_clamp: 1.0
+    #       ff_velocity_scale: 2.0
+    #     arm_j4:
+    #       p: 2.0
+    #       i: 1.0
+    #       d: 1.0
+    #       i_clamp: 1.0
+    #       ff_velocity_scale: 2.0
+    #     arm_j5:
+    #       p: 2.0
+    #       i: 1.0
+    #       d: 1.0
+    #       i_clamp: 1.0
+    #       ff_velocity_scale: 2.0
+    #     arm_j6:
+    #       p: 2.0
+    #       i: 1.0
+    #       d: 1.0
+    #       i_clamp: 1.0
+    #       ff_velocity_scale: 2.0
+
     
 
   #   state_publish_rate: 50.0
