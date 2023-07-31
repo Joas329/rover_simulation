@@ -23,8 +23,11 @@
     <color rgba="0 0 0 1"/>
   </material>
   <!--Dummy Link-->
-  <!-- <link name="world">
-	</link> -->
+  <link name="base_link"/>
+  <joint name="dummy_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="arm_a1"/>
+  </joint>
   <!--Arm Links-->
   <!--Arm 1-->
   <link name="arm_a1">
@@ -52,12 +55,8 @@
     <parent link="arm_a1"/>
     <child link="arm_a2"/>
     <axis xyz="0 0 1"/>
-    <limit effort="40" lower="-3.141592653589793" upper="3.141592653589793" velocity="30"/>
+    <limit effort="40.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="30.0"/>
   </joint>
-  <!-- <joint name="dummy_joint" type="fixed">
-		<parent link="dummy"/>   
-		<child link="arm_a1"/>
-	</joint> -->
   <!--Arm 2-->
   <link name="arm_a2">
     <visual>
@@ -84,7 +83,7 @@
     <parent link="arm_a2"/>
     <child link="arm_a3"/>
     <axis xyz="0 1 0"/>
-    <limit effort="125" lower="-2.356194490192345" upper="0.2617993877991494" velocity="30"/>
+    <limit effort="125.0" lower="-2.356194490192345" upper="0.2617993877991494" velocity="30.0"/>
   </joint>
   <!--Arm 3-->
   <link name="arm_a3">
@@ -112,7 +111,7 @@
     <parent link="arm_a3"/>
     <child link="arm_a4"/>
     <axis xyz="0 1 0"/>
-    <limit effort="80" lower="-2.0943951023931953" upper="2.0943951023931953" velocity="30"/>
+    <limit effort="80.0" lower="-2.0943951023931953" upper="2.0943951023931953" velocity="30.0"/>
   </joint>
   <!--Arm 4-->
   <link name="arm_a4">
@@ -140,7 +139,7 @@
     <parent link="arm_a4"/>
     <child link="arm_a5"/>
     <axis xyz="1 0 0"/>
-    <limit effort="30" velocity="30"/>
+    <limit effort="30.0" velocity="30.0"/>
   </joint>
   <!--Arm 5-->
   <link name="arm_a5">
@@ -168,7 +167,7 @@
     <parent link="arm_a5"/>
     <child link="arm_a6"/>
     <axis xyz="0 1 0"/>
-    <limit effort="30" lower="-1.5707963267948966" upper="1.5707963267948966" velocity="30"/>
+    <limit effort="30.0" lower="-1.5707963267948966" upper="1.5707963267948966" velocity="30.0"/>
   </joint>
   <!--Arm 6-->
   <link name="arm_a6">
@@ -196,7 +195,7 @@
     <parent link="arm_a6"/>
     <child link="arm_a7"/>
     <axis xyz="1 0 0"/>
-    <limit effort="30" velocity="30"/>
+    <limit effort="30.0" velocity="30.0"/>
   </joint>
   <!--Arm 7-->
   <link name="arm_a7">
@@ -215,7 +214,7 @@
   <!--Defining ROS2 Control Joints-->
   <ros2_control name="GazeboSystem" type="system">
     <hardware>
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+      <plugin>mock_components/GenericSystem</plugin>
     </hardware>
     <joint name="arm_j1">
       <command_interface name="position"/>

@@ -20,21 +20,15 @@
     </material>
 
 	<!--Dummy Link-->
-	<link name="world">
-	</link>
-
-	
+	<link name="base_link"/>
+	<joint name="dummy_joint" type="fixed">
+		<parent link="base_link"/>   
+		<child link="arm_a1"/>
+	</joint>
 
 	<!--Arm Links-->
 
 	<!--Arm 1-->
-	<joint name="arm_j1" type="revolute">
-		<xacro:sw_origin x="-3.50000000" y="0.51712500" z="0"/>
-		<parent link="arm_a1"/>
-		<child link="arm_a2" />
-		<axis xyz="0 0 1"/>
-		<limit lower="${radians(-180)}" upper="${radians(180)}" effort="40" velocity="30"/>
-	</joint>
 	
 	<link name="arm_a1">
 		<xacro:sw_visual file="ARM-A01"/>
@@ -53,14 +47,14 @@
 		/>
 	</link>
 
-	
-
-	<joint name="dummy_joint" type="fixed">
-		<origin xyz="0 0 0"/>
-		<parent link="world"/>   
-		<child link="arm_a1"/>
+	<joint name="arm_j1" type="revolute">
+		<xacro:sw_origin x="-3.50000000" y="0.51712500" z="0"/>
+		<parent link="arm_a1"/>
+		<child link="arm_a2" />
+		<axis xyz="0 0 1"/>
+		<limit lower="${radians(-180)}" upper="${radians(180)}" effort="40.0" velocity="30.0"/>
 	</joint>
-	
+
 	<!--Arm 2-->
 
 	<link name="arm_a2">
@@ -84,7 +78,7 @@
 		<parent link="arm_a2"/>
 		<child link="arm_a3"/>
 		<axis xyz="0 1 0"/>
-		<limit lower="${radians(-135)}" upper="${radians(15)}" effort="125" velocity="30"/>
+		<limit lower="${radians(-135)}" upper="${radians(15)}" effort="125.0" velocity="30.0"/>
 	</joint>
 
 	<!--Arm 3-->
@@ -111,7 +105,7 @@
 		<parent link="arm_a3"/>
 		<child link="arm_a4"/>
 		<axis xyz="0 1 0"/>
-		<limit lower="${radians(-120)}" upper="${radians(120)}" effort="80" velocity="30"/>
+		<limit lower="${radians(-120)}" upper="${radians(120)}" effort="80.0" velocity="30.0"/>
 	</joint>
 
 	<!--Arm 4-->
@@ -138,7 +132,7 @@
 		<parent link="arm_a4"/>
 		<child link="arm_a5"/>
 		<axis xyz="1 0 0"/>
-		<limit effort="30" velocity="30"/>
+		<limit effort="30.0" velocity="30.0"/>
 	</joint>
 
 	<!--Arm 5-->
@@ -165,7 +159,7 @@
 		<parent link="arm_a5"/>
 		<child link="arm_a6"/>
 		<axis xyz="0 1 0"/>
-		<limit lower="${radians(-90)}" upper="${radians(90)}" effort="30" velocity="30"/>
+		<limit lower="${radians(-90)}" upper="${radians(90)}" effort="30.0" velocity="30.0"/>
 	</joint>
 
 	<!--Arm 6-->
@@ -192,7 +186,7 @@
 		<parent link="arm_a6"/>
 		<child link="arm_a7"/>
 		<axis xyz="1 0 0"/>
-		<limit effort="30" velocity="30"/>
+		<limit effort="30.0" velocity="30.0"/>
 	</joint>
 
 	<!--Arm 7-->	
@@ -220,7 +214,7 @@
 	
 	<ros2_control name="GazeboSystem" type="system">
         <hardware>
-        	<plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        	<plugin>mock_components/GenericSystem</plugin>
         </hardware>
 
 		<xacro:arm_joint_creator name="arm_j1"/>

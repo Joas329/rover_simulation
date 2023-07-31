@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  >
+   
+    <xacro:include filename="macros.xacro"/>
+
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+       
+
+        <!--left wheels-->
+        <xacro:joint_creator name = "front_left_wheel_joint"/>
+        <xacro:joint_creator name = "middle_left_wheel_joint"/>
+        <xacro:joint_creator name = "rear_left_wheel_joint"/>
+
+        <!--right wheels-->
+        <xacro:joint_creator name = "front_right_wheel_joint"/>
+        <xacro:joint_creator name = "middle_right_wheel_joint"/>
+        <xacro:joint_creator name = "rear_right_wheel_joint"/>
+
+    </ros2_control>
+
+    <gazebo>
+        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+            <parameters> $(find my_bot)/config/my_controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+
+</robot>

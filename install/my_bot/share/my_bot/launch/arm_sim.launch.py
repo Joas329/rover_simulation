@@ -16,6 +16,7 @@ import xacro
 
 def generate_launch_description():
 
+
     pkg_path = os.path.join(get_package_share_directory('my_bot'))
     gazebo_params_file = os.path.join(get_package_share_directory("my_bot"),'config','gazebo_params.yaml')
     gazebo = IncludeLaunchDescription(
@@ -27,7 +28,7 @@ def generate_launch_description():
    
     xacro_file = os.path.join(pkg_path,'description','arm.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
-    params = {'robot_description': robot_description_config.toxml()}
+    params = {'robot_description': robot_description_config.toxml(),'use_sim_time': True}
 
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
@@ -42,16 +43,16 @@ def generate_launch_description():
                                    '-entity', 'my_bot'],
                         output='screen')
     
-    load_joint_state_controller = Node(
+    joint_broad_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_state_broadcaster"]
+        arguments=["joint_broad"]
     )
 
     load_arm_controller = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["effort_controllers"]
+        arguments=["arm_controllers"]
     )
 
     load_joint_state_broadcaster = ExecuteProcess(
@@ -60,7 +61,7 @@ def generate_launch_description():
     )
 
     load_joint_trojectory_controller=ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'effort_controllers'],
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'arm_controllers'],
         output="screen"    
     )
     
@@ -68,12 +69,12 @@ def generate_launch_description():
         RegisterEventHandler(
             event_handler=OnProcessExit(
                 target_action=spawn_entity,
-                on_exit=[load_joint_state_controller],
+                on_exit=[load_joint_state_broadcaster],
             )
         ),
         RegisterEventHandler(
             event_handler=OnProcessExit(
-                target_action=load_joint_state_controller,
+                target_action=load_joint_state_broadcaster,
                 on_exit=[load_arm_controller],
             )
         ),

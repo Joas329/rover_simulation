@@ -17,6 +17,7 @@ setup(
         (os.path.join('share', package_name,'launch'),glob(os.path.join('launch/*.launch.py'))),
         (os.path.join('share', package_name,'config'),glob(os.path.join('config/*.yaml'))),
         (os.path.join('share', package_name,'description'),glob(os.path.join('description/*.xacro'))),
+        (os.path.join('share', package_name,'description'),glob(os.path.join('description/*.srdf'))),
         (os.path.join('share', package_name,'description'),glob(os.path.join('description/*.urdf'))),
         (os.path.join('share', package_name, 'description'), glob(os.path.join('description','xacro', '*.xacro'))),
         (os.path.join('share', package_name, 'description', 'mesh'), glob(os.path.join('description','mesh', '*.STL'))),
