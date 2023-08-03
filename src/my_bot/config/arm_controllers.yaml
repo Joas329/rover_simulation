@@ -1,42 +1,40 @@
 controller_manager:
   ros__parameters:
-    update_rate: 100
-    use_sim_time: true
-    
+    update_rate: 1000 # Hz
+
     hand_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-    arm_controllers:
+
+    arm_group_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
 
-    joint_broad:
-      type: joint_state_broadcaster/JointStateBroadcaster 
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
 
 hand_controller:
   ros__parameters:
-    joint: arm_j6
+    joints: 
+      - arm_j6
     command_interfaces:
       - position
     state_interfaces:
       - position
       - velocity
-
-
-arm_controllers:
+arm_group_controller:
   ros__parameters:
     joints:
-       - "arm_j1"
-       - "arm_j2"
-       - "arm_j3"
-       - "arm_j4"
-       - "arm_j5"
+      - arm_j1
+      - arm_j2
+      - arm_j3
+      - arm_j4
+      - arm_j5
     command_interfaces:
-       - position
+      - position
     state_interfaces:
-       - position
-       - velocity
-    
+      - position
+      - velocity
 
     # open_loop_control: false
     # allow_integration_in_goal_trajectory: true

@@ -24,14 +24,14 @@
         <joint name="arm_j1" value="3.1415"/>
         <joint name="arm_j2" value="-1.4887"/>
         <joint name="arm_j3" value="-1.5243"/>
-        <joint name="arm_j4" value="0.0"/>
-        <joint name="arm_j5" value="0.0"/>
+        <joint name="arm_j4" value="0"/>
+        <joint name="arm_j5" value="0"/>
     </group_state>
     <group_state name="rest" group="arm_group">
         <joint name="arm_j1" value="3.1415"/>
         <joint name="arm_j2" value="-0.0636"/>
         <joint name="arm_j3" value="-2.0943"/>
-        <joint name="arm_j4" value="0.0"/>
+        <joint name="arm_j4" value="0"/>
         <joint name="arm_j5" value="-0.6599"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->

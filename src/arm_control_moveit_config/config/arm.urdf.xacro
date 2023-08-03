@@ -229,7 +229,7 @@
 
 	<gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-            <parameters> $(find my_bot)/config/arm_controllers.yaml</parameters>
+            <parameters> $(find arm_control_moveit_config)/config/ros2_controllers.yaml</parameters>
         </plugin>
     </gazebo>
 

@@ -1,1 +1,0 @@
-/home/joas329/Desktop/rover_simulation/src/my_bot/launch/launch_sim.launch.py

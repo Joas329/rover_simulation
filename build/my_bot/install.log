@@ -2,10 +2,11 @@
 /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/__pycache__/__init__.cpython-310.pyc
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index/resource_index/packages/my_bot
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.xml
+/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch/arm_gazebo.launch.py
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch/launch_sim.launch.py
-/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch/arm_sim.launch.py
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch/demo.launch.py
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch/rsp.launch.py
+/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch/sim.launch.py
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/pilz_cartesian_limits.yaml
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/moveit_controllers.yaml
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/arm_controllers.yaml

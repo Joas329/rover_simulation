@@ -1,1 +1,0 @@
-/home/joas329/Desktop/rover_simulation/src/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py

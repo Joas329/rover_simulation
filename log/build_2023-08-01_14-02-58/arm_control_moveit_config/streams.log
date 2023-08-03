@@ -1,0 +1,4 @@
+[0.006s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot PYTHONPATH=/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config -- -j8 -l8
+[0.013s] gmake: /home/joas329/.local/lib/python3.10/site-packages/cmake/data/bin/cmake: No such file or directory
+[0.014s] gmake: *** [Makefile:226: cmake_check_build_system] Error 127
+[0.016s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config' returned '2': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot PYTHONPATH=/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config -- -j8 -l8

@@ -33,10 +33,11 @@ description/mesh/ARM-A03.STL
 description/mesh/ARM-A04.STL
 description/mesh/ARM-A05.STL
 description/mesh/ARM-A06.STL
-launch/arm_sim.launch.py
+launch/arm_gazebo.launch.py
 launch/demo.launch.py
 launch/launch_sim.launch.py
 launch/rsp.launch.py
+launch/sim.launch.py
 my_bot/__init__.py
 resource/my_bot
 test/test_copyright.py
