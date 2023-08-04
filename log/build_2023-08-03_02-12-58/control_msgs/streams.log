@@ -1,0 +1,41 @@
+[0.296s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/control_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake /home/joas329/Desktop/rover_simulation/src/ros-controls/control_msgs/control_msgs -DCMAKE_INSTALL_PREFIX=/home/joas329/Desktop/rover_simulation/install/control_msgs
+[0.645s] -- The C compiler identification is GNU 11.4.0
+[0.703s] -- The CXX compiler identification is GNU 11.4.0
+[0.711s] -- Detecting C compiler ABI info
+[0.909s] -- Detecting C compiler ABI info - done
+[0.918s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.919s] -- Detecting C compile features
+[0.919s] -- Detecting C compile features - done
+[0.922s] -- Detecting CXX compiler ABI info
+[1.007s] -- Detecting CXX compiler ABI info - done
+[1.018s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.018s] -- Detecting CXX compile features
+[1.019s] -- Detecting CXX compile features - done
+[1.064s] -- Found action_msgs: 1.2.1 (/opt/ros/humble/share/action_msgs/cmake)
+[1.370s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.784s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.826s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.858s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.904s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.932s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.058s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.264s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.301s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.463s] -- Found trajectory_msgs: 4.2.3 (/opt/ros/humble/share/trajectory_msgs/cmake)
+[2.564s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.433s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[4.010s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.263s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.298s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[4.330s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[4.389s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[4.390s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.390s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[4.390s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[4.414s] -- Found PythonExtra: .so  
+[4.535s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.540s] -- Added test 'lint_cmake' to check CMake code style
+[4.543s] -- Added test 'xmllint' to check XML markup files
+[4.551s] -- Configuring done
+[4.657s] -- Generating done
+[4.660s] -- Build files have been written to: /home/joas329/Desktop/rover_simulation/build/control_msgs

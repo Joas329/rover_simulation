@@ -1,0 +1,1 @@
+Invoking command in '/home/joas329/Desktop/rover_simulation/build/control_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake /home/joas329/Desktop/rover_simulation/src/ros-controls/control_msgs/control_msgs -DCMAKE_INSTALL_PREFIX=/home/joas329/Desktop/rover_simulation/install/control_msgs

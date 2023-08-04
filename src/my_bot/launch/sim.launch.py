@@ -2,7 +2,7 @@ import os
 from launch_ros.actions import Node
 from launch import LaunchDescription
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command
 from launch.actions import DeclareLaunchArgument
@@ -18,7 +18,7 @@ def generate_launch_description():
 
 
     pkg_path = os.path.join(get_package_share_directory('my_bot'))
-    gazebo_params_file = os.path.join(get_package_share_directory("my_bot"),'config','gazebo_params.yaml')
+    gazebo_params_file = os.path.join(get_package_share_directory("my_bot"),'config','/gazebo_params.yaml')
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
@@ -28,13 +28,13 @@ def generate_launch_description():
    
     xacro_file = os.path.join(pkg_path,'description','arm.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
-    params = {'robot_description': robot_description_config.toxml(),'use_sim_time': True}
+    params = {'robot_description': robot_description_config.toxml()}
 
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        output='screen',
-        parameters=[params]
+        output='both',
+        parameters=[params,{"use_sim_tine": True}]
     )
 
     # Spawn the robot in Gazebo
@@ -43,44 +43,58 @@ def generate_launch_description():
                                    '-entity', 'my_bot'],
                         output='screen')
     
-    joint_broad_spawner = Node(
+    # **** Load Controllers**** #
+
+    # Joint State Broadcaster
+    joint_state_broadcaster = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_broad"]
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
     )
 
-    load_arm_controller = Node(
+    # Arm Group Controller
+    arm_group_controller = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["arm_controllers"]
+        arguments=["arm_group_controller", "-c", "/controller_manager"],
     )
 
-    load_joint_state_broadcaster = ExecuteProcess(
-        cmd=['ros2', 'control','load_controller','--set-state', 'active','joint_state_broadcaster'],
-        output='screen'
+    # Hand Controller
+    hand_controller = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["hand_controller", "-c", "/controller_manager"],
     )
 
-    load_joint_trojectory_controller=ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'arm_controllers'],
-        output="screen"    
-    )
     
     return LaunchDescription([
-        # RegisterEventHandler(
-        #     event_handler=OnProcessExit(
-        #         target_action=spawn_entity,
-        #         on_exit=[load_joint_state_broadcaster],
-        #     )
-        # ),
-        # RegisterEventHandler(
-        #     event_handler=OnProcessExit(
-        #         target_action=load_joint_state_broadcaster,
-        #         on_exit=[load_arm_controller],
-        #     )
-        # ),
+
         gazebo,
         node_robot_state_publisher,
-        spawn_entity,
-    
+        TimerAction(
+            period=2.0,
+            actions=[
+                spawn_entity,
+            ]
+        ),
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=spawn_entity,
+                on_exit=[joint_state_broadcaster],
+            )
+        ),
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=joint_state_broadcaster,
+                on_exit=[arm_group_controller],
+            )
+        ),
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=joint_state_broadcaster,
+                on_exit=[hand_controller],
+            )
+        ),
+        
     ])
 

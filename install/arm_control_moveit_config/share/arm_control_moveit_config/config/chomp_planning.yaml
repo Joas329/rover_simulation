@@ -1,3 +1,10 @@
+planning_plugin: chomp_interface/CHOMPPlanner
+request_adapters: >-
+  default_planner_request_adapters/AddTimeOptimalParameterization
+  default_planner_request_adapters/FixWorkspaceBounds
+  default_planner_request_adapters/FixStartStateBounds
+  default_planner_request_adapters/FixStartStateCollision
+  default_planner_request_adapters/FixStartStatePathConstraints
 planning_time_limit: 10.0
 max_iterations: 200
 max_iterations_after_collision_free: 5
@@ -9,6 +16,7 @@ smoothness_cost_acceleration: 1.0
 smoothness_cost_jerk: 0.0
 ridge_factor: 0.0
 use_pseudo_inverse: false
+use_hamiltonian_monte_carlo: false
 pseudo_inverse_ridge_factor: 1e-4
 joint_update_limit: 0.1
 collision_clearance: 0.2
