@@ -19,7 +19,7 @@ Visualization Manager:
         Loop Animation: true
         State Display Time: 0.05 s
         Trajectory Topic: display_planned_path
-      Planning Scene Topic: /monitored_planning_scene
+      Planning Scene Topic: monitored_planning_scene
       Robot Description: robot_description
       Scene Geometry:
         Scene Alpha: 1
@@ -27,7 +27,7 @@ Visualization Manager:
         Robot Alpha: 0.5
       Value: true
   Global Options:
-    Fixed Frame: base_link
+    Fixed Frame: world
   Tools:
     - Class: rviz_default_plugins/Interact
     - Class: rviz_default_plugins/MoveCamera

@@ -1,0 +1,754 @@
+[0.000000] (-) TimerEvent: {}
+[0.000220] (control_msgs) JobQueued: {'identifier': 'control_msgs', 'dependencies': OrderedDict()}
+[0.000268] (my_bot) JobQueued: {'identifier': 'my_bot', 'dependencies': OrderedDict()}
+[0.000287] (realtime_tools) JobQueued: {'identifier': 'realtime_tools', 'dependencies': OrderedDict()}
+[0.000304] (arm_control_moveit_config) JobQueued: {'identifier': 'arm_control_moveit_config', 'dependencies': OrderedDict([('my_bot', '/home/joas329/Desktop/rover_simulation/install/my_bot')])}
+[0.000323] (my_bot) JobStarted: {'identifier': 'my_bot'}
+[0.019555] (control_msgs) JobStarted: {'identifier': 'control_msgs'}
+[0.028726] (realtime_tools) JobStarted: {'identifier': 'realtime_tools'}
+[0.097890] (-) TimerEvent: {}
+[0.198227] (-) TimerEvent: {}
+[0.294102] (control_msgs) JobProgress: {'identifier': 'control_msgs', 'progress': 'cmake'}
+[0.294938] (control_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/joas329/Desktop/rover_simulation/src/ros-controls/control_msgs/control_msgs', '-DCMAKE_INSTALL_PREFIX=/home/joas329/Desktop/rover_simulation/install/control_msgs'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/control_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1754'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VJS681'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/control_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot')]), 'shell': False}
+[0.298428] (-) TimerEvent: {}
+[0.299304] (realtime_tools) JobProgress: {'identifier': 'realtime_tools', 'progress': 'cmake'}
+[0.300023] (realtime_tools) Command: {'cmd': ['/usr/bin/cmake', '/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools', '-DCMAKE_INSTALL_PREFIX=/home/joas329/Desktop/rover_simulation/install/realtime_tools'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/realtime_tools', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1754'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VJS681'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/realtime_tools'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot')]), 'shell': False}
+[0.356428] (control_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.370845] (realtime_tools) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.378682] (realtime_tools) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.398552] (-) TimerEvent: {}
+[0.419600] (control_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.429140] (control_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.477095] (realtime_tools) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.491575] (realtime_tools) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.492052] (realtime_tools) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.492845] (realtime_tools) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.496610] (realtime_tools) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.498655] (-) TimerEvent: {}
+[0.512341] (control_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.521870] (control_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.522228] (control_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.522733] (control_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.526797] (control_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.598806] (-) TimerEvent: {}
+[0.623218] (control_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.633336] (control_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.633721] (control_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.634334] (control_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.636669] (control_msgs) StdoutLine: {'line': b'-- Found action_msgs: 1.2.1 (/opt/ros/humble/share/action_msgs/cmake)\n'}
+[0.698899] (-) TimerEvent: {}
+[0.708874] (realtime_tools) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.753726] (my_bot) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/my_bot', 'build', '--build-base', '/home/joas329/Desktop/rover_simulation/build/my_bot/build', 'install', '--record', '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log', '--single-version-externally-managed'], 'cwd': '/home/joas329/Desktop/rover_simulation/src/my_bot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'joas329', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib', 'HOME': '/home/joas329', 'OLDPWD': '/home/joas329/Desktop', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1754', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/joas329/Desktop/rover_simulation/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'joas329', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'joas329', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.VJS681', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.119', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/joas329/Desktop/rover_simulation/build/my_bot', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'}, 'shell': False}
+[0.799016] (-) TimerEvent: {}
+[0.809327] (realtime_tools) StdoutLine: {'line': b'-- Found rclcpp: 16.0.5 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.834252] (control_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.861540] (realtime_tools) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.866967] (realtime_tools) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.876319] (realtime_tools) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.891307] (realtime_tools) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.899111] (-) TimerEvent: {}
+[0.912282] (realtime_tools) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.965133] (control_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.972260] (control_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.983237] (control_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.999208] (realtime_tools) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.999447] (-) TimerEvent: {}
+[1.000513] (control_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.003088] (realtime_tools) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.025200] (control_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.048551] (realtime_tools) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.060095] (realtime_tools) StdoutLine: {'line': b'-- Looking for C++ include pthread.h\n'}
+[1.063039] (my_bot) StdoutLine: {'line': b'running egg_info\n'}
+[1.063636] (my_bot) StdoutLine: {'line': b'creating ../../build/my_bot/my_bot.egg-info\n'}
+[1.063835] (my_bot) StdoutLine: {'line': b'writing ../../build/my_bot/my_bot.egg-info/PKG-INFO\n'}
+[1.064056] (my_bot) StdoutLine: {'line': b'writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt\n'}
+[1.064225] (my_bot) StdoutLine: {'line': b'writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt\n'}
+[1.064418] (my_bot) StdoutLine: {'line': b'writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt\n'}
+[1.064555] (my_bot) StdoutLine: {'line': b'writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt\n'}
+[1.064714] (my_bot) StdoutLine: {'line': b"writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'\n"}
+[1.066465] (my_bot) StdoutLine: {'line': b"reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'\n"}
+[1.067375] (my_bot) StdoutLine: {'line': b"writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'\n"}
+[1.067622] (my_bot) StdoutLine: {'line': b'running build\n'}
+[1.067858] (my_bot) StdoutLine: {'line': b'running build_py\n'}
+[1.068075] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/build/my_bot/build\n'}
+[1.068260] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib\n'}
+[1.068432] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot\n'}
+[1.068579] (my_bot) StdoutLine: {'line': b'copying my_bot/__init__.py -> /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot\n'}
+[1.068730] (my_bot) StdoutLine: {'line': b'running install\n'}
+[1.068919] (my_bot) StdoutLine: {'line': b'running install_lib\n'}
+[1.070193] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot\n'}
+[1.070437] (my_bot) StdoutLine: {'line': b'copying /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot/__init__.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot\n'}
+[1.070926] (my_bot) StdoutLine: {'line': b'byte-compiling /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/__init__.py to __init__.cpython-310.pyc\n'}
+[1.071208] (my_bot) StdoutLine: {'line': b'running install_data\n'}
+[1.071769] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index\n'}
+[1.072173] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index/resource_index\n'}
+[1.072272] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index/resource_index/packages\n'}
+[1.072352] (my_bot) StdoutLine: {'line': b'copying resource/my_bot -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index/resource_index/packages\n'}
+[1.072575] (my_bot) StdoutLine: {'line': b'copying package.xml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot\n'}
+[1.072658] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch\n'}
+[1.072734] (my_bot) StdoutLine: {'line': b'copying launch/arm_gazebo.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch\n'}
+[1.072954] (my_bot) StdoutLine: {'line': b'copying launch/launch_sim.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch\n'}
+[1.073031] (my_bot) StdoutLine: {'line': b'copying launch/rsp.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch\n'}
+[1.073350] (my_bot) StdoutLine: {'line': b'copying launch/sim.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch\n'}
+[1.073684] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config\n'}
+[1.073769] (my_bot) StdoutLine: {'line': b'copying config/arm_controllers.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config\n'}
+[1.073849] (my_bot) StdoutLine: {'line': b'copying config/empty.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config\n'}
+[1.074146] (my_bot) StdoutLine: {'line': b'copying config/my_controllers.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config\n'}
+[1.074846] (my_bot) StdoutLine: {'line': b'copying config/twist_mux.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config\n'}
+[1.075093] (my_bot) StdoutLine: {'line': b'copying config/gazebo_params.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config\n'}
+[1.075177] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.075255] (my_bot) StdoutLine: {'line': b'copying description/robot.urdf.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.075482] (my_bot) StdoutLine: {'line': b'copying description/depth_camera.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.075559] (my_bot) StdoutLine: {'line': b'copying description/camera.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.075641] (my_bot) StdoutLine: {'line': b'copying description/ros2_control.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.075715] (my_bot) StdoutLine: {'line': b'copying description/macros.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.075790] (my_bot) StdoutLine: {'line': b'copying description/arm.urdf.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.075863] (my_bot) StdoutLine: {'line': b'copying description/robot_core.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.075936] (my_bot) StdoutLine: {'line': b'copying description/robot_arm.srdf -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.076061] (my_bot) StdoutLine: {'line': b'copying description/arm.urdf -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description\n'}
+[1.076131] (my_bot) StdoutLine: {'line': b'creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh\n'}
+[1.076200] (my_bot) StdoutLine: {'line': b'copying description/mesh/ARM-A03.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh\n'}
+[1.077669] (my_bot) StdoutLine: {'line': b'copying description/mesh/ARM-A06.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh\n'}
+[1.078321] (my_bot) StdoutLine: {'line': b'copying description/mesh/ARM-A04.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh\n'}
+[1.079163] (my_bot) StdoutLine: {'line': b'copying description/mesh/ARM-A02.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh\n'}
+[1.079486] (my_bot) StdoutLine: {'line': b'copying description/mesh/ARM-A05.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh\n'}
+[1.079977] (my_bot) StdoutLine: {'line': b'copying description/mesh/ARM-A01.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh\n'}
+[1.081302] (my_bot) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.083069] (my_bot) StdoutLine: {'line': b'Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info\n'}
+[1.083959] (my_bot) StdoutLine: {'line': b'running install_scripts\n'}
+[1.099544] (-) TimerEvent: {}
+[1.106478] (my_bot) StdoutLine: {'line': b"writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'\n"}
+[1.136486] (my_bot) CommandEnded: {'returncode': 0}
+[1.140416] (control_msgs) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.176992] (my_bot) JobEnded: {'identifier': 'my_bot', 'rc': 0}
+[1.179116] (arm_control_moveit_config) JobStarted: {'identifier': 'arm_control_moveit_config'}
+[1.179350] (realtime_tools) StdoutLine: {'line': b'-- Looking for C++ include pthread.h - found\n'}
+[1.179570] (realtime_tools) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.189744] (arm_control_moveit_config) JobProgress: {'identifier': 'arm_control_moveit_config', 'progress': 'cmake'}
+[1.190205] (arm_control_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '/home/joas329/Desktop/rover_simulation/src/arm_control_moveit_config', '-DCMAKE_INSTALL_PREFIX=/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1754'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VJS681'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot')]), 'shell': False}
+[1.199669] (-) TimerEvent: {}
+[1.255439] (arm_control_moveit_config) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.273364] (control_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.289685] (control_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.298555] (realtime_tools) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.299746] (-) TimerEvent: {}
+[1.300008] (realtime_tools) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.336255] (arm_control_moveit_config) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.344689] (arm_control_moveit_config) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.399858] (-) TimerEvent: {}
+[1.417320] (control_msgs) StdoutLine: {'line': b'-- Found trajectory_msgs: 4.2.3 (/opt/ros/humble/share/trajectory_msgs/cmake)\n'}
+[1.426485] (arm_control_moveit_config) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.435832] (arm_control_moveit_config) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.436143] (arm_control_moveit_config) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.436626] (arm_control_moveit_config) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.440128] (arm_control_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.499961] (-) TimerEvent: {}
+[1.535320] (arm_control_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.537316] (realtime_tools) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.5 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[1.543575] (control_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.551111] (arm_control_moveit_config) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.551507] (arm_control_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.552333] (arm_control_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.556159] (arm_control_moveit_config) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.600054] (-) TimerEvent: {}
+[1.682849] (realtime_tools) StdoutLine: {'line': b'-- Found ament_cmake_gmock: 1.3.5 (/opt/ros/humble/share/ament_cmake_gmock/cmake)\n'}
+[1.685353] (realtime_tools) StdoutLine: {'line': b'-- Found test_msgs: 1.2.1 (/opt/ros/humble/share/test_msgs/cmake)\n'}
+[1.700153] (-) TimerEvent: {}
+[1.772168] (arm_control_moveit_config) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[1.793305] (realtime_tools) StdoutLine: {'line': b"-- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built\n"}
+[1.800274] (-) TimerEvent: {}
+[1.853575] (realtime_tools) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.862646] (realtime_tools) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.900372] (-) TimerEvent: {}
+[1.951699] (realtime_tools) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.968121] (realtime_tools) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.968711] (realtime_tools) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.969427] (realtime_tools) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.975173] (realtime_tools) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.5 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[1.976782] (realtime_tools) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.986170] (arm_control_moveit_config) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.989137] (arm_control_moveit_config) StdoutLine: {'line': b'-- Generating done\n'}
+[1.990088] (arm_control_moveit_config) StdoutLine: {'line': b'-- Build files have been written to: /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config\n'}
+[1.994686] (arm_control_moveit_config) CommandEnded: {'returncode': 0}
+[1.995659] (arm_control_moveit_config) JobProgress: {'identifier': 'arm_control_moveit_config', 'progress': 'build'}
+[1.996875] (arm_control_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config', '--', '-j8', '-l8'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1754'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VJS681'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot')]), 'shell': False}
+[2.000466] (-) TimerEvent: {}
+[2.044486] (arm_control_moveit_config) CommandEnded: {'returncode': 0}
+[2.070447] (realtime_tools) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.074171] (arm_control_moveit_config) JobProgress: {'identifier': 'arm_control_moveit_config', 'progress': 'install'}
+[2.083962] (arm_control_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1754'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VJS681'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot')]), 'shell': False}
+[2.093146] (arm_control_moveit_config) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.093455] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/package_run_dependencies/arm_control_moveit_config\n'}
+[2.093683] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/parent_prefix_path/arm_control_moveit_config\n'}
+[2.094048] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/ament_prefix_path.sh\n'}
+[2.094273] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/ament_prefix_path.dsv\n'}
+[2.094483] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/path.sh\n'}
+[2.094702] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/path.dsv\n'}
+[2.094916] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.bash\n'}
+[2.095140] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.sh\n'}
+[2.095371] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.zsh\n'}
+[2.095577] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.dsv\n'}
+[2.095799] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.dsv\n'}
+[2.096068] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/packages/arm_control_moveit_config\n'}
+[2.096335] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/cmake/arm_control_moveit_configConfig.cmake\n'}
+[2.096580] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/cmake/arm_control_moveit_configConfig-version.cmake\n'}
+[2.096808] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.xml\n'}
+[2.096968] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch\n'}
+[2.097180] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/spawn_controllers.launch.py\n'}
+[2.097354] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/static_virtual_joint_tfs.launch.py\n'}
+[2.097569] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/arm.launch.py\n'}
+[2.097760] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/warehouse_db.launch.py\n'}
+[2.097972] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/final.launch.py\n'}
+[2.098184] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/setup_assistant.launch.py\n'}
+[2.098351] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/arm_moveit.launch.py\n'}
+[2.098502] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/demo.launch.py\n'}
+[2.098666] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/rsp.launch.py\n'}
+[2.098819] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/moveit_rviz.launch.py\n'}
+[2.098980] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/move_group.launch.py\n'}
+[2.099140] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config\n'}
+[2.099293] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/chomp_planning.yaml\n'}
+[2.099454] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/pilz_cartesian_limits.yaml\n'}
+[2.099632] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/moveit_controllers.yaml\n'}
+[2.099808] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/stomp_planning.yaml\n'}
+[2.099974] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/sensors_3d.yaml\n'}
+[2.100212] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/ompl_planning.yaml\n'}
+[2.100374] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/kinematics.yaml\n'}
+[2.100528] (-) TimerEvent: {}
+[2.100721] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.urdf.xacro\n'}
+[2.100894] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/ros2_controllers.yaml\n'}
+[2.101028] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.srdf\n'}
+[2.101160] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.ros2_control.xacro\n'}
+[2.101301] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/initial_positions.yaml\n'}
+[2.101483] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/joint_limits.yaml\n'}
+[2.101655] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/moveit.rviz\n'}
+[2.101769] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/.setup_assistant\n'}
+[2.102851] (arm_control_moveit_config) CommandEnded: {'returncode': 0}
+[2.119056] (realtime_tools) StdoutLine: {'line': b'-- Generating done\n'}
+[2.123327] (realtime_tools) StdoutLine: {'line': b'-- Build files have been written to: /home/joas329/Desktop/rover_simulation/build/realtime_tools\n'}
+[2.139361] (realtime_tools) CommandEnded: {'returncode': 0}
+[2.140149] (realtime_tools) JobProgress: {'identifier': 'realtime_tools', 'progress': 'build'}
+[2.140835] (realtime_tools) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joas329/Desktop/rover_simulation/build/realtime_tools', '--', '-j8', '-l8'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/realtime_tools', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1754'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VJS681'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/realtime_tools'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot')]), 'shell': False}
+[2.175076] (arm_control_moveit_config) JobEnded: {'identifier': 'arm_control_moveit_config', 'rc': 0}
+[2.200649] (-) TimerEvent: {}
+[2.204624] (realtime_tools) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/humble/src/gtest_vendor/src/gtest-all.cc.o\x1b[0m\n'}
+[2.206250] (realtime_tools) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o\x1b[0m\n'}
+[2.207260] (realtime_tools) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/realtime_tools.dir/src/realtime_clock.cpp.o\x1b[0m\n'}
+[2.208777] (realtime_tools) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/thread_priority.dir/src/thread_priority.cpp.o\x1b[0m\n'}
+[2.210023] (control_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.210632] (realtime_tools) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o\x1b[0m\n'}
+[2.300766] (-) TimerEvent: {}
+[2.401167] (-) TimerEvent: {}
+[2.501521] (-) TimerEvent: {}
+[2.602004] (-) TimerEvent: {}
+[2.702636] (-) TimerEvent: {}
+[2.792433] (realtime_tools) StdoutLine: {'line': b'[ 28%] \x1b[32m\x1b[1mLinking CXX shared library libthread_priority.so\x1b[0m\n'}
+[2.802748] (-) TimerEvent: {}
+[2.903376] (-) TimerEvent: {}
+[2.935000] (realtime_tools) StdoutLine: {'line': b'[ 28%] Built target thread_priority\n'}
+[3.003496] (-) TimerEvent: {}
+[3.103879] (-) TimerEvent: {}
+[3.204226] (control_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.204464] (-) TimerEvent: {}
+[3.304746] (-) TimerEvent: {}
+[3.405100] (-) TimerEvent: {}
+[3.459420] (control_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.491877] (control_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.494700] (control_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.505214] (-) TimerEvent: {}
+[3.531067] (control_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.531997] (control_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.532162] (control_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.532285] (control_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.570549] (control_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.605334] (-) TimerEvent: {}
+[3.714004] (-) TimerEvent: {}
+[3.773601] (control_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[3.777850] (control_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.780695] (control_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.788891] (control_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.795289] (realtime_tools) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX shared library librealtime_tools.so\x1b[0m\n'}
+[3.814108] (-) TimerEvent: {}
+[3.914561] (-) TimerEvent: {}
+[3.921961] (control_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[3.927167] (realtime_tools) StdoutLine: {'line': b'[ 33%] Built target realtime_tools\n'}
+[3.927537] (control_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/joas329/Desktop/rover_simulation/build/control_msgs\n'}
+[3.942515] (control_msgs) CommandEnded: {'returncode': 0}
+[3.943500] (control_msgs) JobProgress: {'identifier': 'control_msgs', 'progress': 'build'}
+[3.944445] (control_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joas329/Desktop/rover_simulation/build/control_msgs', '--', '-j8', '-l8'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/control_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1754'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VJS681'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/control_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot')]), 'shell': False}
+[4.000698] (control_msgs) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.010991] (control_msgs) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.014664] (-) TimerEvent: {}
+[4.019924] (control_msgs) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_control_msgs\n'}
+[4.114764] (-) TimerEvent: {}
+[4.215234] (-) TimerEvent: {}
+[4.315752] (-) TimerEvent: {}
+[4.416265] (-) TimerEvent: {}
+[4.516793] (-) TimerEvent: {}
+[4.523630] (control_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[4.524550] (control_msgs) StdoutLine: {'line': b'creating control_msgs.egg-info\n'}
+[4.524961] (control_msgs) StdoutLine: {'line': b'writing control_msgs.egg-info/PKG-INFO\n'}
+[4.525264] (control_msgs) StdoutLine: {'line': b'writing dependency_links to control_msgs.egg-info/dependency_links.txt\n'}
+[4.525606] (control_msgs) StdoutLine: {'line': b'writing top-level names to control_msgs.egg-info/top_level.txt\n'}
+[4.526079] (control_msgs) StdoutLine: {'line': b"writing manifest file 'control_msgs.egg-info/SOURCES.txt'\n"}
+[4.529664] (control_msgs) StdoutLine: {'line': b"reading manifest file 'control_msgs.egg-info/SOURCES.txt'\n"}
+[4.532716] (control_msgs) StdoutLine: {'line': b"writing manifest file 'control_msgs.egg-info/SOURCES.txt'\n"}
+[4.554483] (realtime_tools) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX static library libgmock_main.a\x1b[0m\n'}
+[4.577008] (control_msgs) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_build_control_msgs_egg\n'}
+[4.607154] (realtime_tools) StdoutLine: {'line': b'[ 38%] Built target gmock_main\n'}
+[4.616894] (-) TimerEvent: {}
+[4.717222] (-) TimerEvent: {}
+[4.817546] (-) TimerEvent: {}
+[4.917850] (-) TimerEvent: {}
+[5.018172] (-) TimerEvent: {}
+[5.118483] (-) TimerEvent: {}
+[5.219287] (-) TimerEvent: {}
+[5.319605] (-) TimerEvent: {}
+[5.419931] (-) TimerEvent: {}
+[5.520252] (-) TimerEvent: {}
+[5.620597] (-) TimerEvent: {}
+[5.720922] (-) TimerEvent: {}
+[5.821252] (-) TimerEvent: {}
+[5.921578] (-) TimerEvent: {}
+[6.021904] (-) TimerEvent: {}
+[6.122276] (-) TimerEvent: {}
+[6.222594] (-) TimerEvent: {}
+[6.322919] (-) TimerEvent: {}
+[6.423226] (-) TimerEvent: {}
+[6.446558] (realtime_tools) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX static library libgmock.a\x1b[0m\n'}
+[6.523321] (-) TimerEvent: {}
+[6.526422] (realtime_tools) StdoutLine: {'line': b'[ 42%] Built target gmock\n'}
+[6.560648] (realtime_tools) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/realtime_clock_tests.dir/test/realtime_clock_tests.cpp.o\x1b[0m\n'}
+[6.561045] (realtime_tools) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/realtime_buffer_tests.dir/test/realtime_buffer_tests.cpp.o\x1b[0m\n'}
+[6.561380] (realtime_tools) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/realtime_server_goal_handle_tests.dir/test/realtime_server_goal_handle_tests.cpp.o\x1b[0m\n'}
+[6.564063] (realtime_tools) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/realtime_publisher_tests.dir/test/realtime_publisher_tests.cpp.o\x1b[0m\n'}
+[6.564346] (realtime_tools) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/realtime_box_tests.dir/test/realtime_box_tests.cpp.o\x1b[0m\n'}
+[6.564860] (realtime_tools) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/realtime_publisher_tests_non_polling.dir/test/realtime_publisher_tests_non_polling.cpp.o\x1b[0m\n'}
+[6.623430] (-) TimerEvent: {}
+[6.723829] (-) TimerEvent: {}
+[6.824206] (-) TimerEvent: {}
+[6.924861] (-) TimerEvent: {}
+[7.025393] (-) TimerEvent: {}
+[7.125942] (-) TimerEvent: {}
+[7.226446] (-) TimerEvent: {}
+[7.326964] (-) TimerEvent: {}
+[7.427479] (-) TimerEvent: {}
+[7.528008] (-) TimerEvent: {}
+[7.628510] (-) TimerEvent: {}
+[7.729043] (-) TimerEvent: {}
+[7.829549] (-) TimerEvent: {}
+[7.930071] (-) TimerEvent: {}
+[8.030619] (-) TimerEvent: {}
+[8.131171] (-) TimerEvent: {}
+[8.231723] (-) TimerEvent: {}
+[8.332287] (-) TimerEvent: {}
+[8.432860] (-) TimerEvent: {}
+[8.533512] (-) TimerEvent: {}
+[8.634147] (-) TimerEvent: {}
+[8.734820] (-) TimerEvent: {}
+[8.835492] (-) TimerEvent: {}
+[8.867112] (control_msgs) StdoutLine: {'line': b'[  0%] Built target control_msgs__cpp\n'}
+[8.898640] (control_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.912082] (control_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.935597] (-) TimerEvent: {}
+[8.936100] (control_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[9.035706] (-) TimerEvent: {}
+[9.136325] (-) TimerEvent: {}
+[9.236875] (-) TimerEvent: {}
+[9.337716] (-) TimerEvent: {}
+[9.438237] (-) TimerEvent: {}
+[9.538773] (-) TimerEvent: {}
+[9.594171] (realtime_tools) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX executable realtime_box_tests\x1b[0m\n'}
+[9.618391] (control_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/follow_joint_trajectory__functions.c.o\x1b[0m\n'}
+[9.638892] (-) TimerEvent: {}
+[9.647961] (control_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/gripper_command__functions.c.o\x1b[0m\n'}
+[9.650153] (control_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/joint_trajectory__functions.c.o\x1b[0m\n'}
+[9.659622] (control_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/point_head__functions.c.o\x1b[0m\n'}
+[9.671482] (control_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/action/detail/single_joint_position__functions.c.o\x1b[0m\n'}
+[9.739004] (-) TimerEvent: {}
+[9.839876] (-) TimerEvent: {}
+[9.940604] (-) TimerEvent: {}
+[10.041331] (-) TimerEvent: {}
+[10.075345] (control_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/admittance_controller_state__functions.c.o\x1b[0m\n'}
+[10.141641] (-) TimerEvent: {}
+[10.204063] (realtime_tools) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX executable realtime_buffer_tests\x1b[0m\n'}
+[10.218096] (realtime_tools) StdoutLine: {'line': b'[ 80%] Built target realtime_box_tests\n'}
+[10.234973] (control_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/dynamic_joint_state__functions.c.o\x1b[0m\n'}
+[10.243235] (-) TimerEvent: {}
+[10.266998] (control_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/gripper_command__functions.c.o\x1b[0m\n'}
+[10.294042] (control_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/interface_value__functions.c.o\x1b[0m\n'}
+[10.343952] (-) TimerEvent: {}
+[10.381036] (control_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_component_tolerance__functions.c.o\x1b[0m\n'}
+[10.384838] (control_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_controller_state__functions.c.o\x1b[0m\n'}
+[10.407184] (realtime_tools) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable realtime_clock_tests\x1b[0m\n'}
+[10.421861] (control_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_jog__functions.c.o\x1b[0m\n'}
+[10.444077] (-) TimerEvent: {}
+[10.470055] (control_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_tolerance__functions.c.o\x1b[0m\n'}
+[10.544200] (-) TimerEvent: {}
+[10.601279] (control_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/joint_trajectory_controller_state__functions.c.o\x1b[0m\n'}
+[10.628694] (control_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/steering_controller_status__functions.c.o\x1b[0m\n'}
+[10.634701] (control_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/mecanum_drive_controller_state__functions.c.o\x1b[0m\n'}
+[10.644315] (-) TimerEvent: {}
+[10.658386] (control_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/msg/detail/pid_state__functions.c.o\x1b[0m\n'}
+[10.744418] (-) TimerEvent: {}
+[10.756223] (control_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/srv/detail/query_calibration_state__functions.c.o\x1b[0m\n'}
+[10.839255] (control_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_generator_c.dir/rosidl_generator_c/control_msgs/srv/detail/query_trajectory_state__functions.c.o\x1b[0m\n'}
+[10.844526] (-) TimerEvent: {}
+[10.900335] (realtime_tools) StdoutLine: {'line': b'[ 85%] Built target realtime_buffer_tests\n'}
+[10.944626] (-) TimerEvent: {}
+[11.000295] (control_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32m\x1b[1mLinking C shared library libcontrol_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[11.044729] (-) TimerEvent: {}
+[11.101282] (control_msgs) StdoutLine: {'line': b'[ 14%] Built target control_msgs__rosidl_generator_c\n'}
+[11.125076] (control_msgs) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[11.144826] (-) TimerEvent: {}
+[11.153753] (control_msgs) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[11.162204] (control_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[11.244928] (-) TimerEvent: {}
+[11.350006] (-) TimerEvent: {}
+[11.450347] (-) TimerEvent: {}
+[11.469974] (realtime_tools) StdoutLine: {'line': b'[ 85%] Built target realtime_clock_tests\n'}
+[11.550445] (-) TimerEvent: {}
+[11.650777] (-) TimerEvent: {}
+[11.751127] (-) TimerEvent: {}
+[11.851449] (-) TimerEvent: {}
+[11.951789] (-) TimerEvent: {}
+[12.052138] (-) TimerEvent: {}
+[12.152488] (-) TimerEvent: {}
+[12.254374] (-) TimerEvent: {}
+[12.354756] (-) TimerEvent: {}
+[12.455302] (-) TimerEvent: {}
+[12.555795] (-) TimerEvent: {}
+[12.656293] (-) TimerEvent: {}
+[12.756800] (-) TimerEvent: {}
+[12.792723] (realtime_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/test/realtime_server_goal_handle_tests.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_action::ClientGoalHandle<test_msgs::action::Fibonacci> > send_goal(rclcpp::Node::SharedPtr, std::shared_ptr<rclcpp_action::Client<test_msgs::action::Fibonacci> >, const string&, ActionClientCallbacks&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.793857] (realtime_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/test/realtime_server_goal_handle_tests.cpp:127:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kserver_name\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.794748] (realtime_tools) StderrLine: {'line': b'  127 |   \x1b[01;35m\x1b[Kconst std::string & server_name\x1b[m\x1b[K, ActionClientCallbacks & client_callbacks)\n'}
+[12.795585] (realtime_tools) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.856902] (-) TimerEvent: {}
+[12.957746] (-) TimerEvent: {}
+[13.058247] (-) TimerEvent: {}
+[13.158731] (-) TimerEvent: {}
+[13.259227] (-) TimerEvent: {}
+[13.359711] (-) TimerEvent: {}
+[13.460210] (-) TimerEvent: {}
+[13.543981] (realtime_tools) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gmock_vendor/include/gmock/internal/gmock-internal-utils.h:47\x1b[m\x1b[K,\n'}
+[13.544938] (realtime_tools) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/src/gmock_vendor/include/gmock/gmock-actions.h:51\x1b[m\x1b[K,\n'}
+[13.545787] (realtime_tools) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/src/gmock_vendor/include/gmock/gmock.h:59\x1b[m\x1b[K,\n'}
+[13.546642] (realtime_tools) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/test/realtime_server_goal_handle_tests.cpp:29\x1b[m\x1b[K:\n'}
+[13.547463] (realtime_tools) StderrLine: {'line': b'/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Ktesting::AssertionResult testing::internal::CmpHelperEQ(const char*, const char*, const T1&, const T2&) [with T1 = int; T2 = long unsigned int]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[13.548291] (realtime_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:1554:23:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstatic testing::AssertionResult testing::internal::EqHelper::Compare(const char*, const char*, const T1&, const T2&) [with T1 = int; T2 = long unsigned int; typename std::enable_if<((! std::is_integral<_Tp>::value) || (! std::is_pointer<_Dp>::value))>::type* <anonymous> = 0]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[13.549139] (realtime_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/test/realtime_server_goal_handle_tests.cpp:203:3:\x1b[m\x1b[K   required from here\n'}
+[13.549967] (realtime_tools) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:1527:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst long unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[13.550815] (realtime_tools) StderrLine: {'line': b' 1527 |   if (\x1b[01;35m\x1b[Klhs == rhs\x1b[m\x1b[K) {\n'}
+[13.551624] (realtime_tools) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~^~~~~~\x1b[m\x1b[K\n'}
+[13.560309] (-) TimerEvent: {}
+[13.660853] (-) TimerEvent: {}
+[13.761401] (-) TimerEvent: {}
+[13.861972] (-) TimerEvent: {}
+[13.962571] (-) TimerEvent: {}
+[14.063237] (-) TimerEvent: {}
+[14.163827] (-) TimerEvent: {}
+[14.264473] (-) TimerEvent: {}
+[14.365066] (-) TimerEvent: {}
+[14.465651] (-) TimerEvent: {}
+[14.566227] (-) TimerEvent: {}
+[14.666661] (-) TimerEvent: {}
+[14.767373] (-) TimerEvent: {}
+[14.867984] (-) TimerEvent: {}
+[14.968567] (-) TimerEvent: {}
+[15.069161] (-) TimerEvent: {}
+[15.136172] (control_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/follow_joint_trajectory__type_support.cpp.o\x1b[0m\n'}
+[15.158413] (control_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/gripper_command__type_support.cpp.o\x1b[0m\n'}
+[15.169262] (-) TimerEvent: {}
+[15.197273] (control_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/joint_trajectory__type_support.cpp.o\x1b[0m\n'}
+[15.269367] (-) TimerEvent: {}
+[15.369705] (-) TimerEvent: {}
+[15.470064] (-) TimerEvent: {}
+[15.570414] (-) TimerEvent: {}
+[15.670759] (-) TimerEvent: {}
+[15.720647] (control_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/follow_joint_trajectory__type_support.cpp.o\x1b[0m\n'}
+[15.770863] (-) TimerEvent: {}
+[15.871451] (-) TimerEvent: {}
+[15.972107] (-) TimerEvent: {}
+[16.072697] (-) TimerEvent: {}
+[16.173293] (-) TimerEvent: {}
+[16.253677] (control_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/point_head__type_support.cpp.o\x1b[0m\n'}
+[16.273397] (-) TimerEvent: {}
+[16.373978] (-) TimerEvent: {}
+[16.474383] (-) TimerEvent: {}
+[16.574986] (-) TimerEvent: {}
+[16.675585] (-) TimerEvent: {}
+[16.776253] (-) TimerEvent: {}
+[16.809025] (control_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/action/single_joint_position__type_support.cpp.o\x1b[0m\n'}
+[16.876359] (-) TimerEvent: {}
+[16.972810] (control_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/admittance_controller_state__type_support.cpp.o\x1b[0m\n'}
+[16.978306] (-) TimerEvent: {}
+[17.078941] (-) TimerEvent: {}
+[17.179683] (-) TimerEvent: {}
+[17.280291] (-) TimerEvent: {}
+[17.380905] (-) TimerEvent: {}
+[17.481405] (-) TimerEvent: {}
+[17.582090] (-) TimerEvent: {}
+[17.615668] (control_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/follow_joint_trajectory__type_support.cpp.o\x1b[0m\n'}
+[17.661201] (control_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/dynamic_joint_state__type_support.cpp.o\x1b[0m\n'}
+[17.682192] (-) TimerEvent: {}
+[17.770551] (control_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/gripper_command__type_support.cpp.o\x1b[0m\n'}
+[17.782300] (-) TimerEvent: {}
+[17.784910] (control_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/gripper_command__type_support.cpp.o\x1b[0m\n'}
+[17.882407] (-) TimerEvent: {}
+[17.921890] (control_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/follow_joint_trajectory__type_support.cpp.o\x1b[0m\n'}
+[17.975049] (control_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/joint_trajectory__type_support.cpp.o\x1b[0m\n'}
+[17.982518] (-) TimerEvent: {}
+[18.070546] (control_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/point_head__type_support.cpp.o\x1b[0m\n'}
+[18.082617] (-) TimerEvent: {}
+[18.130938] (control_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/action/single_joint_position__type_support.cpp.o\x1b[0m\n'}
+[18.155574] (realtime_tools) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable realtime_server_goal_handle_tests\x1b[0m\n'}
+[18.182730] (-) TimerEvent: {}
+[18.267655] (control_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/interface_value__type_support.cpp.o\x1b[0m\n'}
+[18.269966] (control_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/admittance_controller_state__type_support.cpp.o\x1b[0m\n'}
+[18.279757] (control_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/gripper_command__type_support.cpp.o\x1b[0m\n'}
+[18.282845] (-) TimerEvent: {}
+[18.369079] (control_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/follow_joint_trajectory__type_support.c.o\x1b[0m\n'}
+[18.373784] (control_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/dynamic_joint_state__type_support.cpp.o\x1b[0m\n'}
+[18.382959] (-) TimerEvent: {}
+[18.452558] (control_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/gripper_command__type_support.c.o\x1b[0m\n'}
+[18.483070] (-) TimerEvent: {}
+[18.486084] (control_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/joint_trajectory__type_support.c.o\x1b[0m\n'}
+[18.502013] (control_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/gripper_command__type_support.cpp.o\x1b[0m\n'}
+[18.557648] (control_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/interface_value__type_support.cpp.o\x1b[0m\n'}
+[18.583182] (-) TimerEvent: {}
+[18.601099] (control_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_component_tolerance__type_support.cpp.o\x1b[0m\n'}
+[18.623411] (control_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_component_tolerance__type_support.cpp.o\x1b[0m\n'}
+[18.651379] (control_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/gripper_command__type_support.cpp.o\x1b[0m\n'}
+[18.673188] (control_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/point_head__type_support.c.o\x1b[0m\n'}
+[18.683293] (-) TimerEvent: {}
+[18.776542] (control_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_controller_state__type_support.cpp.o\x1b[0m\n'}
+[18.783398] (-) TimerEvent: {}
+[18.883926] (-) TimerEvent: {}
+[18.950413] (control_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/action/detail/single_joint_position__type_support.c.o\x1b[0m\n'}
+[18.963962] (control_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_jog__type_support.cpp.o\x1b[0m\n'}
+[19.000822] (-) TimerEvent: {}
+[19.106745] (-) TimerEvent: {}
+[19.150329] (control_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_tolerance__type_support.cpp.o\x1b[0m\n'}
+[19.190091] (control_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/admittance_controller_state__type_support.c.o\x1b[0m\n'}
+[19.199626] (control_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_controller_state__type_support.cpp.o\x1b[0m\n'}
+[19.205121] (realtime_tools) StdoutLine: {'line': b'[ 90%] Built target realtime_server_goal_handle_tests\n'}
+[19.206877] (-) TimerEvent: {}
+[19.251140] (control_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/joint_trajectory__type_support.cpp.o\x1b[0m\n'}
+[19.267742] (control_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/joint_trajectory_controller_state__type_support.cpp.o\x1b[0m\n'}
+[19.306975] (-) TimerEvent: {}
+[19.340486] (control_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/dynamic_joint_state__type_support.c.o\x1b[0m\n'}
+[19.407088] (-) TimerEvent: {}
+[19.423412] (control_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/mecanum_drive_controller_state__type_support.cpp.o\x1b[0m\n'}
+[19.507196] (-) TimerEvent: {}
+[19.517832] (control_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/gripper_command__type_support.c.o\x1b[0m\n'}
+[19.530221] (control_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/pid_state__type_support.cpp.o\x1b[0m\n'}
+[19.607315] (-) TimerEvent: {}
+[19.629537] (control_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/msg/steering_controller_status__type_support.cpp.o\x1b[0m\n'}
+[19.707424] (-) TimerEvent: {}
+[19.708154] (control_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/interface_value__type_support.c.o\x1b[0m\n'}
+[19.753384] (control_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/srv/query_calibration_state__type_support.cpp.o\x1b[0m\n'}
+[19.809463] (-) TimerEvent: {}
+[19.871026] (control_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_component_tolerance__type_support.c.o\x1b[0m\n'}
+[19.909578] (-) TimerEvent: {}
+[19.944199] (control_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_controller_state__type_support.c.o\x1b[0m\n'}
+[19.981731] (control_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/point_head__type_support.cpp.o\x1b[0m\n'}
+[20.008148] (control_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/joint_trajectory__type_support.cpp.o\x1b[0m\n'}
+[20.010155] (-) TimerEvent: {}
+[20.052058] (control_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_jog__type_support.c.o\x1b[0m\n'}
+[20.053377] (control_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_msgs/srv/query_trajectory_state__type_support.cpp.o\x1b[0m\n'}
+[20.072228] (control_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_jog__type_support.cpp.o\x1b[0m\n'}
+[20.110268] (-) TimerEvent: {}
+[20.165588] (control_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_tolerance__type_support.cpp.o\x1b[0m\n'}
+[20.175749] (control_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[20.210384] (-) TimerEvent: {}
+[20.258319] (control_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_tolerance__type_support.c.o\x1b[0m\n'}
+[20.310498] (-) TimerEvent: {}
+[20.332120] (control_msgs) StdoutLine: {'line': b'[ 46%] Built target control_msgs__rosidl_typesupport_c\n'}
+[20.361432] (control_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/joint_trajectory_controller_state__type_support.c.o\x1b[0m\n'}
+[20.378503] (control_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/mecanum_drive_controller_state__type_support.c.o\x1b[0m\n'}
+[20.410612] (-) TimerEvent: {}
+[20.511223] (-) TimerEvent: {}
+[20.516802] (control_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/follow_joint_trajectory__type_support_c.cpp.o\x1b[0m\n'}
+[20.530494] (control_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/pid_state__type_support.c.o\x1b[0m\n'}
+[20.542214] (control_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/point_head__type_support.cpp.o\x1b[0m\n'}
+[20.611332] (-) TimerEvent: {}
+[20.629761] (control_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/msg/detail/steering_controller_status__type_support.c.o\x1b[0m\n'}
+[20.654816] (control_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/joint_trajectory_controller_state__type_support.cpp.o\x1b[0m\n'}
+[20.711442] (-) TimerEvent: {}
+[20.784906] (control_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/srv/detail/query_calibration_state__type_support.c.o\x1b[0m\n'}
+[20.794739] (control_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/gripper_command__type_support_c.cpp.o\x1b[0m\n'}
+[20.811600] (-) TimerEvent: {}
+[20.889481] (control_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding C object CMakeFiles/control_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_msgs/srv/detail/query_trajectory_state__type_support.c.o\x1b[0m\n'}
+[20.907834] (control_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/action/detail/dds_fastrtps/single_joint_position__type_support.cpp.o\x1b[0m\n'}
+[20.912438] (-) TimerEvent: {}
+[21.013909] (-) TimerEvent: {}
+[21.067178] (control_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking C shared library libcontrol_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[21.113985] (-) TimerEvent: {}
+[21.214743] (-) TimerEvent: {}
+[21.315336] (-) TimerEvent: {}
+[21.317861] (control_msgs) StdoutLine: {'line': b'[ 53%] Built target control_msgs__rosidl_typesupport_introspection_c\n'}
+[21.372004] (control_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/admittance_controller_state__type_support.cpp.o\x1b[0m\n'}
+[21.415451] (-) TimerEvent: {}
+[21.448343] (control_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/mecanum_drive_controller_state__type_support.cpp.o\x1b[0m\n'}
+[21.515561] (-) TimerEvent: {}
+[21.536043] (control_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/pid_state__type_support.cpp.o\x1b[0m\n'}
+[21.615667] (-) TimerEvent: {}
+[21.717571] (-) TimerEvent: {}
+[21.833992] (-) TimerEvent: {}
+[21.934514] (-) TimerEvent: {}
+[22.001749] (control_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/action/detail/single_joint_position__type_support.cpp.o\x1b[0m\n'}
+[22.025195] (control_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/admittance_controller_state__type_support.cpp.o\x1b[0m\n'}
+[22.034621] (-) TimerEvent: {}
+[22.055662] (control_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/dynamic_joint_state__type_support.cpp.o\x1b[0m\n'}
+[22.062855] (control_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/joint_trajectory__type_support_c.cpp.o\x1b[0m\n'}
+[22.134724] (-) TimerEvent: {}
+[22.161674] (control_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/msg/steering_controller_status__type_support.cpp.o\x1b[0m\n'}
+[22.210716] (control_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/gripper_command__type_support.cpp.o\x1b[0m\n'}
+[22.234831] (-) TimerEvent: {}
+[22.335193] (-) TimerEvent: {}
+[22.422206] (control_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/point_head__type_support_c.cpp.o\x1b[0m\n'}
+[22.435302] (-) TimerEvent: {}
+[22.535779] (-) TimerEvent: {}
+[22.636156] (-) TimerEvent: {}
+[22.736525] (-) TimerEvent: {}
+[22.836875] (-) TimerEvent: {}
+[22.929833] (control_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/action/detail/single_joint_position__type_support_c.cpp.o\x1b[0m\n'}
+[22.936985] (-) TimerEvent: {}
+[22.989152] (control_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/dynamic_joint_state__type_support.cpp.o\x1b[0m\n'}
+[23.037095] (-) TimerEvent: {}
+[23.130668] (control_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/srv/query_calibration_state__type_support.cpp.o\x1b[0m\n'}
+[23.137210] (-) TimerEvent: {}
+[23.237761] (-) TimerEvent: {}
+[23.258062] (control_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_msgs/srv/query_trajectory_state__type_support.cpp.o\x1b[0m\n'}
+[23.337893] (-) TimerEvent: {}
+[23.438433] (-) TimerEvent: {}
+[23.450863] (control_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/admittance_controller_state__type_support_c.cpp.o\x1b[0m\n'}
+[23.486117] (control_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/interface_value__type_support.cpp.o\x1b[0m\n'}
+[23.538537] (-) TimerEvent: {}
+[23.544987] (control_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/gripper_command__type_support.cpp.o\x1b[0m\n'}
+[23.638643] (-) TimerEvent: {}
+[23.702163] (control_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/dynamic_joint_state__type_support_c.cpp.o\x1b[0m\n'}
+[23.738754] (-) TimerEvent: {}
+[23.754339] (control_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_component_tolerance__type_support.cpp.o\x1b[0m\n'}
+[23.838865] (-) TimerEvent: {}
+[23.939480] (-) TimerEvent: {}
+[24.006066] (control_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/gripper_command__type_support_c.cpp.o\x1b[0m\n'}
+[24.039595] (-) TimerEvent: {}
+[24.140143] (-) TimerEvent: {}
+[24.194191] (control_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[24.240259] (-) TimerEvent: {}
+[24.340782] (-) TimerEvent: {}
+[24.390376] (control_msgs) StdoutLine: {'line': b'[ 65%] Built target control_msgs__rosidl_typesupport_cpp\n'}
+[24.438864] (control_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/interface_value__type_support_c.cpp.o\x1b[0m\n'}
+[24.440877] (-) TimerEvent: {}
+[24.517310] (control_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_component_tolerance__type_support_c.cpp.o\x1b[0m\n'}
+[24.518990] (control_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_controller_state__type_support_c.cpp.o\x1b[0m\n'}
+[24.535604] (control_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_jog__type_support_c.cpp.o\x1b[0m\n'}
+[24.540999] (-) TimerEvent: {}
+[24.543004] (control_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/interface_value__type_support.cpp.o\x1b[0m\n'}
+[24.606431] (control_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_controller_state__type_support.cpp.o\x1b[0m\n'}
+[24.641118] (-) TimerEvent: {}
+[24.698054] (control_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_tolerance__type_support_c.cpp.o\x1b[0m\n'}
+[24.741224] (-) TimerEvent: {}
+[24.841823] (-) TimerEvent: {}
+[24.848191] (control_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_component_tolerance__type_support.cpp.o\x1b[0m\n'}
+[24.941944] (-) TimerEvent: {}
+[25.042551] (-) TimerEvent: {}
+[25.143178] (-) TimerEvent: {}
+[25.226408] (control_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/joint_trajectory_controller_state__type_support_c.cpp.o\x1b[0m\n'}
+[25.243298] (-) TimerEvent: {}
+[25.343854] (-) TimerEvent: {}
+[25.444460] (-) TimerEvent: {}
+[25.545058] (-) TimerEvent: {}
+[25.561364] (realtime_tools) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable realtime_publisher_tests_non_polling\x1b[0m\n'}
+[25.645169] (-) TimerEvent: {}
+[25.681348] (control_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/mecanum_drive_controller_state__type_support_c.cpp.o\x1b[0m\n'}
+[25.690863] (control_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_jog__type_support.cpp.o\x1b[0m\n'}
+[25.696235] (control_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/pid_state__type_support_c.cpp.o\x1b[0m\n'}
+[25.745282] (-) TimerEvent: {}
+[25.746075] (control_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_controller_state__type_support.cpp.o\x1b[0m\n'}
+[25.757199] (control_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/msg/detail/steering_controller_status__type_support_c.cpp.o\x1b[0m\n'}
+[25.845426] (-) TimerEvent: {}
+[25.862647] (control_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_jog__type_support.cpp.o\x1b[0m\n'}
+[25.945548] (-) TimerEvent: {}
+[26.010010] (control_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/srv/detail/query_calibration_state__type_support_c.cpp.o\x1b[0m\n'}
+[26.045675] (-) TimerEvent: {}
+[26.146275] (-) TimerEvent: {}
+[26.229761] (control_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_tolerance__type_support.cpp.o\x1b[0m\n'}
+[26.246390] (-) TimerEvent: {}
+[26.347075] (-) TimerEvent: {}
+[26.447699] (-) TimerEvent: {}
+[26.489786] (control_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_msgs/srv/detail/query_trajectory_state__type_support_c.cpp.o\x1b[0m\n'}
+[26.547810] (-) TimerEvent: {}
+[26.648344] (-) TimerEvent: {}
+[26.746727] (control_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/joint_trajectory_controller_state__type_support.cpp.o\x1b[0m\n'}
+[26.749648] (-) TimerEvent: {}
+[26.851818] (-) TimerEvent: {}
+[26.952206] (-) TimerEvent: {}
+[26.996713] (control_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/mecanum_drive_controller_state__type_support.cpp.o\x1b[0m\n'}
+[27.043819] (control_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/pid_state__type_support.cpp.o\x1b[0m\n'}
+[27.052313] (-) TimerEvent: {}
+[27.064545] (realtime_tools) StdoutLine: {'line': b'[ 95%] Built target realtime_publisher_tests_non_polling\n'}
+[27.114666] (control_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/msg/detail/dds_fastrtps/steering_controller_status__type_support.cpp.o\x1b[0m\n'}
+[27.152418] (-) TimerEvent: {}
+[27.214081] (control_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/srv/detail/dds_fastrtps/query_calibration_state__type_support.cpp.o\x1b[0m\n'}
+[27.214348] (control_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_tolerance__type_support.cpp.o\x1b[0m\n'}
+[27.252530] (-) TimerEvent: {}
+[27.290456] (control_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[27.352677] (-) TimerEvent: {}
+[27.453251] (-) TimerEvent: {}
+[27.456213] (control_msgs) StdoutLine: {'line': b'[ 79%] Built target control_msgs__rosidl_typesupport_fastrtps_c\n'}
+[27.470384] (control_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/joint_trajectory_controller_state__type_support.cpp.o\x1b[0m\n'}
+[27.553360] (-) TimerEvent: {}
+[27.653927] (-) TimerEvent: {}
+[27.708928] (control_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_msgs/srv/detail/dds_fastrtps/query_trajectory_state__type_support.cpp.o\x1b[0m\n'}
+[27.753999] (-) TimerEvent: {}
+[27.794844] (control_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/mecanum_drive_controller_state__type_support.cpp.o\x1b[0m\n'}
+[27.854114] (-) TimerEvent: {}
+[27.954773] (-) TimerEvent: {}
+[27.973868] (control_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/pid_state__type_support.cpp.o\x1b[0m\n'}
+[28.054889] (-) TimerEvent: {}
+[28.113602] (control_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/msg/detail/steering_controller_status__type_support.cpp.o\x1b[0m\n'}
+[28.154096] (control_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/srv/detail/query_calibration_state__type_support.cpp.o\x1b[0m\n'}
+[28.154969] (-) TimerEvent: {}
+[28.224726] (control_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/control_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_msgs/srv/detail/query_trajectory_state__type_support.cpp.o\x1b[0m\n'}
+[28.255089] (-) TimerEvent: {}
+[28.300161] (realtime_tools) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable realtime_publisher_tests\x1b[0m\n'}
+[28.355199] (-) TimerEvent: {}
+[28.455792] (-) TimerEvent: {}
+[28.556380] (-) TimerEvent: {}
+[28.656962] (-) TimerEvent: {}
+[28.757534] (-) TimerEvent: {}
+[28.857433] (control_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[28.858191] (-) TimerEvent: {}
+[28.958476] (-) TimerEvent: {}
+[29.036948] (control_msgs) StdoutLine: {'line': b'[ 83%] Built target control_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[29.058612] (-) TimerEvent: {}
+[29.133173] (control_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX shared library libcontrol_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[29.158745] (-) TimerEvent: {}
+[29.207601] (realtime_tools) StdoutLine: {'line': b'[100%] Built target realtime_publisher_tests\n'}
+[29.221684] (realtime_tools) CommandEnded: {'returncode': 0}
+[29.258871] (-) TimerEvent: {}
+[29.267115] (control_msgs) StdoutLine: {'line': b'[ 84%] Built target control_msgs__rosidl_typesupport_introspection_cpp\n'}
+[29.282713] (control_msgs) StderrLine: {'line': b"gmake[2]: *** No rule to make target '/home/joas329/Desktop/rover_simulation/src/ros-controls/control_msgs/control_msgs/action/FollowJointTrajectory.action', needed by 'CMakeFiles/control_msgs'.  Stop.\n"}
+[29.283154] (control_msgs) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:187: CMakeFiles/control_msgs.dir/all] Error 2\n'}
+[29.283340] (control_msgs) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[29.285834] (control_msgs) CommandEnded: {'returncode': 2}
+[29.290151] (realtime_tools) JobProgress: {'identifier': 'realtime_tools', 'progress': 'install'}
+[29.291085] (realtime_tools) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joas329/Desktop/rover_simulation/build/realtime_tools'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/realtime_tools', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/joas329/Desktop/rover_simulation/install/realtime_tools/lib:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/home/joas329/Desktop/rover_simulation/install/control_msgs/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1754'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joas329/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1713,unix/Morpheus:/tmp/.ICE-unix/1713'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/34374433_b954_4b03_bf0f_88f57e17418b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VJS681'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/realtime_tools'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/home/joas329/Desktop/rover_simulation/install/control_msgs/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/realtime_tools:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/control_msgs:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot')]), 'shell': False}
+[29.300886] (realtime_tools) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.301234] (realtime_tools) StderrLine: {'line': b'\x1b[31mCMake Error at cmake_install.cmake:56 (file):\n'}
+[29.301392] (realtime_tools) StderrLine: {'line': b'  file INSTALL cannot find\n'}
+[29.301528] (realtime_tools) StderrLine: {'line': b'  "/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/include":\n'}
+[29.301662] (realtime_tools) StderrLine: {'line': b'  No such file or directory.\n'}
+[29.301788] (realtime_tools) StderrLine: {'line': b'\n'}
+[29.301924] (realtime_tools) StderrLine: {'line': b'\x1b[0m\n'}
+[29.302957] (realtime_tools) CommandEnded: {'returncode': 1}
+[29.359019] (-) TimerEvent: {}
+[29.386422] (realtime_tools) JobEnded: {'identifier': 'realtime_tools', 'rc': 1}
+[29.459127] (-) TimerEvent: {}
+[29.559490] (-) TimerEvent: {}
+[29.659800] (-) TimerEvent: {}
+[29.760094] (-) TimerEvent: {}
+[29.801193] (control_msgs) JobEnded: {'identifier': 'control_msgs', 'rc': 'SIGINT'}
+[29.811953] (-) EventReactorShutdown: {}

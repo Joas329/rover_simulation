@@ -1,0 +1,20 @@
+[01m[K/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/test/realtime_server_goal_handle_tests.cpp:[m[K In function ‘[01m[Kstd::shared_ptr<rclcpp_action::ClientGoalHandle<test_msgs::action::Fibonacci> > send_goal(rclcpp::Node::SharedPtr, std::shared_ptr<rclcpp_action::Client<test_msgs::action::Fibonacci> >, const string&, ActionClientCallbacks&)[m[K’:
+[01m[K/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/test/realtime_server_goal_handle_tests.cpp:127:23:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kserver_name[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  127 |   [01;35m[Kconst std::string & server_name[m[K, ActionClientCallbacks & client_callbacks)
+      |   [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/src/gmock_vendor/include/gmock/internal/gmock-internal-utils.h:47[m[K,
+                 from [01m[K/opt/ros/humble/src/gmock_vendor/include/gmock/gmock-actions.h:51[m[K,
+                 from [01m[K/opt/ros/humble/src/gmock_vendor/include/gmock/gmock.h:59[m[K,
+                 from [01m[K/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/test/realtime_server_goal_handle_tests.cpp:29[m[K:
+/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h: In instantiation of ‘[01m[Ktesting::AssertionResult testing::internal::CmpHelperEQ(const char*, const char*, const T1&, const T2&) [with T1 = int; T2 = long unsigned int][m[K’:
+[01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:1554:23:[m[K   required from ‘[01m[Kstatic testing::AssertionResult testing::internal::EqHelper::Compare(const char*, const char*, const T1&, const T2&) [with T1 = int; T2 = long unsigned int; typename std::enable_if<((! std::is_integral<_Tp>::value) || (! std::is_pointer<_Dp>::value))>::type* <anonymous> = 0][m[K’
+[01m[K/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/test/realtime_server_goal_handle_tests.cpp:203:3:[m[K   required from here
+[01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:1527:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kconst int[m[K’ and ‘[01m[Kconst long unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+ 1527 |   if ([01;35m[Klhs == rhs[m[K) {
+      |       [01;35m[K~~~~^~~~~~[m[K
+[31mCMake Error at cmake_install.cmake:56 (file):
+  file INSTALL cannot find
+  "/home/joas329/Desktop/rover_simulation/src/ros-controls/realtime_tools/include":
+  No such file or directory.
+
+[0m

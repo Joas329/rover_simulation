@@ -1,4 +1,4 @@
-planning_plugin: chomp_interface/CHOMPPlanner
+planning_plugin: ompl_interface/OMPLPlanner
 request_adapters: >-
   default_planner_request_adapters/AddTimeOptimalParameterization
   default_planner_request_adapters/FixWorkspaceBounds

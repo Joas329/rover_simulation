@@ -10,6 +10,7 @@ from launch.actions import ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from ament_index_python.packages import get_package_share_directory
 from moveit_configs_utils import MoveItConfigsBuilder
+from moveit_configs_utils.launches import generate_warehouse_db_launch
 
 
 def generate_launch_description():
@@ -149,6 +150,8 @@ def generate_launch_description():
     )
 
     # Warehouse mongodb server
+
+    mongodb = MoveItConfigsBuilder("robot_arm", package_name="arm_control_moveit_config").to_moveit_configs()
     db_config = LaunchConfiguration("db")
     mongodb_server_node = Node(
         package="warehouse_ros_mongo",
@@ -189,6 +192,6 @@ def generate_launch_description():
             joint_state_broadcaster_spawner,
             arm_group_controller_spawner,
             hand_controller_spawner,
-            mongodb_server_node,
+            generate_warehouse_db_launch(mongodb)
         ]
     )

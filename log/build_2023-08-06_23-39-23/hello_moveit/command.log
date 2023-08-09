@@ -1,0 +1,4 @@
+Invoking command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/hello_moveit -- -j8 -l8
+Invoked command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/hello_moveit -- -j8 -l8
+Invoking command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/hello_moveit
+Invoked command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/hello_moveit

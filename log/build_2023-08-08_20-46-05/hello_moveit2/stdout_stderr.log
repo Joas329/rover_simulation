@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target hello_moveit2[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/hello_moveit2.dir/src/hello_moveit2.cpp.o[0m
+[100%] [32m[1mLinking CXX executable hello_moveit2[0m
+[100%] Built target hello_moveit2
+-- Install configuration: ""
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/lib/hello_moveit2/hello_moveit2
+-- Set runtime path of "/home/joas329/Desktop/rover_simulation/install/hello_moveit2/lib/hello_moveit2/hello_moveit2" to ""
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/ament_index/resource_index/package_run_dependencies/hello_moveit2
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/ament_index/resource_index/parent_prefix_path/hello_moveit2
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/environment/ament_prefix_path.sh
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/environment/ament_prefix_path.dsv
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/environment/path.sh
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/environment/path.dsv
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/local_setup.bash
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/local_setup.sh
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/local_setup.zsh
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/local_setup.dsv
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/package.dsv
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/ament_index/resource_index/packages/hello_moveit2
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/cmake/hello_moveit2Config.cmake
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/cmake/hello_moveit2Config-version.cmake
+-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/package.xml

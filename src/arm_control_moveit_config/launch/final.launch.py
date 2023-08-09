@@ -149,6 +149,48 @@ def generate_launch_description():
         "publish_transforms_updates": True,
     }
 
+    # ************ Mongo Cache ************#
+    db_arg = DeclareLaunchArgument(
+        "db", default_value="False", description="Database flag"
+    )
+
+     # Warehouse mongodb server
+    db_config = LaunchConfiguration("db")
+    mongodb_server_node = Node(
+        package="warehouse_ros_mongo",
+        executable="mongo_wrapper_ros.py",
+        parameters=[
+            {"warehouse_port": 33829},
+            {"warehouse_host": "localhost"},
+            {"warehouse_plugin": "warehouse_ros_mongo::MongoDatabaseConnection"},
+        ],
+        output="screen",
+        condition=IfCondition(db_config),
+    )
+
+    warehouse_ros_config = {
+    "warehouse_port": 33829,
+    "warehouse_host": "localhost",
+    "warehouse_plugin": "warehouse_ros_mongo::MongoDatabaseConnection",
+}
+
+
+    move_group_configuration = {
+        "publish_robot_description_semantic": True,
+        "allow_trajectory_execution": True,
+        "capabilities": "",
+        "disable_capabilities": "",
+        "monitor_dynamics": False,
+        "publish_planning_scene": True,
+        "publish_geometry_updates": True,
+        "publish_state_updates": True,
+        "publish_transforms_updates": True,
+        "moveit_manage_controllers": True,
+        "trajectory_execution.allowed_execution_duration_scaling": 2.0,
+        "trajectory_execution.allowed_goal_duration_margin": 0.5,
+        "trajectory_execution.allowed_start_tolerance": 0.0,
+    }
+
     # START NODE -> MOVE GROUP:
     run_move_group_node = Node(
         package="moveit_ros_move_group",
@@ -157,12 +199,13 @@ def generate_launch_description():
         parameters=[
             robot_description,
             robot_description_semantic,
-            kinematics_yaml,
+            robot_description_kinematics,
             ompl_planning_pipeline_config,
             trajectory_execution,
             moveit_controllers,
             planning_scene_monitor_parameters,
             {"use_sim_time": True}, 
+            move_group_configuration,
         ],
     )
 
@@ -190,6 +233,7 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
+
             # Gazebo nodes:
             gazebo, 
             spawn_entity,
