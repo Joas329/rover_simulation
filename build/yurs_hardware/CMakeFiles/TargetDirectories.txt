@@ -1,0 +1,10 @@
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/uninstall.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/yurs_hardware_uninstall.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/yurs_hardware.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/test.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/edit_cache.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/rebuild_cache.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/list_install_components.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/install.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/install/local.dir
+/home/joas329/Desktop/rover_simulation/build/yurs_hardware/CMakeFiles/install/strip.dir
