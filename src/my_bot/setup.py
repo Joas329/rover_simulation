@@ -31,6 +31,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "PID = my_bot.PID:main"
         ],
     },
 )

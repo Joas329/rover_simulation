@@ -21,8 +21,8 @@ moveit_simple_controller_manager:
   #   action_ns: gripper_cmd
   #   default: true
   arm_group_controller:
-    type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
+    type: ForwardCommandController
+    action_ns: forward_command_controller
     default: true
     joints:
       - arm_j1

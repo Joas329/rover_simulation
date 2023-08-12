@@ -4,59 +4,47 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
 import math
+import moveit_msgs.msg
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from sensor_msgs.msg import JointState
+from moveit_msgs.msg import DisplayTrajectory, RobotTrajectory, 
 from std_msgs.msg import Header
 import time
 
-#declaring tunning variables
-
-k_p = 1.0
-k_i = 0.1
-k_d = 0.1
-
-time_variable = 0.1
-
-#subscriber to joint position
-def create_dummy_joint_trajectory(self):
-        trajectory_msg = JointTrajectory()
-        trajectory_msg.header = Header()
-        trajectory_msg.header.stamp = self.get_clock().now().to_msg()
-        trajectory_msg.joint_names = ["joint1", "joint2", "joint3", "joint4", "joint5"]
-
-        point = JointTrajectoryPoint()
-        point.positions = [0.1, 0.2, 0.3, 0.4, 0.5]
-        point.velocities = [0.0, 0.0, 0.0, 0.0, 0.0]
-        point.time_from_start = rclpy.duration.Duration(seconds=1).to_msg()
-
-        trajectory_msg.points.append(point)
-
-        return trajectory_msg
-
-desired_position = 10.0
-
-#subscriber to position state interface
-
-current_position = 13.0
-previous_error = 0
-current_error = desired_position - current_position
-
+flag = True
 
 class MyNode(Node):
 
     def __init__(self):
         super().__init__('my_node')
+        self.timer = self.create_timer(0.1,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
+        self.time_variable = 0.1
+        self.stack = []
+        self.current_error = []
+        self.currentPosition = []
+        self.effortsum = []
+        self.previous_error = []
+        self.namestack = []
+        self.effort = []
+        self.p_factor = []
+        self.i_factor = []
+        self.d_factor = []
+
+        self.k_p = 100.0
+        self.k_i = 0
+        self.k_d = 0
 
         # Create subscribers
         self.joint_trajectory_subscriber = self.create_subscription(
-            Float64MultiArray,
-            '/arm_group_controller/joint_Trajectory',
+            DisplayTrajectory,
+            '/display_planned_path',
             self.joint_trajectory_callback,
             10
         )
 
         self.position_feedback_subscriber = self.create_subscription(
-            Float64MultiArray,
-            '/position_feedback',
+            JointState,
+            '/joint_states',
             self.position_feedback_callback,
             10
         )
@@ -64,43 +52,54 @@ class MyNode(Node):
         # Create publisher
         self.effort_publisher = self.create_publisher(
             Float64MultiArray,
-            '/effort',
+            '/arm_group_controller/commands',
             10
         )
-
     def joint_trajectory_callback(self, msg):
-        global desired_position
-        desired_position = create_dummy_joint_trajectory()
+        self.stack = msg.trajectory
 
     def position_feedback_callback(self, msg):
-         
-        global current_position
-        current_position = create_dummy_joint_trajectory()
+            self.currentPosition = msg.position
+            # print(self.currentPosition)
+            
+    
 
+    def timercallback(self):
+        effor = self.pidCalc([0.0, -86.0,0.0 ,0.0 ,0.0])
+        self.effort_publisher.publish(effor)
+
+        # if not len(self.stack) == 0:
+        #     for desiredPoses in self.stack.joint_trajectory.points:
+        #         efforts = self.pidCalc(desiredPoses.positions)
+        #         print(efforts)
+        #         self.effort_publisher.publish(efforts)
+
+
+    def pidCalc(self, jointDesiredPositions):
+        newmsg = Float64MultiArray()
+        joint = 0
+        for desiredPose in jointDesiredPositions:
+        
+            print("in pidcalc")
+            self.current_error[joint] = desiredPose - self.currentPosition[joint]
+            # self.current_error = self.stack[0].positions[0] - self.realpos
+            self.p_factor[joint] = self.k_p * (self.current_error[joint])
+            #I function
+            self.i_factor[joint] = self.k_i * (self.effortsum[joint] + self.previous_error[joint])
+            self.effortsum[joint] += self.current_error[joint]
+            #D function
+            self.d_factor[joint] = self.k_d * (self.current_error[joint] - self.previous_error[joint])
+            #publish this value to the respective joint
+            self.effort[joint] = self.p_factor[joint] + self.i_factor[joint] + self.d_factor[joint]
+            newmsg.data.append(self.effort[joint])
+            joint += 1
+        return newmsg
 
 def main(args=None):
     rclpy.init(args=args)
     node = MyNode()
     rclpy.spin(node)
-    while(True):
-        global time_variable
-
-        #P function
-        p_factor = k_p * (node.joint_trajectory_callback() - node.position_feedback_callback())
-        #I function
-        i_factor = k_i * (current_error + previous_error)
-
-        previous_error = current_error + previous_error
-        #D function
-        d_factor = k_d * (current_error/time_variable)
-        
-
-        #publish this value to the respective joint
-        effort = p_factor + i_factor + d_factor
-        node.effort_publisher(effort)
-
-        time.sleep(0.1)
-
+    node.timer.cancel()
     rclpy.shutdown()
 
 if __name__ == '__main__':

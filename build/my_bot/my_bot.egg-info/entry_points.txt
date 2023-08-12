@@ -1,3 +1,3 @@
 [console_scripts]
-
+PID = my_bot.PID:main
 
