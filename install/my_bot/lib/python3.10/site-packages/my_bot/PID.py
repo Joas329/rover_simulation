@@ -7,7 +7,7 @@ import math
 import moveit_msgs.msg
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from sensor_msgs.msg import JointState
-from moveit_msgs.msg import DisplayTrajectory, RobotTrajectory, 
+from moveit_msgs.msg import DisplayTrajectory, RobotTrajectory
 from std_msgs.msg import Header
 import time
 
