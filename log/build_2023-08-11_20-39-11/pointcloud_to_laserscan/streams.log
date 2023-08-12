@@ -1,0 +1,44 @@
+[1.807s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan -- -j8 -l8
+[6.663s] [ 20%] Built target laserscan_to_pointcloud_node
+[6.677s] [ 40%] Built target pointcloud_to_laserscan_node
+[7.846s] [ 60%] Built target laserscan_to_pointcloud
+[8.685s] [ 80%] Built target pointcloud_to_laserscan
+[9.181s] [100%] Built target dummy_pointcloud_publisher
+[9.234s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan -- -j8 -l8
+[9.415s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan
+[9.619s] -- Install configuration: ""
+[10.462s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node
+[10.466s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node
+[10.469s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include
+[10.469s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan
+[10.469s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/pointcloud_to_laserscan_node.hpp
+[10.470s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/laserscan_to_pointcloud_node.hpp
+[10.470s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/visibility_control.h
+[10.470s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.sh
+[10.471s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.dsv
+[10.471s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so
+[10.471s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so
+[10.471s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher
+[10.472s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch
+[10.472s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_pointcloud_to_laserscan_launch.py
+[10.473s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py
+[10.474s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/ament_index/resource_index/package_run_dependencies/pointcloud_to_laserscan
+[10.474s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/ament_index/resource_index/parent_prefix_path/pointcloud_to_laserscan
+[10.474s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.sh
+[10.475s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.dsv
+[10.475s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.sh
+[10.475s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.dsv
+[10.476s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.bash
+[10.476s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.sh
+[10.476s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.zsh
+[10.476s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.dsv
+[10.477s] -- Installing: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv
+[11.096s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/ament_index/resource_index/packages/pointcloud_to_laserscan
+[11.096s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/ament_index/resource_index/rclcpp_components/pointcloud_to_laserscan
+[11.097s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.097s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.097s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_libraries-extras.cmake
+[11.097s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake
+[11.098s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig-version.cmake
+[11.098s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.xml
+[11.153s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/pointcloud_to_laserscan

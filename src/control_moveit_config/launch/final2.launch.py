@@ -309,23 +309,23 @@ def generate_launch_description():
             #         ]
             #     )
             # ),
-            # RegisterEventHandler(
-            #     OnProcessExit(
-            #         target_action = arm_group_controller,
-            #         on_exit = [
+            RegisterEventHandler(
+                OnProcessExit(
+                    target_action = arm_group_controller,
+                    on_exit = [
 
-            #             # MoveIt!2:
-            #             TimerAction(
-            #                 period=5.0,
-            #                 actions=[
-            #                     rviz_arg,
-            #                     rviz_node_full,
-            #                     move_group_node
-            #                 ]
-            #             ),
+                        # MoveIt!2:
+                        TimerAction(
+                            period=5.0,
+                            actions=[
+                                rviz_arg,
+                                rviz_node_full,
+                                move_group_node
+                            ]
+                        ),
 
-            #         ]
-            #     )
-            # )
+                    ]
+                )
+            )
         ]
     )

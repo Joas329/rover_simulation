@@ -9,12 +9,14 @@ setup.py
 ../../build/my_bot/my_bot.egg-info/top_level.txt
 ../../build/my_bot/my_bot.egg-info/zip-safe
 config/arm_controllers.yaml
+config/arm_gazebo_controllers.yaml
 config/empty.yaml
 config/gazebo_params.yaml
 config/my_controllers.yaml
 config/twist_mux.yaml
 description/arm.urdf
 description/arm.urdf.xacro
+description/arm_gazebo.urdf.xacro
 description/camera.xacro
 description/depth_camera.xacro
 description/macros.xacro

@@ -6,6 +6,7 @@ from launch.substitutions import LaunchConfiguration
 from launch.actions import ExecuteProcess, IncludeLaunchDescription, RegisterEventHandler, DeclareLaunchArgument, TimerAction
 from launch.conditions import IfCondition, UnlessCondition
 from launch.event_handlers import OnProcessExit
+from moveit_configs_utils import MoveItConfigsBuilder
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 import xacro
 import yaml
@@ -47,7 +48,7 @@ def generate_launch_description():
     # PANDA ROBOT Description file package:
     pkg_path = os.path.join(
         get_package_share_directory('my_bot'))
-    xacro_file = os.path.join(pkg_path,'description','arm.urdf.xacro')
+    xacro_file = os.path.join(pkg_path,'description','arm_gazebo.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_description = {'robot_description': robot_description_config.toxml()}
 
@@ -55,7 +56,7 @@ def generate_launch_description():
     # SPAWN ROBOT TO GAZEBO:
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-topic', 'robot_description',
-                                   '-entity', 'panda'],
+                                   '-entity', 'arm_bot'],
                         output='screen')
     
     # *************** STATIC TRANSFORM *************** #
@@ -95,12 +96,12 @@ def generate_launch_description():
         arguments=["arm_group_controller", "-c", "/controller_manager"],
     )
 
-    # Hand Controller
-    hand_controller = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["hand_controller", "-c", "/controller_manager"],
-    )
+    # # Hand Controller
+    # hand_controller = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     arguments=["hand_controller", "-c", "/controller_manager"],
+    # )
 
     # *********************** MoveIt!2 *********************** # 
 
@@ -131,49 +132,23 @@ def generate_launch_description():
     ompl_planning_pipeline_config["move_group"].update(ompl_planning_yaml)
 
     # MoveIt!2 Controllers:
-    moveit_simple_controllers_yaml = load_yaml("arm_control_moveit_config", "config/moveit_controllers.yaml")
-    moveit_controllers = {
-        "moveit_simple_controller_manager": moveit_simple_controllers_yaml,
-        "moveit_controller_manager": "moveit_simple_controller_manager/MoveItSimpleControllerManager",
-    }
-    trajectory_execution = {
-        "moveit_manage_controllers": True,
-        "trajectory_execution.allowed_execution_duration_scaling": 1.2,
-        "trajectory_execution.allowed_goal_duration_margin": 0.5,
-        "trajectory_execution.allowed_start_tolerance": 0.01,
-    }
-    planning_scene_monitor_parameters = {
-        "publish_planning_scene": True,
-        "publish_geometry_updates": True,
-        "publish_state_updates": True,
-        "publish_transforms_updates": True,
-    }
-
-    # ************ Mongo Cache ************#
-    db_arg = DeclareLaunchArgument(
-        "db", default_value="False", description="Database flag"
-    )
-
-     # Warehouse mongodb server
-    db_config = LaunchConfiguration("db")
-    mongodb_server_node = Node(
-        package="warehouse_ros_mongo",
-        executable="mongo_wrapper_ros.py",
-        parameters=[
-            {"warehouse_port": 33829},
-            {"warehouse_host": "localhost"},
-            {"warehouse_plugin": "warehouse_ros_mongo::MongoDatabaseConnection"},
-        ],
-        output="screen",
-        condition=IfCondition(db_config),
-    )
-
-    warehouse_ros_config = {
-    "warehouse_port": 33829,
-    "warehouse_host": "localhost",
-    "warehouse_plugin": "warehouse_ros_mongo::MongoDatabaseConnection",
-}
-
+    # moveit_simple_controllers_yaml = load_yaml("arm_control_moveit_config", "config/moveit_controllers.yaml")
+    # # moveit_controllers = {
+    #     "moveit_simple_controller_manager": moveit_simple_controllers_yaml,
+    #     "moveit_controller_manager": "moveit_simple_controller_manager/MoveItSimpleControllerManager",
+    # }
+    # trajectory_execution = {
+    #     "moveit_manage_controllers": True,
+    #     "trajectory_execution.allowed_execution_duration_scaling": 1.2,
+    #     "trajectory_execution.allowed_goal_duration_margin": 0.5,
+    #     "trajectory_execution.allowed_start_tolerance": 0.01,
+    # }
+    # planning_scene_monitor_parameters = {
+    #     "publish_planning_scene": True,
+    #     "publish_geometry_updates": True,
+    #     "publish_state_updates": True,
+    #     "publish_transforms_updates": True,
+    # }
 
     move_group_configuration = {
         "publish_robot_description_semantic": True,
@@ -191,26 +166,36 @@ def generate_launch_description():
         "trajectory_execution.allowed_start_tolerance": 0.0,
     }
 
-    # START NODE -> MOVE GROUP:
-    run_move_group_node = Node(
+    moveit_config = (
+        MoveItConfigsBuilder("arm_control")
+        .robot_description(
+            file_path="config/robot_arm.urdf.xacro",
+            mappings={
+                "ros2_control_hardware_type": LaunchConfiguration(
+                    "ros2_control_hardware_type"
+                )
+            },
+        )
+        .robot_description_semantic(file_path="config/robot_arm.srdf")
+        .trajectory_execution(file_path="config/moveit_controllers.yaml")
+        .planning_pipelines(
+            pipelines=["ompl", "chomp", "pilz_industrial_motion_planner"]
+        )
+        .to_moveit_configs()
+    )
+
+    move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
-        parameters=[
-            robot_description,
-            robot_description_semantic,
-            robot_description_kinematics,
-            ompl_planning_pipeline_config,
-            trajectory_execution,
-            moveit_controllers,
-            planning_scene_monitor_parameters,
-            {"use_sim_time": True}, 
-            move_group_configuration,
-        ],
+        parameters= [moveit_config.to_dict(),move_group_configuration,],
+        arguments=["--ros-args", "--log-level", "info"],
     )
 
-    # RVIZ:
-    load_RVIZfile = LaunchConfiguration("rviz_file")
+
+
+    # ******************* RVIZ2 *******************#
+    
     rviz_base = os.path.join(get_package_share_directory("arm_control_moveit_config"), "config")
     rviz_full_config = os.path.join(rviz_base, "moveit.rviz")
     rviz_node_full = Node(
@@ -220,14 +205,32 @@ def generate_launch_description():
         output="log",
         arguments=["-d", rviz_full_config],
         parameters=[
-            robot_description,
-            robot_description_semantic,
-            ompl_planning_pipeline_config,
-            kinematics_yaml,
-            {"use_sim_time": True}, 
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.planning_pipelines,
+            moveit_config.robot_description_kinematics,
         ],
-        condition=UnlessCondition(load_RVIZfile),
     )
+
+    # RVIZ:
+    # load_RVIZfile = LaunchConfiguration("rviz_file")
+    # rviz_base = os.path.join(get_package_share_directory("arm_control_moveit_config"), "config")
+    # rviz_full_config = os.path.join(rviz_base, "moveit.rviz")
+    # rviz_node_full = Node(
+    #     package="rviz2",
+    #     executable="rviz2",
+    #     name="rviz2",
+    #     output="log",
+    #     arguments=["-d", rviz_full_config],
+    #     parameters=[
+    #         robot_description,
+    #         robot_description_semantic,
+    #         ompl_planning_pipeline_config,
+    #         kinematics_yaml,
+    #         {"use_sim_time": True}, 
+    #     ],
+    #     condition=UnlessCondition(load_RVIZfile),
+    # )
 
 
 
@@ -238,7 +241,7 @@ def generate_launch_description():
             gazebo, 
             spawn_entity,
             # ROS2_CONTROL:
-            static_tf,
+            # static_tf,
             robot_state_publisher,
             
             # ROS2 Controllers:
@@ -258,17 +261,17 @@ def generate_launch_description():
                     ]
                 )
             ),
+            # RegisterEventHandler(
+            #     OnProcessExit(
+            #         target_action = arm_group_controller,
+            #         on_exit = [
+            #             hand_controller,
+            #         ]
+            #     )
+            # ),
             RegisterEventHandler(
                 OnProcessExit(
                     target_action = arm_group_controller,
-                    on_exit = [
-                        hand_controller,
-                    ]
-                )
-            ),
-            RegisterEventHandler(
-                OnProcessExit(
-                    target_action = hand_controller,
                     on_exit = [
 
                         # MoveIt!2:
@@ -277,7 +280,7 @@ def generate_launch_description():
                             actions=[
                                 rviz_arg,
                                 rviz_node_full,
-                                run_move_group_node
+                                move_group_node
                             ]
                         ),
 

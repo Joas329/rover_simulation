@@ -11,9 +11,11 @@
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch/sim.launch.py
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/arm_controllers.yaml
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/empty.yaml
+/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/arm_gazebo_controllers.yaml
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/my_controllers.yaml
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/twist_mux.yaml
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/gazebo_params.yaml
+/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/arm_gazebo.urdf.xacro
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/robot.urdf.xacro
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/depth_camera.xacro
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/camera.xacro

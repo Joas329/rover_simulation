@@ -14,6 +14,8 @@ k_p = 1.0
 k_i = 0.1
 k_d = 0.1
 
+time_variable = 0.1
+
 #subscriber to joint position
 def create_dummy_joint_trajectory(self):
         trajectory_msg = JointTrajectory()
@@ -81,13 +83,14 @@ def main(args=None):
     node = MyNode()
     rclpy.spin(node)
     while(True):
+        global time_variable
 
         #P function
         p_factor = k_p * (node.joint_trajectory_callback() - node.position_feedback_callback())
         #I function
         i_factor = k_i * (current_error + previous_error)
 
-        previous_error = current_error
+        previous_error = current_error + previous_error
         #D function
         d_factor = k_d * (current_error/time_variable)
         

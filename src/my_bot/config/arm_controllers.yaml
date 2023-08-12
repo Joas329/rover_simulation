@@ -7,7 +7,7 @@ controller_manager:
 
 
     arm_group_controller:
-      type: forward_command_controller/ForwardCommandController
+      type: joint_trajectory_controller/JointTrajectoryController
       # type: joint_trajectory_controller/JointTrajectoryController
 
 
