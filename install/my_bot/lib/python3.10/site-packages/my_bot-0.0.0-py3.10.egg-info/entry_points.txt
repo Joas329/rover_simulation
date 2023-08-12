@@ -1,3 +1,4 @@
 [console_scripts]
 PID = my_bot.PID:main
+udp_conv = my_bot.udp_conv:main
 

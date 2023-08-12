@@ -8,6 +8,8 @@ from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command
 from launch_ros.substitutions import FindPackageShare
+import launch_ros.actions
+import launch
 from launch.actions import RegisterEventHandler
 from launch.substitutions import PathJoinSubstitution
 import xacro
@@ -83,33 +85,6 @@ def generate_launch_description():
     # )
 
 
-    # Code for delaying a node (I haven't tested how effective it is)
-    # 
-    # First add the below lines to imports
-    # from launch.actions import RegisterEventHandler
-    # from launch.event_handlers import OnProcessExit
-    #
-    # Then add the following below the current diff_drive_spawner
-    # delayed_diff_drive_spawner = RegisterEventHandler(
-    #     event_handler=OnProcessExit(
-    #         target_action=spawn_entity,
-    #         on_exit=[diff_drive_spawner],
-    #     )
-    # )
-    #
-    # Replace the diff_drive_spawner in the final return with delayed_diff_drive_spawner
-
-
-
-    # Launch them all!
-    # return LaunchDescription([
-    #     robot_state_publisher,
-    #     delayed_controller_manager,
-    #     delayed_arm_group_controler,
-    # ])
-
-
-
     pkg_path = os.path.join(
     get_package_share_directory('my_bot'))
     xacro_file = os.path.join(pkg_path,'description','arm.urdf.xacro')
@@ -158,11 +133,13 @@ def generate_launch_description():
         output="both",
     )
 
+
     nodes = [
         control_node,
         robot_state_pub_node,
         joint_state_broadcaster_spawner,
         arm_controller_spawner,
+        
     ]
 
     return LaunchDescription(nodes)

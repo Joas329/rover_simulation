@@ -21,6 +21,7 @@ setup(
         (os.path.join('share', package_name,'description'),glob(os.path.join('description/*.urdf'))),
         (os.path.join('share', package_name, 'description'), glob(os.path.join('description','xacro', '*.xacro'))),
         (os.path.join('share', package_name, 'description', 'mesh'), glob(os.path.join('description','mesh', '*.STL'))),
+        ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -31,7 +32,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "PID = my_bot.PID:main"
+            "PID = my_bot.PID:main",
+            "udp_conv = my_bot.udp_conv:main"
         ],
     },
 )

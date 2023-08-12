@@ -217,7 +217,7 @@
 
 	<!--Defining ROS2 Control Joints-->
 	
-	<ros2_control name="GazeboSystem" type="system">
+	<!-- <ros2_control name="GazeboSystem" type="system">
         <hardware>
         	<plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
@@ -229,45 +229,46 @@
         <xacro:arm_joint_creator name="arm_j5"/>    
 		<xacro:arm_joint_creator name="arm_j6"/>	
 
-	</ros2_control>
+	</ros2_control> -->
 
-	<!-- <ros2_control name="yurs_motor" type="actuator">
+
+	<ros2_control name="yurs_motor" type="actuator">
 		<hardware>
 			<plugin>yurs_hardware/yurs_motor</plugin>
 			<param name="can_interface">can0</param>
 		</hardware>
-		<joint name="front_left_wheel_joint">
-			<param name="device_id">0</param>
+
+ 		<joint name="arm_j1">
+			<param name="device_id">6</param>
 			<param name="counts_per_rev">1512</param>
 		</joint>
-		<joint name="front_right_wheel_joint">
-			<param name="device_id">3</param>
+		<joint name="arm_j2">
+			<param name="device_id">7</param>
 			<param name="counts_per_rev">1512</param>
 		</joint>
-		<joint name="middle_left_wheel_joint">
-			<param name="device_id">1</param>
+		<joint name="arm_j3">
+			<param name="device_id">8</param>
 			<param name="counts_per_rev">1512</param>
 		</joint>
-		<joint name="middle_right_wheel_joint">
-			<param name="device_id">4</param>
-			<param name="counts_per_rev">1512</param>
-		</joint>
-		<joint name="rear_left_wheel_joint">
-			<param name="device_id">2</param>
-			<param name="counts_per_rev">1512</param>
-		</joint> 
 		<joint name="arm_j4">
 			<param name="device_id">9</param>
 			<param name="counts_per_rev">1512</param>
 		</joint>
+		<joint name="arm_j5">
+			<param name="device_id">10</param>
+			<param name="counts_per_rev">1512</param>
+		</joint>
+		<joint name="arm_j6">
+			<param name="device_id">11</param>
+			<param name="counts_per_rev">1512</param>
+		</joint>
 	</ros2_control>
- -->
 
-	<gazebo>
+	<!-- <gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
             <parameters> $(find my_bot)/config/arm_gazebo_controllers.yaml</parameters>
         </plugin>
-    </gazebo>
+    </gazebo> -->
 
 </robot>
 

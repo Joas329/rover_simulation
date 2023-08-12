@@ -38,6 +38,7 @@ launch/rsp.launch.py
 launch/sim.launch.py
 my_bot/PID.py
 my_bot/__init__.py
+my_bot/upd_conv.py
 resource/my_bot
 test/test_copyright.py
 test/test_flake8.py

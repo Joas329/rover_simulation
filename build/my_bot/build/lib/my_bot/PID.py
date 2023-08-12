@@ -20,27 +20,27 @@ class MyNode(Node):
         self.timer2 = self.create_timer(0.02,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.time_variable = 0.1
         self.stack  = [None] 
-        self.current_error = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.current_error = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
         self.currentPosition = []
-        self.effortsum = [0.0,0.0,0.0,0.0,0.0,0.0]
-        self.desired_joint_positions = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.effortsum = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        self.desired_joint_positions = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
 
-        self.previous_error = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.previous_error = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
         self.namestack = []
-        self.effort = [0.0,0.0,0.0,0.0,0.0,0.0]
-        self.p_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
-        self.i_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
-        self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.effort = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        self.p_factor = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        self.i_factor = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
 
         self.i = 1
-        self.k_p = 100.0
-        self.k_i = 0
-        self.k_d = 0
+        self.k_p = 1.0
+        self.k_i = 0.1
+        self.k_d = 0.1
 
         # Create subscribers
         self.joint_trajectory_subscriber = self.create_subscription(
             DisplayTrajectory,
-            'display_planned_path',
+            'planned_path',
             self.joint_trajectory_callback,
             10
         )
