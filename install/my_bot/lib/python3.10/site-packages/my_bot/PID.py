@@ -10,26 +10,29 @@ from sensor_msgs.msg import JointState
 from moveit_msgs.msg import DisplayTrajectory, RobotTrajectory
 from std_msgs.msg import Header
 import time
-
-flag = True
+flag = False
 
 class MyNode(Node):
 
     def __init__(self):
         super().__init__('my_node')
-        self.timer = self.create_timer(0.1,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
+        self.timer = self.create_timer(0.02,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
+        self.timer2 = self.create_timer(0.02,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.time_variable = 0.1
-        self.stack = []
-        self.current_error = []
+        self.stack  = [None] 
+        self.current_error = [0.0,0.0,0.0,0.0,0.0,0.0]
         self.currentPosition = []
-        self.effortsum = []
-        self.previous_error = []
-        self.namestack = []
-        self.effort = []
-        self.p_factor = []
-        self.i_factor = []
-        self.d_factor = []
+        self.effortsum = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.desired_joint_positions = [0.0,0.0,0.0,0.0,0.0,0.0]
 
+        self.previous_error = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.namestack = []
+        self.effort = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.p_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.i_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
+
+        self.i = 1
         self.k_p = 100.0
         self.k_i = 0
         self.k_d = 0
@@ -37,14 +40,14 @@ class MyNode(Node):
         # Create subscribers
         self.joint_trajectory_subscriber = self.create_subscription(
             DisplayTrajectory,
-            '/display_planned_path',
+            'display_planned_path',
             self.joint_trajectory_callback,
             10
         )
 
         self.position_feedback_subscriber = self.create_subscription(
             JointState,
-            '/joint_states',
+            'joint_states',
             self.position_feedback_callback,
             10
         )
@@ -52,27 +55,37 @@ class MyNode(Node):
         # Create publisher
         self.effort_publisher = self.create_publisher(
             Float64MultiArray,
-            '/arm_group_controller/commands',
+            'arm_group_controller/commands',
             10
         )
     def joint_trajectory_callback(self, msg):
         self.stack = msg.trajectory
+        self.i=0
 
     def position_feedback_callback(self, msg):
             self.currentPosition = msg.position
-            # print(self.currentPosition)
             
-    
+    def timercallback2(self):
+        #This indexes through array
+        if  not self.stack[0] == None:
+            if not len(self.stack[0].joint_trajectory.points) == self.i:
+                print(len(self.stack[0].joint_trajectory.points))
+                trajectories = self.stack[0]
+                holder = trajectories.joint_trajectory
+                holder2 = holder.points
 
+                self.desired_joint_poistions = holder2[self.i].positions
+                self.i +=1
+        
     def timercallback(self):
-        effor = self.pidCalc([0.0, -86.0,0.0 ,0.0 ,0.0])
-        self.effort_publisher.publish(effor)
+        #This performs pid
 
-        # if not len(self.stack) == 0:
-        #     for desiredPoses in self.stack.joint_trajectory.points:
-        #         efforts = self.pidCalc(desiredPoses.positions)
-        #         print(efforts)
-        #         self.effort_publisher.publish(efforts)
+        if  not self.stack[0] == None:
+            if not len(self.stack[0].joint_trajectory.points) == self.i:
+                efforts = self.pidCalc(self.desired_joint_positions)
+                print(efforts)
+                self.effort_publisher.publish(efforts)
+          
 
 
     def pidCalc(self, jointDesiredPositions):
@@ -80,9 +93,8 @@ class MyNode(Node):
         joint = 0
         for desiredPose in jointDesiredPositions:
         
-            print("in pidcalc")
             self.current_error[joint] = desiredPose - self.currentPosition[joint]
-            # self.current_error = self.stack[0].positions[0] - self.realpos
+         
             self.p_factor[joint] = self.k_p * (self.current_error[joint])
             #I function
             self.i_factor[joint] = self.k_i * (self.effortsum[joint] + self.previous_error[joint])
@@ -93,7 +105,9 @@ class MyNode(Node):
             self.effort[joint] = self.p_factor[joint] + self.i_factor[joint] + self.d_factor[joint]
             newmsg.data.append(self.effort[joint])
             joint += 1
+
         return newmsg
+    
 
 def main(args=None):
     rclpy.init(args=args)
