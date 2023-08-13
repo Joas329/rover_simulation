@@ -9,25 +9,24 @@ moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControll
 
 
 
-moveit_simple_controller_manager:
-  controller_names:
-    # - hand_controller
-    - arm_group_controller
+controller_names:
+  # - hand_controller
+  - arm_group_controller
 
-  # hand_controller:
-  #   type: GripperCommand
-  #   joints:
-  #     - arm_j6
-  #   action_ns: gripper_cmd
-  #   default: true
-  arm_group_controller:
-    type: ForwardCommandController
-    action_ns: forward_command_controller
-    default: true
-    joints:
-      - arm_j1
-      - arm_j2
-      - arm_j3
-      - arm_j4
-      - arm_j5
-      - arm_j6
+# hand_controller:
+#   type: GripperCommand
+#   joints:
+#     - arm_j6
+#   action_ns: gripper_cmd
+#   default: true
+arm_group_controller:
+  type: ForwardCommandController
+  action_ns: forward_command_controller
+  default: true
+  joints:
+    - arm_j1
+    - arm_j2
+    - arm_j3
+    - arm_j4
+    - arm_j5
+    - arm_j6

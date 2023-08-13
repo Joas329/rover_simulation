@@ -18,6 +18,7 @@ description/abdi.urdf
 description/arm.urdf
 description/arm.urdf.xacro
 description/arm_gazebo.urdf.xacro
+description/arm_hardware.urdf.xacro
 description/camera.xacro
 description/depth_camera.xacro
 description/macros.xacro

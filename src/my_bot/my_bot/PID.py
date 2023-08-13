@@ -34,7 +34,7 @@ class MyNode(Node):
         self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
 
         self.i = 0
-        self.k_p = 1.0
+        self.k_p = 100.0
         self.k_i = 0.1
         self.k_d = 0.1
 
@@ -109,7 +109,7 @@ class MyNode(Node):
             self.effort[joint] = self.p_factor[joint] + self.i_factor[joint] + self.d_factor[joint]
             newmsg.data.append(self.effort[joint])
             joint += 1
-
+        print(joint)
         return newmsg
     
 

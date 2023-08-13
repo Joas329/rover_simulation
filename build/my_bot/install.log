@@ -22,6 +22,7 @@
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/arm_gazebo.urdf.xacro
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/robot.urdf.xacro
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/depth_camera.xacro
+/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/arm_hardware.urdf.xacro
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/camera.xacro
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/ros2_control.xacro
 /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/macros.xacro
