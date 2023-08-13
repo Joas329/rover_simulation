@@ -221,42 +221,42 @@
     <joint name="arm_j1">
       <command_interface name="effort"/>
       <state_interface name="position">
-        <param name="initial_value">0.0</param>
+        <param name="initial_value">180</param>
       </state_interface>
       <!-- <state_interface name="velocity"/> -->
     </joint>
     <joint name="arm_j2">
       <command_interface name="effort"/>
       <state_interface name="position">
-        <param name="initial_value">0.0</param>
+        <param name="initial_value">-1</param>
       </state_interface>
       <!-- <state_interface name="velocity"/> -->
     </joint>
     <joint name="arm_j3">
       <command_interface name="effort"/>
       <state_interface name="position">
-        <param name="initial_value">0.0</param>
+        <param name="initial_value">-120</param>
       </state_interface>
       <!-- <state_interface name="velocity"/> -->
     </joint>
     <joint name="arm_j4">
       <command_interface name="effort"/>
       <state_interface name="position">
-        <param name="initial_value">0.0</param>
+        <param name="initial_value">1</param>
       </state_interface>
       <!-- <state_interface name="velocity"/> -->
     </joint>
     <joint name="arm_j5">
       <command_interface name="effort"/>
       <state_interface name="position">
-        <param name="initial_value">0.0</param>
+        <param name="initial_value">-11</param>
       </state_interface>
       <!-- <state_interface name="velocity"/> -->
     </joint>
     <joint name="arm_j6">
       <command_interface name="effort"/>
       <state_interface name="position">
-        <param name="initial_value">0.0</param>
+        <param name="initial_value">3</param>
       </state_interface>
       <!-- <state_interface name="velocity"/> -->
     </joint>

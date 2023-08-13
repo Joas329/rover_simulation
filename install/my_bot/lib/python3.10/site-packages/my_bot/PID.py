@@ -34,9 +34,9 @@ class MyNode(Node):
         self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
 
         self.i = 0
-        self.k_p = 100.0
-        self.k_i = 0.1
-        self.k_d = 0.1
+        self.k_p = [0.1,0.1,0.1,0.1,10.0,0.1]
+        self.k_i = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.k_d =[0.0,0.0,0.0,0.0,0.0,0.0]
 
         # Create subscribers
         self.joint_trajectory_subscriber = self.create_subscription(
@@ -59,8 +59,22 @@ class MyNode(Node):
             'arm_group_controller/commands',
             10
         )
+
+        #GUI
+        self.gui_feedback_subscriber = self.create_subscription(
+            Float64MultiArray,
+            'gui_commands',
+            self.gui_feedback_callback,
+            10
+        )
+
+
     def joint_trajectory_callback(self, msg):
         self.stack = msg.trajectory
+        self.i=0
+
+    def gui_feedback_callback(self, msg):
+        self.desired_joint_positions = msg.trajectory
         self.i=0
 
     def position_feedback_callback(self, msg):
@@ -99,12 +113,12 @@ class MyNode(Node):
 
             self.current_error[joint] = desiredPose - self.currentPosition[joint]
          
-            self.p_factor[joint] = self.k_p * (self.current_error[joint])
+            self.p_factor[joint] = self.k_p[joint] * (self.current_error[joint])
             #I function
-            self.i_factor[joint] = self.k_i * (self.effortsum[joint] + self.previous_error[joint])
+            self.i_factor[joint] = self.k_i[joint] * (self.effortsum[joint] + self.previous_error[joint])
             self.effortsum[joint] += self.current_error[joint]
             #D function
-            self.d_factor[joint] = self.k_d * (self.current_error[joint] - self.previous_error[joint])
+            self.d_factor[joint] = self.k_d [joint]* (self.current_error[joint] - self.previous_error[joint])
             #publish this value to the respective joint
             self.effort[joint] = self.p_factor[joint] + self.i_factor[joint] + self.d_factor[joint]
             newmsg.data.append(self.effort[joint])
