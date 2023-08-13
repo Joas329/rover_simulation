@@ -87,7 +87,7 @@ def generate_launch_description():
 
     pkg_path = os.path.join(
     get_package_share_directory('my_bot'))
-    xacro_file = os.path.join(pkg_path,'description','arm.urdf.xacro')
+    xacro_file = os.path.join(pkg_path,'description','arm_gazebo.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_description = {'robot_description': robot_description_config.toxml()}
 

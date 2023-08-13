@@ -24,11 +24,9 @@
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/rsp.launch.py
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/moveit_rviz.launch.py
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/move_group.launch.py
-/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/chomp_planning.yaml
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/pilz_cartesian_limits.yaml
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/moveit_controllers.yaml
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/stomp_planning.yaml
-/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/ompl_planning.yaml
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/kinematics.yaml
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.urdf.xacro
 /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/ros2_controllers.yaml

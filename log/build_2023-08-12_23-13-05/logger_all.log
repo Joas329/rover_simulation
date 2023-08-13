@@ -1,0 +1,408 @@
+[2.175s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.175s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fc411a2df60>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fc411a2d8d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fc411a2d8d0>>, mixin_verb=('build',))
+[2.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.309s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.309s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/joas329/Desktop/rover_simulation'
+[2.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.310s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.310s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.310s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.310s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.364s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.364s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.365s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.365s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.365s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.366s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.366s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.367s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.367s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.368s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.368s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.371s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.372s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.372s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.372s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[2.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extension 'ignore'
+[2.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extension 'ignore_ament_install'
+[2.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extensions ['colcon_pkg']
+[2.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extension 'colcon_pkg'
+[2.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extensions ['colcon_meta']
+[2.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extension 'colcon_meta'
+[2.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extensions ['ros']
+[2.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_control_moveit_config) by extension 'ros'
+[2.389s] DEBUG:colcon.colcon_core.package_identification:Package 'src/arm_control_moveit_config' with type 'ros.ament_cmake' and name 'arm_control_moveit_config'
+[2.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'ignore'
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'ignore_ament_install'
+[2.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extensions ['colcon_pkg']
+[2.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'colcon_pkg'
+[2.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extensions ['colcon_meta']
+[2.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'colcon_meta'
+[2.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extensions ['ros']
+[2.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'ros'
+[2.397s] DEBUG:colcon.colcon_core.package_identification:Package 'src/arm_moveit_config' with type 'ros.ament_cmake' and name 'arm_moveit_config'
+[2.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[2.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[2.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[2.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extension 'ignore'
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extension 'ignore_ament_install'
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extensions ['colcon_pkg']
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extension 'colcon_pkg'
+[2.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extensions ['colcon_meta']
+[2.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extension 'colcon_meta'
+[2.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extensions ['ros']
+[2.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_moveit_config) by extension 'ros'
+[2.405s] DEBUG:colcon.colcon_core.package_identification:Package 'src/control_moveit_config' with type 'ros.ament_cmake' and name 'control_moveit_config'
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[2.407s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[2.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[2.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[2.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['ignore', 'ignore_ament_install']
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ignore'
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ignore_ament_install'
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['colcon_pkg']
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'colcon_pkg'
+[2.410s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['colcon_meta']
+[2.410s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'colcon_meta'
+[2.410s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['ros']
+[2.410s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ros'
+[2.412s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_bot' with type 'ros.ament_python' and name 'my_bot'
+[2.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ignore', 'ignore_ament_install']
+[2.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore'
+[2.414s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore_ament_install'
+[2.414s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_pkg']
+[2.414s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_pkg'
+[2.414s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_meta']
+[2.414s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_meta'
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ros']
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ros'
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['cmake', 'python']
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'cmake'
+[2.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'python'
+[2.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['python_setup_py']
+[2.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'python_setup_py'
+[2.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extensions ['ignore', 'ignore_ament_install']
+[2.417s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extension 'ignore'
+[2.417s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extension 'ignore_ament_install'
+[2.417s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extensions ['colcon_pkg']
+[2.417s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extension 'colcon_pkg'
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extensions ['colcon_meta']
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extension 'colcon_meta'
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extensions ['ros']
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/yurs_hardware) by extension 'ros'
+[2.422s] DEBUG:colcon.colcon_core.package_identification:Package 'src/yurs_hardware' with type 'ros.ament_cmake' and name 'yurs_hardware'
+[2.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.559s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.559s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.577s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/joas329/Desktop/rover_simulation/install
+[2.592s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 457 installed packages in /opt/ros/humble
+[2.603s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.069s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_args' from command line to 'None'
+[3.069s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_target' from command line to 'None'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_clean_cache' from command line to 'False'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_clean_first' from command line to 'False'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_force_configure' from command line to 'False'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'ament_cmake_args' from command line to 'None'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'catkin_cmake_args' from command line to 'None'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.071s] DEBUG:colcon.colcon_core.verb:Building package 'my_bot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/my_bot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/my_bot', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/my_bot', 'symlink_install': False, 'test_result_base': None}
+[3.081s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'cmake_args' from command line to 'None'
+[3.082s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'cmake_target' from command line to 'None'
+[3.082s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.082s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[3.082s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[3.083s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[3.083s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[3.083s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[3.083s] Level 5:colcon.colcon_core.verb:set package 'yurs_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.084s] DEBUG:colcon.colcon_core.verb:Building package 'yurs_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/yurs_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/yurs_hardware', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/yurs_hardware', 'symlink_install': False, 'test_result_base': None}
+[3.092s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'cmake_args' from command line to 'None'
+[3.092s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'cmake_target' from command line to 'None'
+[3.092s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.092s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[3.092s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[3.092s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[3.093s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[3.093s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[3.093s] Level 5:colcon.colcon_core.verb:set package 'arm_control_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.093s] DEBUG:colcon.colcon_core.verb:Building package 'arm_control_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/arm_control_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[3.102s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_args' from command line to 'None'
+[3.102s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_target' from command line to 'None'
+[3.102s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.102s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[3.102s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[3.103s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[3.103s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[3.103s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[3.103s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.103s] DEBUG:colcon.colcon_core.verb:Building package 'arm_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/arm_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/arm_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[3.110s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'cmake_args' from command line to 'None'
+[3.111s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'cmake_target' from command line to 'None'
+[3.111s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.111s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[3.111s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[3.111s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[3.111s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[3.112s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[3.112s] Level 5:colcon.colcon_core.verb:set package 'control_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.112s] DEBUG:colcon.colcon_core.verb:Building package 'control_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/control_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/control_moveit_config', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/control_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[3.118s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.150s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.151s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/my_bot' with build type 'ament_python'
+[3.151s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_bot', 'ament_prefix_path')
+[3.186s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.187s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.ps1'
+[3.189s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.dsv'
+[3.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.sh'
+[3.208s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.208s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.243s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/yurs_hardware' with build type 'ament_cmake'
+[3.244s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joas329/Desktop/rover_simulation/src/yurs_hardware'
+[3.265s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.265s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.764s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/joas329/Desktop/rover_simulation/src/my_bot'
+[4.779s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.780s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.838s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/yurs_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/yurs_hardware -- -j8 -l8
+[5.192s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/yurs_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/yurs_hardware -- -j8 -l8
+[5.360s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/yurs_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/yurs_hardware
+[5.407s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yurs_hardware)
+[5.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/yurs_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/yurs_hardware
+[5.454s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware' for CMake module files
+[5.456s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware' for CMake config files
+[5.457s] Level 1:colcon.colcon_core.shell:create_environment_hook('yurs_hardware', 'cmake_prefix_path')
+[5.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/cmake_prefix_path.ps1'
+[5.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/cmake_prefix_path.dsv'
+[5.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/cmake_prefix_path.sh'
+[5.484s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/lib'
+[5.486s] Level 1:colcon.colcon_core.shell:create_environment_hook('yurs_hardware', 'ld_library_path_lib')
+[5.503s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/ld_library_path_lib.ps1'
+[5.505s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/ld_library_path_lib.dsv'
+[5.507s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/ld_library_path_lib.sh'
+[5.508s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/bin'
+[5.509s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/lib/pkgconfig/yurs_hardware.pc'
+[5.510s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/lib/python3.10/site-packages'
+[5.511s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/bin'
+[5.527s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.ps1'
+[5.531s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.dsv'
+[5.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.sh'
+[5.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.bash'
+[5.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.zsh'
+[5.542s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/colcon-core/packages/yurs_hardware)
+[5.685s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yurs_hardware)
+[5.720s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware' for CMake module files
+[5.723s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware' for CMake config files
+[5.724s] Level 1:colcon.colcon_core.shell:create_environment_hook('yurs_hardware', 'cmake_prefix_path')
+[5.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/cmake_prefix_path.ps1'
+[5.744s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/cmake_prefix_path.dsv'
+[5.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/cmake_prefix_path.sh'
+[5.747s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/lib'
+[5.747s] Level 1:colcon.colcon_core.shell:create_environment_hook('yurs_hardware', 'ld_library_path_lib')
+[5.765s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/ld_library_path_lib.ps1'
+[5.766s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/ld_library_path_lib.dsv'
+[5.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/hook/ld_library_path_lib.sh'
+[5.770s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/bin'
+[5.770s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/lib/pkgconfig/yurs_hardware.pc'
+[5.771s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/lib/python3.10/site-packages'
+[5.773s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/bin'
+[5.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.ps1'
+[5.798s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.dsv'
+[5.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.sh'
+[5.804s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.bash'
+[5.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.zsh'
+[5.808s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/colcon-core/packages/yurs_hardware)
+[6.875s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[8.619s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[8.631s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot' for CMake module files
+[8.634s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot' for CMake config files
+[8.638s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib'
+[8.638s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/bin'
+[8.639s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/pkgconfig/my_bot.pc'
+[8.640s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages'
+[8.640s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_bot', 'pythonpath')
+[8.653s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.ps1'
+[8.654s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.dsv'
+[8.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.sh'
+[8.659s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/bin'
+[8.659s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_bot)
+[8.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.ps1'
+[8.678s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.dsv'
+[8.680s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.sh'
+[8.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.bash'
+[8.683s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.zsh'
+[8.685s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/my_bot/share/colcon-core/packages/my_bot)
+[8.686s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/arm_control_moveit_config' with build type 'ament_cmake'
+[8.688s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joas329/Desktop/rover_simulation/src/arm_control_moveit_config'
+[8.705s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.705s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.742s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/arm_moveit_config' with build type 'ament_cmake'
+[8.743s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joas329/Desktop/rover_simulation/src/arm_moveit_config'
+[8.760s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.761s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.795s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/control_moveit_config' with build type 'ament_cmake'
+[8.797s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joas329/Desktop/rover_simulation/src/control_moveit_config'
+[8.816s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.816s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config -- -j8 -l8
+[8.893s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/arm_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_moveit_config -- -j8 -l8
+[8.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/control_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/control_moveit_config -- -j8 -l8
+[9.087s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config -- -j8 -l8
+[9.098s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_moveit_config -- -j8 -l8
+[9.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/control_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/control_moveit_config -- -j8 -l8
+[9.220s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config
+[9.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/arm_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/arm_moveit_config
+[9.281s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_control_moveit_config)
+[9.317s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config' for CMake module files
+[9.322s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config' for CMake config files
+[9.328s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_control_moveit_config', 'cmake_prefix_path')
+[9.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/hook/cmake_prefix_path.ps1'
+[9.357s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/hook/cmake_prefix_path.dsv'
+[9.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/hook/cmake_prefix_path.sh'
+[9.367s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/bin'
+[9.368s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/lib/pkgconfig/arm_control_moveit_config.pc'
+[9.369s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/lib/python3.10/site-packages'
+[9.371s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/bin'
+[9.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.ps1'
+[9.398s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.dsv'
+[9.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.sh'
+[9.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.bash'
+[9.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.zsh'
+[9.416s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/colcon-core/packages/arm_control_moveit_config)
+[9.435s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_moveit_config)
+[9.459s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config
+[9.473s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config' for CMake module files
+[9.477s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config' for CMake config files
+[9.479s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_moveit_config', 'cmake_prefix_path')
+[9.505s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.ps1'
+[9.509s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.dsv'
+[9.512s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/control_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/control_moveit_config
+[9.514s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/arm_moveit_config
+[9.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.sh'
+[9.525s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/bin'
+[9.525s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/lib/pkgconfig/arm_moveit_config.pc'
+[9.527s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/lib/python3.10/site-packages'
+[9.528s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/bin'
+[9.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.ps1'
+[9.552s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.dsv'
+[9.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.sh'
+[9.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.bash'
+[9.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.zsh'
+[9.568s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/colcon-core/packages/arm_moveit_config)
+[9.598s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_control_moveit_config)
+[9.626s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config' for CMake module files
+[9.629s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config' for CMake config files
+[9.631s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_control_moveit_config', 'cmake_prefix_path')
+[9.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/hook/cmake_prefix_path.ps1'
+[9.648s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/hook/cmake_prefix_path.dsv'
+[9.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/hook/cmake_prefix_path.sh'
+[9.652s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/bin'
+[9.653s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/lib/pkgconfig/arm_control_moveit_config.pc'
+[9.654s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/lib/python3.10/site-packages'
+[9.655s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/bin'
+[9.672s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.ps1'
+[9.674s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.dsv'
+[9.676s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.sh'
+[9.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.bash'
+[9.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.zsh'
+[9.683s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/colcon-core/packages/arm_control_moveit_config)
+[9.688s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_moveit_config)
+[9.716s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config' for CMake module files
+[9.718s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/control_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/pointcloud_to_laserscan:/home/joas329/Desktop/rover_simulation/install/control_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/control_moveit_config
+[9.720s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config' for CMake config files
+[9.721s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_moveit_config', 'cmake_prefix_path')
+[9.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/hook/cmake_prefix_path.ps1'
+[9.738s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/hook/cmake_prefix_path.dsv'
+[9.739s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/hook/cmake_prefix_path.sh'
+[9.741s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/bin'
+[9.741s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/lib/pkgconfig/control_moveit_config.pc'
+[9.742s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/lib/python3.10/site-packages'
+[9.743s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/bin'
+[9.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.ps1'
+[9.762s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.dsv'
+[9.763s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.sh'
+[9.765s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.bash'
+[9.766s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.zsh'
+[9.767s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/colcon-core/packages/control_moveit_config)
+[9.793s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_moveit_config)
+[9.814s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config' for CMake module files
+[9.816s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config' for CMake config files
+[9.817s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_moveit_config', 'cmake_prefix_path')
+[9.833s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.ps1'
+[9.834s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.dsv'
+[9.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.sh'
+[9.839s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/bin'
+[9.840s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/lib/pkgconfig/arm_moveit_config.pc'
+[9.841s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/lib/python3.10/site-packages'
+[9.842s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/bin'
+[9.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.ps1'
+[9.861s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.dsv'
+[9.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.sh'
+[9.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.bash'
+[9.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/arm_moveit_config/package.zsh'
+[9.868s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/arm_moveit_config/share/colcon-core/packages/arm_moveit_config)
+[9.894s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_moveit_config)
+[9.920s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config' for CMake module files
+[9.923s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config' for CMake config files
+[9.925s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_moveit_config', 'cmake_prefix_path')
+[9.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/hook/cmake_prefix_path.ps1'
+[9.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/hook/cmake_prefix_path.dsv'
+[9.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/hook/cmake_prefix_path.sh'
+[9.948s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/bin'
+[9.949s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/lib/pkgconfig/control_moveit_config.pc'
+[9.951s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/lib/python3.10/site-packages'
+[9.952s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/bin'
+[9.970s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.ps1'
+[9.973s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.dsv'
+[9.976s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.sh'
+[9.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.bash'
+[9.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/control_moveit_config/package.zsh'
+[9.983s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/control_moveit_config/share/colcon-core/packages/control_moveit_config)
+[9.984s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.986s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.987s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.987s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.018s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.018s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.019s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.079s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.094s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.ps1'
+[10.099s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/joas329/Desktop/rover_simulation/install/_local_setup_util_ps1.py'
+[10.107s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.ps1'
+[10.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.sh'
+[10.122s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/joas329/Desktop/rover_simulation/install/_local_setup_util_sh.py'
+[10.125s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.sh'
+[10.137s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.bash'
+[10.140s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.bash'
+[10.153s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.zsh'
+[10.155s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.zsh'

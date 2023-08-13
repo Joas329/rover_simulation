@@ -1,7 +1,6 @@
 controller_manager:
   ros__parameters:
     update_rate: 30 # Hz
-    use_sim_time: true
 
     # hand_controller:
     #   type: joint_trajectory_controller/JointTrajectoryController
@@ -33,7 +32,7 @@ arm_group_controller:
       - arm_j4
       - arm_j5
       - arm_j6
-      - arm_j7
+      # - arm_j7
     # command_interfaces:
     #   - effort
     # state_interfaces:

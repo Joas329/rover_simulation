@@ -20,19 +20,20 @@ class MyNode(Node):
         self.timer2 = self.create_timer(0.02,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.time_variable = 0.1
         self.stack  = [None] 
-        self.current_error = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-        self.currentPosition = []
-        self.effortsum = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-        self.desired_joint_positions = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        #DO NOT FORGET: number of 0s must match number of joints 
+        self.current_error = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.currentPosition = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.effortsum =[0.0,0.0,0.0,0.0,0.0,0.0]
+        self.desired_joint_positions = [0.0,0.0,0.0,0.0,0.0,0.0]
 
-        self.previous_error = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        self.previous_error = [0.0,0.0,0.0,0.0,0.0,0.0]
         self.namestack = []
-        self.effort = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-        self.p_factor = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-        self.i_factor = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-        self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+        self.effort = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.p_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.i_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
+        self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
 
-        self.i = 1
+        self.i = 0
         self.k_p = 1.0
         self.k_i = 0.1
         self.k_d = 0.1
@@ -40,7 +41,7 @@ class MyNode(Node):
         # Create subscribers
         self.joint_trajectory_subscriber = self.create_subscription(
             DisplayTrajectory,
-            'planned_path',
+            'display_planned_path',
             self.joint_trajectory_callback,
             10
         )
@@ -68,20 +69,22 @@ class MyNode(Node):
     def timercallback2(self):
         #This indexes through array
         if  not self.stack[0] == None:
-            if not len(self.stack[0].joint_trajectory.points) == self.i:
-                print(len(self.stack[0].joint_trajectory.points))
+            if  len(self.stack[0].joint_trajectory.points) > self.i:
                 trajectories = self.stack[0]
                 holder = trajectories.joint_trajectory
                 holder2 = holder.points
 
-                self.desired_joint_poistions = holder2[self.i].positions
+                self.desired_joint_positions = holder2[self.i].positions
                 self.i +=1
+               
+                # print(self.desired_joint_positions)
         
     def timercallback(self):
         #This performs pid
 
         if  not self.stack[0] == None:
-            if not len(self.stack[0].joint_trajectory.points) == self.i:
+            if len(self.stack[0].joint_trajectory.points) > self.i:
+                
                 efforts = self.pidCalc(self.desired_joint_positions)
                 print(efforts)
                 self.effort_publisher.publish(efforts)
@@ -90,9 +93,10 @@ class MyNode(Node):
 
     def pidCalc(self, jointDesiredPositions):
         newmsg = Float64MultiArray()
+        # print(jointDesiredPositions)
         joint = 0
         for desiredPose in jointDesiredPositions:
-        
+
             self.current_error[joint] = desiredPose - self.currentPosition[joint]
          
             self.p_factor[joint] = self.k_p * (self.current_error[joint])

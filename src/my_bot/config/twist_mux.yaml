@@ -1,11 +1,17 @@
 twist_mux:
   ros__parameters:
     topics:
-      navigation:
-        topic: cmd_vel
-        timeout: 0.5
-        priority: 10
       joystick:
-        topic: cmd_vel_joy
+        topic: normal_effort
         timeout: 0.5
         priority: 100
+      ammber_light:
+        topic: aber_effort
+        timeout: 0.5
+        priority: 50
+      forward_run:
+        topic: forward_effort
+        tiemout: 0.5
+        priority: 10
+
+        #driver_controller/commands
