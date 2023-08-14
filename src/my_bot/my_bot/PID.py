@@ -17,7 +17,7 @@ class MyNode(Node):
     def __init__(self):
         super().__init__('my_node')
         self.timer = self.create_timer(0.02,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
-        self.timer2 = self.create_timer(0.02,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
+        self.timer2 = self.create_timer(0.1,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.time_variable = 0.1
         self.stack  = [None] 
         #DO NOT FORGET: number of 0s must match number of joints 
@@ -34,9 +34,16 @@ class MyNode(Node):
         self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
 
         self.i = 0
-        self.k_p = [0.1,0.1,0.1,0.1,10.0,0.1]
+        self.k_p = [3000.0,3000.0,3000.0,3000.0,4000.0,3000.0]
         self.k_i = [0.0,0.0,0.0,0.0,0.0,0.0]
         self.k_d =[0.0,0.0,0.0,0.0,0.0,0.0]
+
+
+        #order of the joints that come from the joint_states topic
+        #Make sure to check the order by echoing the topic and checkng the positions of the joints, to ensure a good PID control
+        #CLARIFICATION: substract -1 to the order of the joint to index the array correctly
+        self.joint_order = [0,2,3,4,1,5]
+        self.ordered_current_pose = [0.0 , 0.0, 0.0, 0.0, 0.0, 0.0]
 
         # Create subscribers
         self.joint_trajectory_subscriber = self.create_subscription(
@@ -71,14 +78,16 @@ class MyNode(Node):
 
     def joint_trajectory_callback(self, msg):
         self.stack = msg.trajectory
-        self.i=0
+      
 
     def gui_feedback_callback(self, msg):
         self.desired_joint_positions = msg.trajectory
         self.i=0
 
     def position_feedback_callback(self, msg):
-            self.currentPosition = msg.position
+            self.currentPosition = msg.position        
+            for i in range(0,5):
+                self.ordered_current_pose[i] = self.currentPosition[self.joint_order[i]]
             
     def timercallback2(self):
         #This indexes through array
@@ -89,19 +98,28 @@ class MyNode(Node):
                 holder2 = holder.points
 
                 self.desired_joint_positions = holder2[self.i].positions
+                    # print("DESIRED: \n")
+                    # print(self.desired_joint_positions)
                 self.i +=1
-               
-                # print(self.desired_joint_positions)
-        
+            # print(self.i)
     def timercallback(self):
         #This performs pid
 
         if  not self.stack[0] == None:
-            if len(self.stack[0].joint_trajectory.points) > self.i:
+            # if len(self.stack[0].joint_trajectory.points) > self.i:
                 
-                efforts = self.pidCalc(self.desired_joint_positions)
-                print(efforts)
-                self.effort_publisher.publish(efforts)
+            efforts = self.pidCalc(self.desired_joint_positions)
+            print(efforts)
+            self.effort_publisher.publish(efforts)
+
+        #Code here is 
+        # if not self.desired_joint_positions ==  [0.0,0.0,0.0,0.0,0.0,0.0]:
+        #     efforts = self.pidCalc(self.desired_joint_positions)
+        #     print(efforts)
+        #     self.effort_publisher.publish(efforts)
+
+
+
           
 
 
@@ -110,8 +128,7 @@ class MyNode(Node):
         # print(jointDesiredPositions)
         joint = 0
         for desiredPose in jointDesiredPositions:
-
-            self.current_error[joint] = desiredPose - self.currentPosition[joint]
+            self.current_error[joint] = desiredPose - self.ordered_current_pose[joint]
          
             self.p_factor[joint] = self.k_p[joint] * (self.current_error[joint])
             #I function
@@ -122,8 +139,7 @@ class MyNode(Node):
             #publish this value to the respective joint
             self.effort[joint] = self.p_factor[joint] + self.i_factor[joint] + self.d_factor[joint]
             newmsg.data.append(self.effort[joint])
-            joint += 1
-        print(joint)
+            joint+= 1
         return newmsg
     
 
