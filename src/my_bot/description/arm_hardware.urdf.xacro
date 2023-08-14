@@ -22,6 +22,7 @@
 	<!--Dummy Link-->
 	<link name="base_link"/>
 	<joint name="dummy_joint" type="fixed">
+		<origin xyz="0 1-0 0" rpy="0 0 0"/>
 		<parent link="base_link"/>   
 		<child link="arm_a1"/>
 	</joint>
@@ -264,27 +265,27 @@
 
  		<joint name="arm_j1">
 			<param name="device_id">6</param>
-			<param name="counts_per_rev">1512</param>
+			<param name="counts_per_rev">1050</param>
 		</joint>
 		<joint name="arm_j2">
 			<param name="device_id">7</param>
-			<param name="counts_per_rev">1512</param>
+			<param name="counts_per_rev">5250</param>
 		</joint>
 		<joint name="arm_j3">
 			<param name="device_id">8</param>
-			<param name="counts_per_rev">1512</param>
+			<param name="counts_per_rev">5250</param>
 		</joint>
 		<joint name="arm_j4">
 			<param name="device_id">9</param>
-			<param name="counts_per_rev">1512</param>
+			<param name="counts_per_rev">1149.1597</param>
 		</joint>
 		<joint name="arm_j5">
 			<param name="device_id">10</param>
-			<param name="counts_per_rev">1512</param>
+			<param name="counts_per_rev">1149.1597</param>
 		</joint>
 		<joint name="arm_j6">
 			<param name="device_id">11</param>
-			<param name="counts_per_rev">1512</param>
+			<param name="counts_per_rev">1149.1597</param>
 		</joint>
 		<!-- <joint name="arm_j7">
 			<param name="device_id">12</param>

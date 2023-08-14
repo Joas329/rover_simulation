@@ -207,13 +207,13 @@
                     iyy="${Lzz*lbsqintokgsqm}" iyz="${-Lyz*lbsqintokgsqm}"
                     izz="${Lyy*lbsqintokgsqm}"/>
             </inertial>
-
+<!-- 
             <collision>
                 <origin rpy="${radians(90)} 0 0" xyz="0 0 0"/>
                 <geometry>
                     <mesh filename="file://$(find my_bot)/description/mesh/${file}.STL" />
                 </geometry>
-            </collision>
+            </collision> -->
         </link>
 
         <joint name="arm_j${component_number}" type="${type}">

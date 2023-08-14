@@ -19,13 +19,13 @@
         <color rgba="0 0 0 1"/>
     </material>
 
-	<!--Dummy Link-->
-	<link name="base_link"/>
-	<joint name="dummy_joint" type="fixed">
-		<parent link="base_link"/>   
-		<child link="arm_a1"/>
-	</joint>
+	 <link name="world"/>
 
+
+        <joint name="fix" type="fixed">
+            <parent link="world"/>
+            <child link="arm_a1"/>
+        </joint>
 	<!--Arm Links-->
 
 	<!--Arm 1-->
@@ -299,4 +299,3 @@
     </gazebo>
 
 </robot>
-

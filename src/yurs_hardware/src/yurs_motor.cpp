@@ -109,7 +109,7 @@ void yurs_motor::can_connection::read() {
 			if (ident.api_index == CAN_INDEX_TELEM_ENCODER) {
 				if (std::isnan(data.cpr)) return;
 
-				auto counts = read_buffer<uint32_t>(frame.data);
+				auto counts = read_buffer<int32_t>(frame.data);
 				data.input_position_shadow = 2 * M_PI * (counts / data.cpr);
 			}
 		}
