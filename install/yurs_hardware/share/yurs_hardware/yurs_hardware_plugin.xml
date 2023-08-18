@@ -1,4 +1,0 @@
-<library path="yurs_hardware">
-	<class name="yurs_hardware/yurs_motor" type="yurs_hardware::yurs_motor" base_class_type="hardware_interface::ActuatorInterface">
-	</class>
-</library>
