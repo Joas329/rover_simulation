@@ -1,0 +1,47 @@
+[0.120s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config -- -j8 -l8
+[0.330s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config -- -j8 -l8
+[0.459s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config
+[0.498s] -- Install configuration: ""
+[0.498s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/package_run_dependencies/arm_control_moveit_config
+[0.514s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/parent_prefix_path/arm_control_moveit_config
+[0.515s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/ament_prefix_path.sh
+[0.515s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/ament_prefix_path.dsv
+[0.516s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/path.sh
+[0.516s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/path.dsv
+[0.517s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.bash
+[0.517s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.sh
+[0.518s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.zsh
+[0.518s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.dsv
+[0.518s] -- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.dsv
+[0.519s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/packages/arm_control_moveit_config
+[0.523s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/cmake/arm_control_moveit_configConfig.cmake
+[0.524s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/cmake/arm_control_moveit_configConfig-version.cmake
+[0.525s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.xml
+[0.525s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch
+[0.526s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/spawn_controllers.launch.py
+[0.526s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[0.527s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/arm.launch.py
+[0.572s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/warehouse_db.launch.py
+[0.573s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/final.launch.py
+[0.574s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/setup_assistant.launch.py
+[0.575s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/arm_moveit.launch.py
+[0.575s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/demo.launch.py
+[0.576s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/rsp.launch.py
+[0.579s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/moveit_rviz.launch.py
+[0.580s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/move_group.launch.py
+[0.581s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config
+[0.582s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/chomp_planning.yaml
+[0.583s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/pilz_cartesian_limits.yaml
+[0.585s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/moveit_controllers.yaml
+[0.586s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/stomp_planning.yaml
+[0.588s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/ompl_planning.yaml
+[0.599s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/kinematics.yaml
+[0.606s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.urdf.xacro
+[0.607s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/ros2_controllers.yaml
+[0.620s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.srdf
+[0.620s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.ros2_control.xacro
+[0.622s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/initial_positions.yaml
+[0.623s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/joint_limits.yaml
+[0.624s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/moveit.rviz
+[0.625s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/.setup_assistant
+[0.736s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config

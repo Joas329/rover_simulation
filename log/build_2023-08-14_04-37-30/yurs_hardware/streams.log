@@ -1,0 +1,30 @@
+[1.604s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/yurs_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/yurs_hardware -- -j8 -l8
+[1.953s] [ 50%] [32mBuilding CXX object CMakeFiles/yurs_hardware.dir/src/yurs_motor.cpp.o[0m
+[20.548s] [32m[1mLinking CXX shared library libyurs_hardware.so[0m
+[21.532s] Built target yurs_hardware
+[21.577s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/yurs_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/yurs_hardware -- -j8 -l8
+[21.693s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/yurs_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/yurs_hardware
+[21.726s] -- Install configuration: ""
+[21.727s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/yurs_hardware_plugin.xml
+[21.728s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/include
+[21.729s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/include/yurs_hardware
+[21.729s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/include/yurs_hardware/yurs_motor.hpp
+[21.730s] -- Installing: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/lib/libyurs_hardware.so
+[21.743s] -- Set runtime path of "/home/joas329/Desktop/rover_simulation/install/yurs_hardware/lib/libyurs_hardware.so" to ""
+[21.744s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/ament_index/resource_index/package_run_dependencies/yurs_hardware
+[21.745s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/ament_index/resource_index/parent_prefix_path/yurs_hardware
+[21.746s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/environment/ament_prefix_path.sh
+[21.747s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/environment/ament_prefix_path.dsv
+[21.748s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/environment/path.sh
+[21.749s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/environment/path.dsv
+[21.749s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/local_setup.bash
+[21.750s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/local_setup.sh
+[21.751s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/local_setup.zsh
+[21.751s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/local_setup.dsv
+[21.752s] -- Installing: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.dsv
+[21.753s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/ament_index/resource_index/packages/yurs_hardware
+[21.753s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/yurs_hardware
+[21.754s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/cmake/yurs_hardwareConfig.cmake
+[21.754s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/cmake/yurs_hardwareConfig-version.cmake
+[21.755s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/yurs_hardware/share/yurs_hardware/package.xml
+[21.763s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/yurs_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/yurs_hardware

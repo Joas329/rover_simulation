@@ -1,0 +1,20 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/udp_receiver/lib/python3.10/site-packages",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/rover_sim/lib/python3.10/site-packages",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/http_server/lib/python3.10/site-packages",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/drivesub/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/udp_receiver/lib/python3.10/site-packages",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/rover_sim/lib/python3.10/site-packages",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/http_server/lib/python3.10/site-packages",
+        "/home/joas329/Desktop/Rover-Team-2022-3-Codebase/ros2_ws/install/drivesub/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

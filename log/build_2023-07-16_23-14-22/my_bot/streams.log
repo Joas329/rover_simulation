@@ -1,0 +1,17 @@
+[0.921s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/joas329/Desktop/rover_simulation/build/my_bot/build --no-deps install_data
+[1.218s] running develop
+[1.414s] running egg_info
+[1.414s] writing my_bot.egg-info/PKG-INFO
+[1.414s] writing dependency_links to my_bot.egg-info/dependency_links.txt
+[1.414s] writing entry points to my_bot.egg-info/entry_points.txt
+[1.466s] writing requirements to my_bot.egg-info/requires.txt
+[1.466s] writing top-level names to my_bot.egg-info/top_level.txt
+[1.472s] reading manifest file 'my_bot.egg-info/SOURCES.txt'
+[1.473s] writing manifest file 'my_bot.egg-info/SOURCES.txt'
+[1.486s] running build_ext
+[1.497s] Creating /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my-bot.egg-link (link to .)
+[1.497s] 
+[1.497s] Installed /home/joas329/Desktop/rover_simulation/build/my_bot
+[1.512s] running install_data
+[1.512s] copying description/macros.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[1.592s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/joas329/Desktop/rover_simulation/build/my_bot/build --no-deps install_data

@@ -1,0 +1,27 @@
+[5.027s] Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[6.914s] running egg_info
+[6.918s] writing ../../build/my_bot/my_bot.egg-info/PKG-INFO
+[6.921s] writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt
+[6.922s] writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt
+[6.923s] writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt
+[6.923s] writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt
+[6.934s] reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[6.942s] writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[6.943s] running build
+[6.943s] running build_py
+[6.944s] running install
+[6.946s] running install_lib
+[6.953s] byte-compiling /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/PID.py to PID.cpython-310.pyc
+[6.958s]   File "/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/PID.py", line 87
+[6.958s]     '/joint_states',
+[6.959s]     ^^^^^^^^^^^^^^^
+[6.959s] SyntaxError: invalid syntax
+[6.960s] 
+[6.961s] running install_data
+[6.966s] running install_egg_info
+[6.976s] removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[6.978s] Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info
+[6.985s] running install_scripts
+[7.105s] Installing PID script to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/my_bot
+[7.109s] writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'
+[7.249s] Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed

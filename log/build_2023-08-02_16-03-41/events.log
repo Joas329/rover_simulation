@@ -1,0 +1,363 @@
+[0.000000] (-) TimerEvent: {}
+[0.001395] (hello_moveit) JobQueued: {'identifier': 'hello_moveit', 'dependencies': OrderedDict()}
+[0.001432] (my_bot) JobQueued: {'identifier': 'my_bot', 'dependencies': OrderedDict()}
+[0.001470] (arm_control_moveit_config) JobQueued: {'identifier': 'arm_control_moveit_config', 'dependencies': OrderedDict([('my_bot', '/home/joas329/Desktop/rover_simulation/install/my_bot')])}
+[0.001494] (my_bot) JobStarted: {'identifier': 'my_bot'}
+[0.012222] (hello_moveit) JobStarted: {'identifier': 'hello_moveit'}
+[0.099539] (-) TimerEvent: {}
+[0.199957] (-) TimerEvent: {}
+[0.300234] (-) TimerEvent: {}
+[0.310710] (hello_moveit) JobProgress: {'identifier': 'hello_moveit', 'progress': 'cmake'}
+[0.311087] (hello_moveit) Command: {'cmd': ['/usr/bin/cmake', '/home/joas329/Desktop/rover_simulation/src/hello_moveit', '-DCMAKE_INSTALL_PREFIX=/home/joas329/Desktop/rover_simulation/install/hello_moveit'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/hello_moveit', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1928'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1904,unix/Morpheus:/tmp/.ICE-unix/1904'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4922b1dd_5892_42b8_a88f_23d62cfcaf81'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.23N481'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.105'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/hello_moveit'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble')]), 'shell': False}
+[0.400335] (-) TimerEvent: {}
+[0.500683] (-) TimerEvent: {}
+[0.600939] (-) TimerEvent: {}
+[0.701215] (-) TimerEvent: {}
+[0.750512] (my_bot) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/my_bot', 'build', '--build-base', '/home/joas329/Desktop/rover_simulation/build/my_bot/build', 'install', '--record', '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log', '--single-version-externally-managed'], 'cwd': '/home/joas329/Desktop/rover_simulation/src/my_bot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'joas329', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/joas329', 'OLDPWD': '/home/joas329', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1928', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/joas329/Desktop/rover_simulation/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'joas329', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'joas329', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/Morpheus:@/tmp/.ICE-unix/1904,unix/Morpheus:/tmp/.ICE-unix/1904', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4922b1dd_5892_42b8_a88f_23d62cfcaf81', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.23N481', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.105', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/joas329/Desktop/rover_simulation/build/my_bot', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control'}, 'shell': False}
+[0.801351] (-) TimerEvent: {}
+[0.901657] (-) TimerEvent: {}
+[1.001928] (-) TimerEvent: {}
+[1.039795] (hello_moveit) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.046813] (my_bot) StdoutLine: {'line': b'running egg_info\n'}
+[1.047477] (my_bot) StdoutLine: {'line': b'writing ../../build/my_bot/my_bot.egg-info/PKG-INFO\n'}
+[1.047682] (my_bot) StdoutLine: {'line': b'writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt\n'}
+[1.047897] (my_bot) StdoutLine: {'line': b'writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt\n'}
+[1.048023] (my_bot) StdoutLine: {'line': b'writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt\n'}
+[1.048115] (my_bot) StdoutLine: {'line': b'writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt\n'}
+[1.050414] (my_bot) StdoutLine: {'line': b"reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'\n"}
+[1.051628] (my_bot) StdoutLine: {'line': b"writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'\n"}
+[1.051880] (my_bot) StdoutLine: {'line': b'running build\n'}
+[1.052010] (my_bot) StdoutLine: {'line': b'running build_py\n'}
+[1.052167] (my_bot) StdoutLine: {'line': b'running install\n'}
+[1.052314] (my_bot) StdoutLine: {'line': b'running install_lib\n'}
+[1.053343] (my_bot) StdoutLine: {'line': b'running install_data\n'}
+[1.054676] (my_bot) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.056365] (my_bot) StdoutLine: {'line': b"removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.056686] (my_bot) StdoutLine: {'line': b'Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info\n'}
+[1.057559] (my_bot) StdoutLine: {'line': b'running install_scripts\n'}
+[1.077607] (my_bot) StdoutLine: {'line': b"writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'\n"}
+[1.103825] (my_bot) CommandEnded: {'returncode': 0}
+[1.104287] (-) TimerEvent: {}
+[1.120377] (my_bot) JobEnded: {'identifier': 'my_bot', 'rc': 0}
+[1.121478] (arm_control_moveit_config) JobStarted: {'identifier': 'arm_control_moveit_config'}
+[1.129149] (arm_control_moveit_config) JobProgress: {'identifier': 'arm_control_moveit_config', 'progress': 'cmake'}
+[1.129710] (arm_control_moveit_config) JobProgress: {'identifier': 'arm_control_moveit_config', 'progress': 'build'}
+[1.130915] (arm_control_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config', '--', '-j8', '-l8'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1928'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1904,unix/Morpheus:/tmp/.ICE-unix/1904'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4922b1dd_5892_42b8_a88f_23d62cfcaf81'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.23N481'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.105'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble')]), 'shell': False}
+[1.169640] (arm_control_moveit_config) CommandEnded: {'returncode': 0}
+[1.192646] (arm_control_moveit_config) JobProgress: {'identifier': 'arm_control_moveit_config', 'progress': 'install'}
+[1.202468] (arm_control_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1928'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1904,unix/Morpheus:/tmp/.ICE-unix/1904'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4922b1dd_5892_42b8_a88f_23d62cfcaf81'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.23N481'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.105'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/arm_control_moveit_config'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble')]), 'shell': False}
+[1.204364] (-) TimerEvent: {}
+[1.209791] (arm_control_moveit_config) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.210060] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/package_run_dependencies/arm_control_moveit_config\n'}
+[1.210269] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/parent_prefix_path/arm_control_moveit_config\n'}
+[1.210414] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/ament_prefix_path.sh\n'}
+[1.210526] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/ament_prefix_path.dsv\n'}
+[1.210725] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/path.sh\n'}
+[1.211036] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/environment/path.dsv\n'}
+[1.211336] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.bash\n'}
+[1.211594] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.sh\n'}
+[1.211748] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.zsh\n'}
+[1.211866] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/local_setup.dsv\n'}
+[1.211983] (arm_control_moveit_config) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.dsv\n'}
+[1.212100] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/ament_index/resource_index/packages/arm_control_moveit_config\n'}
+[1.212226] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/cmake/arm_control_moveit_configConfig.cmake\n'}
+[1.212343] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/cmake/arm_control_moveit_configConfig-version.cmake\n'}
+[1.212459] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/package.xml\n'}
+[1.212575] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch\n'}
+[1.212691] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/spawn_controllers.launch.py\n'}
+[1.212810] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/static_virtual_joint_tfs.launch.py\n'}
+[1.213058] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/warehouse_db.launch.py\n'}
+[1.213447] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/setup_assistant.launch.py\n'}
+[1.213572] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/arm_moveit.launch.py\n'}
+[1.217942] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/demo.launch.py\n'}
+[1.218559] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/rsp.launch.py\n'}
+[1.218732] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/moveit_rviz.launch.py\n'}
+[1.218898] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/launch/move_group.launch.py\n'}
+[1.219092] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config\n'}
+[1.219239] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/pilz_cartesian_limits.yaml\n'}
+[1.219530] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/moveit_controllers.yaml\n'}
+[1.219711] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/ompl_planning.yaml\n'}
+[1.219962] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/kinematics.yaml\n'}
+[1.220112] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.urdf.xacro\n'}
+[1.220269] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/ros2_controllers.yaml\n'}
+[1.220436] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.srdf\n'}
+[1.220592] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/robot_arm.ros2_control.xacro\n'}
+[1.220756] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/macros.xacro\n'}
+[1.220925] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/arm.urdf.xacro\n'}
+[1.221087] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/initial_positions.yaml\n'}
+[1.221256] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/arm.urdf\n'}
+[1.221410] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/joint_limits.yaml\n'}
+[1.224132] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/config/moveit.rviz\n'}
+[1.224313] (arm_control_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config/share/arm_control_moveit_config/.setup_assistant\n'}
+[1.224462] (arm_control_moveit_config) CommandEnded: {'returncode': 0}
+[1.274217] (arm_control_moveit_config) JobEnded: {'identifier': 'arm_control_moveit_config', 'rc': 0}
+[1.304636] (-) TimerEvent: {}
+[1.405336] (-) TimerEvent: {}
+[1.506302] (-) TimerEvent: {}
+[1.606912] (-) TimerEvent: {}
+[1.678131] (hello_moveit) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.690672] (hello_moveit) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.707081] (-) TimerEvent: {}
+[1.807621] (-) TimerEvent: {}
+[1.897043] (hello_moveit) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.905488] (hello_moveit) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.905965] (hello_moveit) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.907692] (-) TimerEvent: {}
+[1.928174] (hello_moveit) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.932263] (hello_moveit) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.007923] (-) TimerEvent: {}
+[2.108503] (-) TimerEvent: {}
+[2.109671] (hello_moveit) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.122774] (hello_moveit) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.123185] (hello_moveit) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.123773] (hello_moveit) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.181624] (hello_moveit) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[2.208735] (-) TimerEvent: {}
+[2.309526] (-) TimerEvent: {}
+[2.409814] (-) TimerEvent: {}
+[2.510143] (-) TimerEvent: {}
+[2.518960] (hello_moveit) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[2.610324] (-) TimerEvent: {}
+[2.710947] (-) TimerEvent: {}
+[2.811537] (-) TimerEvent: {}
+[2.837973] (hello_moveit) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.5.4 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)\n'}
+[2.911757] (-) TimerEvent: {}
+[3.012358] (-) TimerEvent: {}
+[3.112839] (-) TimerEvent: {}
+[3.213252] (-) TimerEvent: {}
+[3.314102] (-) TimerEvent: {}
+[3.378308] (hello_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread \n'}
+[3.414246] (-) TimerEvent: {}
+[3.514545] (-) TimerEvent: {}
+[3.607198] (hello_moveit) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.614655] (-) TimerEvent: {}
+[3.616419] (hello_moveit) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.644915] (hello_moveit) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.681697] (hello_moveit) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.714806] (-) TimerEvent: {}
+[3.716353] (hello_moveit) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.814912] (-) TimerEvent: {}
+[3.915251] (-) TimerEvent: {}
+[4.015576] (-) TimerEvent: {}
+[4.115899] (-) TimerEvent: {}
+[4.216281] (-) TimerEvent: {}
+[4.316564] (-) TimerEvent: {}
+[4.416927] (-) TimerEvent: {}
+[4.517249] (-) TimerEvent: {}
+[4.617562] (-) TimerEvent: {}
+[4.717868] (-) TimerEvent: {}
+[4.818177] (-) TimerEvent: {}
+[4.918418] (-) TimerEvent: {}
+[5.018705] (-) TimerEvent: {}
+[5.119080] (-) TimerEvent: {}
+[5.170828] (hello_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[5.219249] (-) TimerEvent: {}
+[5.319634] (-) TimerEvent: {}
+[5.420351] (-) TimerEvent: {}
+[5.434420] (hello_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[5.520548] (-) TimerEvent: {}
+[5.621315] (-) TimerEvent: {}
+[5.722078] (-) TimerEvent: {}
+[5.822732] (-) TimerEvent: {}
+[5.923181] (-) TimerEvent: {}
+[6.023732] (-) TimerEvent: {}
+[6.124120] (-) TimerEvent: {}
+[6.215327] (hello_moveit) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[6.224282] (-) TimerEvent: {}
+[6.245610] (hello_moveit) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[6.324549] (-) TimerEvent: {}
+[6.425129] (-) TimerEvent: {}
+[6.482695] (hello_moveit) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[6.511457] (hello_moveit) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[6.525272] (-) TimerEvent: {}
+[6.625575] (-) TimerEvent: {}
+[6.726098] (-) TimerEvent: {}
+[6.826479] (-) TimerEvent: {}
+[6.926882] (-) TimerEvent: {}
+[7.027564] (-) TimerEvent: {}
+[7.073219] (hello_moveit) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[7.127811] (-) TimerEvent: {}
+[7.228420] (-) TimerEvent: {}
+[7.328859] (-) TimerEvent: {}
+[7.367567] (hello_moveit) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[7.367904] (hello_moveit) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[7.428976] (-) TimerEvent: {}
+[7.529291] (-) TimerEvent: {}
+[7.629765] (-) TimerEvent: {}
+[7.730337] (-) TimerEvent: {}
+[7.830676] (-) TimerEvent: {}
+[7.930990] (-) TimerEvent: {}
+[8.031330] (-) TimerEvent: {}
+[8.131667] (-) TimerEvent: {}
+[8.231971] (-) TimerEvent: {}
+[8.282447] (hello_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[8.332106] (-) TimerEvent: {}
+[8.432394] (-) TimerEvent: {}
+[8.532701] (-) TimerEvent: {}
+[8.633013] (-) TimerEvent: {}
+[8.733325] (-) TimerEvent: {}
+[8.833636] (-) TimerEvent: {}
+[8.869278] (hello_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options \n'}
+[8.933776] (-) TimerEvent: {}
+[9.034088] (-) TimerEvent: {}
+[9.134364] (-) TimerEvent: {}
+[9.234756] (-) TimerEvent: {}
+[9.335455] (-) TimerEvent: {}
+[9.375369] (hello_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread \n'}
+[9.435698] (-) TimerEvent: {}
+[9.536502] (-) TimerEvent: {}
+[9.637141] (-) TimerEvent: {}
+[9.737439] (-) TimerEvent: {}
+[9.837729] (-) TimerEvent: {}
+[9.938030] (-) TimerEvent: {}
+[10.030489] (hello_moveit) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[10.038429] (-) TimerEvent: {}
+[10.138736] (-) TimerEvent: {}
+[10.239121] (-) TimerEvent: {}
+[10.273043] (hello_moveit) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[10.273839] (hello_moveit) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/joas329/Desktop/rover_simulation/src/hello_moveit/include>\n'}
+[10.274238] (hello_moveit) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[10.279054] (hello_moveit) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[10.285442] (hello_moveit) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[10.285853] (hello_moveit) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[10.288620] (hello_moveit) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[10.294333] (hello_moveit) StdoutLine: {'line': b'-- Configuring done\n'}
+[10.339256] (-) TimerEvent: {}
+[10.434035] (hello_moveit) StdoutLine: {'line': b'-- Generating done\n'}
+[10.439358] (-) TimerEvent: {}
+[10.439871] (hello_moveit) StdoutLine: {'line': b'-- Build files have been written to: /home/joas329/Desktop/rover_simulation/build/hello_moveit\n'}
+[10.457827] (hello_moveit) CommandEnded: {'returncode': 0}
+[10.458663] (hello_moveit) JobProgress: {'identifier': 'hello_moveit', 'progress': 'build'}
+[10.459822] (hello_moveit) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joas329/Desktop/rover_simulation/build/hello_moveit', '--', '-j8', '-l8'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/hello_moveit', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1928'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1904,unix/Morpheus:/tmp/.ICE-unix/1904'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4922b1dd_5892_42b8_a88f_23d62cfcaf81'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.23N481'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.105'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/hello_moveit'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble')]), 'shell': False}
+[10.518106] (hello_moveit) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/hello_moveit.dir/src/hello_moveit.cpp.o\x1b[0m\n'}
+[10.539506] (-) TimerEvent: {}
+[10.639832] (-) TimerEvent: {}
+[10.740155] (-) TimerEvent: {}
+[10.840693] (-) TimerEvent: {}
+[10.941005] (-) TimerEvent: {}
+[11.041317] (-) TimerEvent: {}
+[11.141625] (-) TimerEvent: {}
+[11.242013] (-) TimerEvent: {}
+[11.342271] (-) TimerEvent: {}
+[11.442560] (-) TimerEvent: {}
+[11.542873] (-) TimerEvent: {}
+[11.643197] (-) TimerEvent: {}
+[11.743496] (-) TimerEvent: {}
+[11.843809] (-) TimerEvent: {}
+[11.944108] (-) TimerEvent: {}
+[12.044406] (-) TimerEvent: {}
+[12.144725] (-) TimerEvent: {}
+[12.245026] (-) TimerEvent: {}
+[12.345463] (-) TimerEvent: {}
+[12.446361] (-) TimerEvent: {}
+[12.547121] (-) TimerEvent: {}
+[12.647536] (-) TimerEvent: {}
+[12.747882] (-) TimerEvent: {}
+[12.848217] (-) TimerEvent: {}
+[12.948556] (-) TimerEvent: {}
+[13.048899] (-) TimerEvent: {}
+[13.149249] (-) TimerEvent: {}
+[13.249604] (-) TimerEvent: {}
+[13.349969] (-) TimerEvent: {}
+[13.450388] (-) TimerEvent: {}
+[13.550775] (-) TimerEvent: {}
+[13.651158] (-) TimerEvent: {}
+[13.751516] (-) TimerEvent: {}
+[13.851866] (-) TimerEvent: {}
+[13.952239] (-) TimerEvent: {}
+[14.052610] (-) TimerEvent: {}
+[14.152970] (-) TimerEvent: {}
+[14.253324] (-) TimerEvent: {}
+[14.353684] (-) TimerEvent: {}
+[14.454033] (-) TimerEvent: {}
+[14.554347] (-) TimerEvent: {}
+[14.654683] (-) TimerEvent: {}
+[14.755020] (-) TimerEvent: {}
+[14.855368] (-) TimerEvent: {}
+[14.955723] (-) TimerEvent: {}
+[15.056115] (-) TimerEvent: {}
+[15.156464] (-) TimerEvent: {}
+[15.256817] (-) TimerEvent: {}
+[15.357174] (-) TimerEvent: {}
+[15.457533] (-) TimerEvent: {}
+[15.557945] (-) TimerEvent: {}
+[15.658274] (-) TimerEvent: {}
+[15.758584] (-) TimerEvent: {}
+[15.858931] (-) TimerEvent: {}
+[15.959287] (-) TimerEvent: {}
+[16.059629] (-) TimerEvent: {}
+[16.159940] (-) TimerEvent: {}
+[16.260258] (-) TimerEvent: {}
+[16.360580] (-) TimerEvent: {}
+[16.460903] (-) TimerEvent: {}
+[16.561176] (-) TimerEvent: {}
+[16.661500] (-) TimerEvent: {}
+[16.761821] (-) TimerEvent: {}
+[16.862168] (-) TimerEvent: {}
+[16.962490] (-) TimerEvent: {}
+[17.062809] (-) TimerEvent: {}
+[17.163130] (-) TimerEvent: {}
+[17.263450] (-) TimerEvent: {}
+[17.363772] (-) TimerEvent: {}
+[17.464092] (-) TimerEvent: {}
+[17.564385] (-) TimerEvent: {}
+[17.664753] (-) TimerEvent: {}
+[17.765110] (-) TimerEvent: {}
+[17.865461] (-) TimerEvent: {}
+[17.965816] (-) TimerEvent: {}
+[18.066183] (-) TimerEvent: {}
+[18.166551] (-) TimerEvent: {}
+[18.266907] (-) TimerEvent: {}
+[18.367268] (-) TimerEvent: {}
+[18.467665] (-) TimerEvent: {}
+[18.568064] (-) TimerEvent: {}
+[18.668460] (-) TimerEvent: {}
+[18.768849] (-) TimerEvent: {}
+[18.869274] (-) TimerEvent: {}
+[18.969709] (-) TimerEvent: {}
+[19.070086] (-) TimerEvent: {}
+[19.170482] (-) TimerEvent: {}
+[19.271148] (-) TimerEvent: {}
+[19.371883] (-) TimerEvent: {}
+[19.472225] (-) TimerEvent: {}
+[19.572579] (-) TimerEvent: {}
+[19.672927] (-) TimerEvent: {}
+[19.748240] (hello_moveit) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable hello_moveit\x1b[0m\n'}
+[19.773302] (-) TimerEvent: {}
+[19.873834] (-) TimerEvent: {}
+[19.974608] (-) TimerEvent: {}
+[20.075011] (-) TimerEvent: {}
+[20.175808] (-) TimerEvent: {}
+[20.276640] (-) TimerEvent: {}
+[20.377141] (-) TimerEvent: {}
+[20.478017] (-) TimerEvent: {}
+[20.578414] (-) TimerEvent: {}
+[20.678714] (-) TimerEvent: {}
+[20.779036] (-) TimerEvent: {}
+[20.879326] (-) TimerEvent: {}
+[20.891793] (hello_moveit) StdoutLine: {'line': b'[100%] Built target hello_moveit\n'}
+[20.906955] (hello_moveit) CommandEnded: {'returncode': 0}
+[20.938856] (hello_moveit) JobProgress: {'identifier': 'hello_moveit', 'progress': 'install'}
+[20.940038] (hello_moveit) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joas329/Desktop/rover_simulation/build/hello_moveit'], 'cwd': '/home/joas329/Desktop/rover_simulation/build/hello_moveit', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'joas329'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joas329'), ('OLDPWD', '/home/joas329'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1928'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joas329'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joas329'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Morpheus:@/tmp/.ICE-unix/1904,unix/Morpheus:/tmp/.ICE-unix/1904'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4922b1dd_5892_42b8_a88f_23d62cfcaf81'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.23N481'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.105'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joas329/Desktop/rover_simulation/build/hello_moveit'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joas329/Desktop/rover_simulation/install/moveit:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos:/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble')]), 'shell': False}
+[20.948577] (hello_moveit) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.948868] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/lib/hello_moveit/hello_moveit\n'}
+[20.949834] (hello_moveit) StdoutLine: {'line': b'-- Set runtime path of "/home/joas329/Desktop/rover_simulation/install/hello_moveit/lib/hello_moveit/hello_moveit" to ""\n'}
+[20.950032] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/ament_index/resource_index/package_run_dependencies/hello_moveit\n'}
+[20.950266] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/ament_index/resource_index/parent_prefix_path/hello_moveit\n'}
+[20.950518] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/environment/ament_prefix_path.sh\n'}
+[20.950745] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/environment/ament_prefix_path.dsv\n'}
+[20.950993] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/environment/path.sh\n'}
+[20.951328] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/environment/path.dsv\n'}
+[20.951651] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/local_setup.bash\n'}
+[20.951885] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/local_setup.sh\n'}
+[20.952020] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/local_setup.zsh\n'}
+[20.952111] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/local_setup.dsv\n'}
+[20.952217] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/package.dsv\n'}
+[20.952301] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/ament_index/resource_index/packages/hello_moveit\n'}
+[20.952442] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/cmake/hello_moveitConfig.cmake\n'}
+[20.952596] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/cmake/hello_moveitConfig-version.cmake\n'}
+[20.952790] (hello_moveit) StdoutLine: {'line': b'-- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/package.xml\n'}
+[20.955067] (hello_moveit) CommandEnded: {'returncode': 0}
+[20.979438] (-) TimerEvent: {}
+[21.014150] (hello_moveit) JobEnded: {'identifier': 'hello_moveit', 'rc': 0}
+[21.014882] (-) EventReactorShutdown: {}

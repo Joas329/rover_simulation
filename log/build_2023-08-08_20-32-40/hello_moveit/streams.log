@@ -1,0 +1,22 @@
+[0.790s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/hello_moveit -- -j8 -l8
+[0.941s] [100%] Built target hello_moveit
+[0.965s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/hello_moveit -- -j8 -l8
+[1.041s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/hello_moveit
+[1.073s] -- Install configuration: "Release"
+[1.073s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/lib/hello_moveit/hello_moveit
+[1.076s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/ament_index/resource_index/package_run_dependencies/hello_moveit
+[1.077s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/ament_index/resource_index/parent_prefix_path/hello_moveit
+[1.077s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/environment/ament_prefix_path.sh
+[1.077s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/environment/ament_prefix_path.dsv
+[1.077s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/environment/path.sh
+[1.078s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/environment/path.dsv
+[1.078s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/local_setup.bash
+[1.078s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/local_setup.sh
+[1.078s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/local_setup.zsh
+[1.078s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/local_setup.dsv
+[1.078s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/package.dsv
+[1.079s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/ament_index/resource_index/packages/hello_moveit
+[1.079s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/cmake/hello_moveitConfig.cmake
+[1.079s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/cmake/hello_moveitConfig-version.cmake
+[1.079s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/hello_moveit/share/hello_moveit/package.xml
+[1.147s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/hello_moveit

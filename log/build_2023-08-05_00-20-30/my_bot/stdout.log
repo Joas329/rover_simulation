@@ -1,0 +1,53 @@
+running egg_info
+writing ../../build/my_bot/my_bot.egg-info/PKG-INFO
+writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt
+writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt
+writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt
+writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt
+reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot
+copying /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot/__init__.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot
+byte-compiling /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index
+creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index/resource_index
+creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index/resource_index/packages
+copying resource/my_bot -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index/resource_index/packages
+copying package.xml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot
+creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+copying launch/arm_gazebo.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+copying launch/launch_sim.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+copying launch/rsp.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+copying launch/sim.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+copying config/arm_controllers.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+copying config/empty.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+copying config/my_controllers.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+copying config/twist_mux.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+copying config/gazebo_params.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/robot.urdf.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/depth_camera.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/camera.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/ros2_control.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/macros.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/arm.urdf.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/robot_core.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/robot_arm.srdf -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+copying description/arm.urdf -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+creating /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+copying description/mesh/ARM-A03.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+copying description/mesh/ARM-A06.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+copying description/mesh/ARM-A04.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+copying description/mesh/ARM-A02.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+copying description/mesh/ARM-A05.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+copying description/mesh/ARM-A01.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+running install_egg_info
+Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'

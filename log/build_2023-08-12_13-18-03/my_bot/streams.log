@@ -1,0 +1,23 @@
+[2.859s] Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[4.092s] running egg_info
+[4.095s] writing ../../build/my_bot/my_bot.egg-info/PKG-INFO
+[4.096s] writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt
+[4.097s] writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt
+[4.098s] writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt
+[4.099s] writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt
+[4.108s] reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[4.113s] writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[4.114s] running build
+[4.115s] running build_py
+[4.116s] running install
+[4.117s] running install_lib
+[4.124s] running install_data
+[4.128s] copying description/arm_gazebo.urdf.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[4.131s] running install_egg_info
+[4.139s] removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[4.140s] Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info
+[4.146s] running install_scripts
+[4.233s] Installing PID script to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/my_bot
+[4.234s] Installing udp_conv script to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/my_bot
+[4.235s] writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'
+[4.331s] Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed

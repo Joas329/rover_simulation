@@ -1,0 +1,12 @@
+[0.014s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/arm_moveit_config': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_moveit_config -- -j8 -l8
+[0.034s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.178s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[0.178s]   ament_target_dependencies() the first argument must be a valid target name
+[0.178s] Call Stack (most recent call first):
+[0.178s]   CMakeLists.txt:6 (ament_target_dependencies)
+[0.178s] 
+[0.178s] [0m
+[0.178s] -- Configuring incomplete, errors occurred!
+[0.178s] See also "/home/joas329/Desktop/rover_simulation/build/arm_moveit_config/CMakeFiles/CMakeOutput.log".
+[0.180s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.182s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/arm_moveit_config' returned '2': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/my_bot:/home/joas329/Desktop/rover_simulation/install/yurs_hardware:/home/joas329/Desktop/rover_simulation/install/arm_moveit_config:/home/joas329/Desktop/rover_simulation/install/arm_control_moveit_config:/home/joas329/Desktop/rover_simulation/install/hello_moveit:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/arm_moveit_config -- -j8 -l8

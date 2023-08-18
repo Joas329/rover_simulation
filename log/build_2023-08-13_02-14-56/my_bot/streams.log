@@ -1,0 +1,22 @@
+[2.803s] Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[4.022s] running egg_info
+[4.024s] writing ../../build/my_bot/my_bot.egg-info/PKG-INFO
+[4.025s] writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt
+[4.026s] writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt
+[4.026s] writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt
+[4.027s] writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt
+[4.036s] reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[4.042s] writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[4.042s] running build
+[4.042s] running build_py
+[4.043s] running install
+[4.045s] running install_lib
+[4.050s] running install_data
+[4.058s] running install_egg_info
+[4.065s] removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[4.067s] Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info
+[4.072s] running install_scripts
+[4.163s] Installing PID script to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/my_bot
+[4.164s] Installing udp_conv script to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/my_bot
+[4.165s] writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'
+[4.267s] Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed

@@ -1,0 +1,67 @@
+[1.318s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/joas329/Desktop/rover_simulation/build/my_bot/build
+[1.566s] running develop
+[1.600s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.600s]   warnings.warn(
+[1.618s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.618s]   warnings.warn(
+[1.703s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[1.703s]   warnings.warn(
+[1.703s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[1.703s]   warnings.warn(
+[1.834s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/joas329/Desktop/rover_simulation/build/my_bot/build
+[1.835s] Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[2.058s] running egg_info
+[2.059s] writing ../../build/my_bot/my_bot.egg-info/PKG-INFO
+[2.059s] writing dependency_links to ../../build/my_bot/my_bot.egg-info/dependency_links.txt
+[2.059s] writing entry points to ../../build/my_bot/my_bot.egg-info/entry_points.txt
+[2.059s] writing requirements to ../../build/my_bot/my_bot.egg-info/requires.txt
+[2.059s] writing top-level names to ../../build/my_bot/my_bot.egg-info/top_level.txt
+[2.061s] reading manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[2.062s] writing manifest file '../../build/my_bot/my_bot.egg-info/SOURCES.txt'
+[2.062s] running build
+[2.062s] running build_py
+[2.062s] copying my_bot/__init__.py -> /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot
+[2.062s] running install
+[2.062s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.062s]   warnings.warn(
+[2.062s] running install_lib
+[2.063s] copying /home/joas329/Desktop/rover_simulation/build/my_bot/build/lib/my_bot/__init__.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot
+[2.063s] byte-compiling /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/__init__.py to __init__.cpython-310.pyc
+[2.064s] running install_data
+[2.064s] copying resource/my_bot -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/ament_index/resource_index/packages
+[2.064s] copying package.xml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot
+[2.064s] copying launch/launch_sim.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+[2.064s] copying launch/arm_sim.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+[2.065s] copying launch/demo.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+[2.065s] copying launch/rsp.launch.py -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/launch
+[2.065s] copying config/pilz_cartesian_limits.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.065s] copying config/moveit_controllers.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.065s] copying config/arm_controllers.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.065s] copying config/empty.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.065s] copying config/kinematics.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.065s] copying config/my_controllers.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.065s] copying config/initial_positions.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.066s] copying config/joint_limits.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.066s] copying config/twist_mux.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.066s] copying config/gazebo_params.yaml -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config
+[2.066s] copying description/robot.urdf.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.066s] copying description/depth_camera.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.066s] copying description/camera.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.066s] copying description/ros2_control.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.066s] copying description/macros.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.066s] copying description/arm.urdf.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.066s] copying description/robot_core.xacro -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.066s] copying description/robot_arm.srdf -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.067s] copying description/arm.urdf -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description
+[2.067s] copying description/mesh/ARM-A03.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[2.117s] copying description/mesh/ARM-A06.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[2.136s] copying description/mesh/ARM-A04.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[2.157s] copying description/mesh/ARM-A02.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[2.160s] copying description/mesh/ARM-A05.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[2.181s] copying description/mesh/ARM-A01.STL -> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/description/mesh
+[2.203s] running install_egg_info
+[2.204s] removing '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[2.205s] Copying ../../build/my_bot/my_bot.egg-info to /home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot-0.0.0-py3.10.egg-info
+[2.206s] running install_scripts
+[2.226s] writing list of installed files to '/home/joas329/Desktop/rover_simulation/build/my_bot/install.log'
+[2.250s] Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed

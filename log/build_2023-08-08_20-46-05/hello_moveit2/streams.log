@@ -1,0 +1,26 @@
+[0.315s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/hello_moveit2 -- -j8 -l8
+[0.371s] [35m[1mConsolidate compiler generated dependencies of target hello_moveit2[0m
+[0.414s] [ 50%] [32mBuilding CXX object CMakeFiles/hello_moveit2.dir/src/hello_moveit2.cpp.o[0m
+[7.624s] [100%] [32m[1mLinking CXX executable hello_moveit2[0m
+[8.752s] [100%] Built target hello_moveit2
+[8.764s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/hello_moveit2 -- -j8 -l8
+[8.792s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/hello_moveit2
+[8.800s] -- Install configuration: ""
+[8.800s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/lib/hello_moveit2/hello_moveit2
+[8.801s] -- Set runtime path of "/home/joas329/Desktop/rover_simulation/install/hello_moveit2/lib/hello_moveit2/hello_moveit2" to ""
+[8.801s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/ament_index/resource_index/package_run_dependencies/hello_moveit2
+[8.802s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/ament_index/resource_index/parent_prefix_path/hello_moveit2
+[8.802s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/environment/ament_prefix_path.sh
+[8.802s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/environment/ament_prefix_path.dsv
+[8.802s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/environment/path.sh
+[8.802s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/environment/path.dsv
+[8.802s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/local_setup.bash
+[8.803s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/local_setup.sh
+[8.803s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/local_setup.zsh
+[8.803s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/local_setup.dsv
+[8.803s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/package.dsv
+[8.803s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/ament_index/resource_index/packages/hello_moveit2
+[8.803s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/cmake/hello_moveit2Config.cmake
+[8.803s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/cmake/hello_moveit2Config-version.cmake
+[8.803s] -- Installing: /home/joas329/Desktop/rover_simulation/install/hello_moveit2/share/hello_moveit2/package.xml
+[8.811s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/hello_moveit2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/joas329/Desktop/rover_simulation/install/my_bot:/opt/ros/humble /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/hello_moveit2

@@ -1,0 +1,56 @@
+[0.320s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/realtime_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/realtime_tools -- -j8 -l8
+[0.370s] [35m[1mConsolidate compiler generated dependencies of target thread_priority[0m
+[0.371s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[0.374s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[0.385s] [35m[1mConsolidate compiler generated dependencies of target realtime_tools[0m
+[0.417s] [  9%] Built target thread_priority
+[0.440s] [ 19%] Built target gmock_main
+[0.443s] [ 33%] Built target gmock
+[0.446s] [ 42%] Built target realtime_tools
+[0.490s] [35m[1mConsolidate compiler generated dependencies of target realtime_box_tests[0m
+[0.517s] [35m[1mConsolidate compiler generated dependencies of target realtime_clock_tests[0m
+[0.529s] [35m[1mConsolidate compiler generated dependencies of target realtime_buffer_tests[0m
+[0.535s] [35m[1mConsolidate compiler generated dependencies of target realtime_publisher_tests[0m
+[0.551s] [35m[1mConsolidate compiler generated dependencies of target realtime_publisher_tests_non_polling[0m
+[0.558s] [ 52%] Built target realtime_box_tests
+[0.565s] [35m[1mConsolidate compiler generated dependencies of target realtime_server_goal_handle_tests[0m
+[0.609s] [ 61%] Built target realtime_buffer_tests
+[0.611s] [ 71%] Built target realtime_publisher_tests_non_polling
+[0.615s] [ 80%] Built target realtime_clock_tests
+[0.626s] [ 90%] Built target realtime_publisher_tests
+[0.629s] [100%] Built target realtime_server_goal_handle_tests
+[0.644s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/realtime_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/realtime_tools -- -j8 -l8
+[0.725s] Invoking command in '/home/joas329/Desktop/rover_simulation/build/realtime_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/realtime_tools
+[0.738s] -- Install configuration: ""
+[0.739s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/include/realtime_tools
+[0.739s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/include/realtime_tools/realtime_tools
+[0.739s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/include/realtime_tools/realtime_tools/thread_priority.hpp
+[0.739s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_buffer.h
+[0.739s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_box.h
+[0.739s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_server_goal_handle.h
+[0.740s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_publisher.h
+[0.740s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_clock.h
+[0.740s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/lib/librealtime_tools.so
+[0.740s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/lib/libthread_priority.so
+[0.741s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/environment/library_path.sh
+[0.741s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/environment/library_path.dsv
+[0.741s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/ament_index/resource_index/package_run_dependencies/realtime_tools
+[0.741s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/ament_index/resource_index/parent_prefix_path/realtime_tools
+[0.742s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/environment/ament_prefix_path.sh
+[0.742s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/environment/ament_prefix_path.dsv
+[0.742s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/environment/path.sh
+[0.742s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/environment/path.dsv
+[0.742s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/local_setup.bash
+[0.743s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/local_setup.sh
+[0.743s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/local_setup.zsh
+[0.743s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/local_setup.dsv
+[0.743s] -- Installing: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/package.dsv
+[0.743s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/ament_index/resource_index/packages/realtime_tools
+[0.743s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/cmake/export_realtime_toolsExport.cmake
+[0.743s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/cmake/export_realtime_toolsExport-noconfig.cmake
+[0.744s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/cmake/ament_cmake_export_targets-extras.cmake
+[0.744s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.744s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/cmake/realtime_toolsConfig.cmake
+[0.744s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/cmake/realtime_toolsConfig-version.cmake
+[0.744s] -- Up-to-date: /home/joas329/Desktop/rover_simulation/install/realtime_tools/share/realtime_tools/package.xml
+[0.757s] Invoked command in '/home/joas329/Desktop/rover_simulation/build/realtime_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble:/home/joas329/Desktop/rover_simulation/install/my_bot /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/realtime_tools

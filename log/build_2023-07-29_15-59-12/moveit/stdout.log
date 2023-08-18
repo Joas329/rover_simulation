@@ -1,0 +1,55 @@
+-- The C compiler identification is GNU 11.3.0
+-- The CXX compiler identification is GNU 11.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+-- Configuring done (1.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/joas329/Desktop/rover_simulation/build/moveit
+-- Install configuration: ""
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/ament_index/resource_index/package_run_dependencies/moveit
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/ament_index/resource_index/parent_prefix_path/moveit
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/environment/ament_prefix_path.sh
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/environment/ament_prefix_path.dsv
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/environment/path.sh
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/environment/path.dsv
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/local_setup.bash
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/local_setup.sh
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/local_setup.zsh
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/local_setup.dsv
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/package.dsv
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/ament_index/resource_index/packages/moveit
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/cmake/moveitConfig.cmake
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/cmake/moveitConfig-version.cmake
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/package.xml
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch/setup_assistant.launch.py
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch/demo.launch.py
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch/moveit_rviz.launch.py
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch/static_virtual_joint_tfs.launch.py
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch/rsp.launch.py
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch/move_group.launch.py
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch/warehouse_db.launch.py
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/launch/spawn_controllers.launch.py
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/moveit_controllers.yaml
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/robot_arm.srdf
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/initial_positions.yaml
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/arm_controllers.yaml
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/ros2_controllers.yaml
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/robot_arm.ros2_control.xacro
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/joint_limits.yaml
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/pilz_cartesian_limits.yaml
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/kinematics.yaml
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/robot_arm.urdf.xacro
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/config/moveit.rviz
+-- Installing: /home/joas329/Desktop/rover_simulation/install/moveit/share/moveit/.setup_assistant

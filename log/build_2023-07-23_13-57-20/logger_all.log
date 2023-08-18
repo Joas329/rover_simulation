@@ -1,0 +1,329 @@
+[11.842s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[11.842s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=11, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ff916a1d3f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ff916a1cf10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ff916a1cf10>>)
+[12.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[12.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[12.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[12.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[12.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[12.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[12.419s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/joas329/Desktop/rover_simulation'
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[12.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[12.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[12.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extension 'ignore'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extension 'ignore_ament_install'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extensions ['colcon_pkg']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extension 'colcon_pkg'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extensions ['colcon_meta']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extension 'colcon_meta'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extensions ['ros']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extension 'ros'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extensions ['cmake', 'python']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extension 'cmake'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extension 'python'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extensions ['python_setup_py']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control) by extension 'python_setup_py'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extensions ['ignore', 'ignore_ament_install']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extension 'ignore'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extension 'ignore_ament_install'
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extensions ['colcon_pkg']
+[12.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extension 'colcon_pkg'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extensions ['colcon_meta']
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extension 'colcon_meta'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extensions ['ros']
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extension 'ros'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extensions ['cmake', 'python']
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extension 'cmake'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extension 'python'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extensions ['python_setup_py']
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/Docker) by extension 'python_setup_py'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extensions ['ignore', 'ignore_ament_install']
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extension 'ignore'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extension 'ignore_ament_install'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extensions ['colcon_pkg']
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extension 'colcon_pkg'
+[12.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extensions ['colcon_meta']
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extension 'colcon_meta'
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extensions ['ros']
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extension 'ros'
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extensions ['cmake', 'python']
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extension 'cmake'
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extension 'python'
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extensions ['python_setup_py']
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc) by extension 'python_setup_py'
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extensions ['ignore', 'ignore_ament_install']
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extension 'ignore'
+[12.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extension 'ignore_ament_install'
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extensions ['colcon_pkg']
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extension 'colcon_pkg'
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extensions ['colcon_meta']
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extension 'colcon_meta'
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extensions ['ros']
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extension 'ros'
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extensions ['cmake', 'python']
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extension 'cmake'
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extension 'python'
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extensions ['python_setup_py']
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/doc/img) by extension 'python_setup_py'
+[12.447s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[12.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extension 'ignore'
+[12.448s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extension 'ignore_ament_install'
+[12.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extensions ['colcon_pkg']
+[12.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extension 'colcon_pkg'
+[12.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extensions ['colcon_meta']
+[12.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extension 'colcon_meta'
+[12.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extensions ['ros']
+[12.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control) by extension 'ros'
+[12.487s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_ros2_control/gazebo_ros2_control' with type 'ros.ament_cmake' and name 'gazebo_ros2_control'
+[12.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[12.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extension 'ignore'
+[12.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extension 'ignore_ament_install'
+[12.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extensions ['colcon_pkg']
+[12.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extension 'colcon_pkg'
+[12.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extensions ['colcon_meta']
+[12.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extension 'colcon_meta'
+[12.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extensions ['ros']
+[12.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros2_control/gazebo_ros2_control_demos) by extension 'ros'
+[12.510s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_ros2_control/gazebo_ros2_control_demos' with type 'ros.ament_cmake' and name 'gazebo_ros2_control_demos'
+[12.513s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['ignore', 'ignore_ament_install']
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ignore'
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ignore_ament_install'
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['colcon_pkg']
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'colcon_pkg'
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['colcon_meta']
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'colcon_meta'
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extensions ['ros']
+[12.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_bot) by extension 'ros'
+[12.539s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_bot' with type 'ros.ament_python' and name 'my_bot'
+[12.541s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[12.546s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[12.548s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[12.548s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[12.548s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[12.865s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[12.866s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[12.968s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 428 installed packages in /opt/ros/humble
+[12.971s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[13.115s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'cmake_args' from command line to 'None'
+[13.120s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'cmake_target' from command line to 'None'
+[13.120s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[13.120s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'cmake_clean_cache' from command line to 'False'
+[13.120s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'cmake_clean_first' from command line to 'False'
+[13.120s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'cmake_force_configure' from command line to 'False'
+[13.120s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'ament_cmake_args' from command line to 'None'
+[13.120s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'catkin_cmake_args' from command line to 'None'
+[13.120s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[13.120s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_ros2_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/gazebo_ros2_control/gazebo_ros2_control', 'symlink_install': False, 'test_result_base': None}
+[13.121s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_args' from command line to 'None'
+[13.128s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_target' from command line to 'None'
+[13.128s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[13.128s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_clean_cache' from command line to 'False'
+[13.128s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_clean_first' from command line to 'False'
+[13.128s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'cmake_force_configure' from command line to 'False'
+[13.128s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'ament_cmake_args' from command line to 'None'
+[13.128s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'catkin_cmake_args' from command line to 'None'
+[13.128s] Level 5:colcon.colcon_core.verb:set package 'my_bot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[13.128s] DEBUG:colcon.colcon_core.verb:Building package 'my_bot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/my_bot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/my_bot', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/my_bot', 'symlink_install': False, 'test_result_base': None}
+[13.133s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'cmake_args' from command line to 'None'
+[13.133s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'cmake_target' from command line to 'None'
+[13.133s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[13.133s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'cmake_clean_cache' from command line to 'False'
+[13.133s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'cmake_clean_first' from command line to 'False'
+[13.133s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'cmake_force_configure' from command line to 'False'
+[13.133s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'ament_cmake_args' from command line to 'None'
+[13.133s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'catkin_cmake_args' from command line to 'None'
+[13.135s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros2_control_demos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[13.135s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_ros2_control_demos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos', 'merge_install': False, 'path': '/home/joas329/Desktop/rover_simulation/src/gazebo_ros2_control/gazebo_ros2_control_demos', 'symlink_install': False, 'test_result_base': None}
+[13.144s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[13.163s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[13.171s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/gazebo_ros2_control/gazebo_ros2_control' with build type 'ament_cmake'
+[13.171s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joas329/Desktop/rover_simulation/src/gazebo_ros2_control/gazebo_ros2_control'
+[13.380s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[13.380s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.380s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.445s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/my_bot' with build type 'ament_python'
+[13.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_bot', 'ament_prefix_path')
+[13.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.ps1'
+[13.487s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.dsv'
+[13.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/ament_prefix_path.sh'
+[13.536s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.540s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.700s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control': CMAKE_PREFIX_PATH=/opt/ros/humble /home/joas329/.local/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control -- -j11 -l11
+[14.515s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/joas329/Desktop/rover_simulation/src/my_bot'
+[14.521s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[14.521s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.584s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/joas329/.local/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control -- -j11 -l11
+[22.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control': CMAKE_PREFIX_PATH=/opt/ros/humble /home/joas329/.local/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control
+[22.569s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros2_control)
+[22.576s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/joas329/.local/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control
+[22.859s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control' for CMake module files
+[22.865s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control' for CMake config files
+[22.865s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros2_control', 'cmake_prefix_path')
+[22.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/cmake_prefix_path.ps1'
+[22.887s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/cmake_prefix_path.dsv'
+[22.899s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/cmake_prefix_path.sh'
+[22.916s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib'
+[22.920s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros2_control', 'ld_library_path_lib')
+[22.923s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/ld_library_path_lib.ps1'
+[22.934s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/ld_library_path_lib.dsv'
+[22.966s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/ld_library_path_lib.sh'
+[22.969s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/bin'
+[22.969s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib/pkgconfig/gazebo_ros2_control.pc'
+[22.969s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib/python3.10/site-packages'
+[22.969s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/bin'
+[22.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.ps1'
+[23.005s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.dsv'
+[23.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.sh'
+[23.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.bash'
+[23.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.zsh'
+[23.139s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/colcon-core/packages/gazebo_ros2_control)
+[23.236s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/joas329/Desktop/rover_simulation/build/my_bot/build
+[23.924s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros2_control)
+[23.933s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control' for CMake module files
+[23.933s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control' for CMake config files
+[23.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros2_control', 'cmake_prefix_path')
+[23.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/cmake_prefix_path.ps1'
+[23.945s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/cmake_prefix_path.dsv'
+[23.949s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/cmake_prefix_path.sh'
+[23.957s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib'
+[23.957s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros2_control', 'ld_library_path_lib')
+[23.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/ld_library_path_lib.ps1'
+[23.968s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/ld_library_path_lib.dsv'
+[23.970s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/hook/ld_library_path_lib.sh'
+[23.972s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/bin'
+[23.972s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib/pkgconfig/gazebo_ros2_control.pc'
+[23.972s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib/python3.10/site-packages'
+[23.972s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/bin'
+[23.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.ps1'
+[23.995s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.dsv'
+[24.008s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.sh'
+[24.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.bash'
+[24.019s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/gazebo_ros2_control/package.zsh'
+[24.036s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/share/colcon-core/packages/gazebo_ros2_control)
+[24.060s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/joas329/Desktop/rover_simulation/src/gazebo_ros2_control/gazebo_ros2_control_demos' with build type 'ament_cmake'
+[24.071s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/joas329/Desktop/rover_simulation/src/gazebo_ros2_control/gazebo_ros2_control_demos'
+[24.073s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[24.073s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[24.142s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/joas329/Desktop/rover_simulation/build/my_bot/build
+[24.155s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/src/my_bot': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[24.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:${LD_LIBRARY_PATH} /home/joas329/.local/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos -- -j11 -l11
+[24.756s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot' for CMake module files
+[24.781s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot' for CMake config files
+[24.765s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/src/my_bot' returned '0': PYTHONPATH=/home/joas329/Desktop/rover_simulation/build/my_bot/prefix_override:/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bot build --build-base /home/joas329/Desktop/rover_simulation/build/my_bot/build install --record /home/joas329/Desktop/rover_simulation/build/my_bot/install.log --single-version-externally-managed
+[24.783s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib'
+[24.818s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/bin'
+[24.819s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/pkgconfig/my_bot.pc'
+[24.819s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages'
+[24.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_bot', 'pythonpath')
+[24.826s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.ps1'
+[24.827s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.dsv'
+[24.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/hook/pythonpath.sh'
+[24.886s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/my_bot/bin'
+[24.886s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_bot)
+[24.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.ps1'
+[24.896s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.dsv'
+[24.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.sh'
+[24.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.bash'
+[24.934s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/package.zsh'
+[24.939s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/my_bot/share/colcon-core/packages/my_bot)
+[25.728s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:${LD_LIBRARY_PATH} /home/joas329/.local/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos -- -j11 -l11
+[26.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:${LD_LIBRARY_PATH} /home/joas329/.local/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos
+[27.283s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros2_control_demos)
+[27.301s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos' for CMake module files
+[27.310s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos' for CMake config files
+[27.310s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros2_control_demos', 'cmake_prefix_path')
+[27.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/hook/cmake_prefix_path.ps1'
+[27.314s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/hook/cmake_prefix_path.dsv'
+[27.316s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control/lib:${LD_LIBRARY_PATH} /home/joas329/.local/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/gazebo_ros2_control_demos
+[27.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/hook/cmake_prefix_path.sh'
+[27.322s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib'
+[27.322s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/bin'
+[27.322s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/pkgconfig/gazebo_ros2_control_demos.pc'
+[27.322s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/python3.10/site-packages'
+[27.322s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/bin'
+[27.324s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.ps1'
+[27.337s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.dsv'
+[27.344s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.sh'
+[27.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.bash'
+[27.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.zsh'
+[27.396s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/colcon-core/packages/gazebo_ros2_control_demos)
+[28.391s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros2_control_demos)
+[28.400s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos' for CMake module files
+[28.400s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos' for CMake config files
+[28.417s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros2_control_demos', 'cmake_prefix_path')
+[28.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/hook/cmake_prefix_path.ps1'
+[28.444s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/hook/cmake_prefix_path.dsv'
+[28.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/hook/cmake_prefix_path.sh'
+[28.464s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib'
+[28.464s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/bin'
+[28.464s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/pkgconfig/gazebo_ros2_control_demos.pc'
+[28.465s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/lib/python3.10/site-packages'
+[28.465s] Level 1:colcon.colcon_core.environment:checking '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/bin'
+[28.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.ps1'
+[28.480s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.dsv'
+[28.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.sh'
+[28.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.bash'
+[28.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/gazebo_ros2_control_demos/package.zsh'
+[28.503s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/joas329/Desktop/rover_simulation/install/gazebo_ros2_control_demos/share/colcon-core/packages/gazebo_ros2_control_demos)
+[28.510s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[28.510s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[28.510s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[28.510s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[28.751s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[28.762s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[28.762s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[29.046s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[29.052s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.ps1'
+[29.064s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/joas329/Desktop/rover_simulation/install/_local_setup_util_ps1.py'
+[29.088s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.ps1'
+[29.110s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.sh'
+[29.131s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/joas329/Desktop/rover_simulation/install/_local_setup_util_sh.py'
+[29.144s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.sh'
+[29.164s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.bash'
+[29.177s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.bash'
+[29.191s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/joas329/Desktop/rover_simulation/install/local_setup.zsh'
+[29.200s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/joas329/Desktop/rover_simulation/install/setup.zsh'
