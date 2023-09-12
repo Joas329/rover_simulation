@@ -37,8 +37,7 @@ class EffortPID(Node):
         self.k_vel_d =[0.0,1.0,0.0,0.0,0.0,0.0]
 
 
-
-        # Subscribers
+        #**************Subscribers*************
 
         self.joint_velocity_subscriber =self.create_subscription(
             Float64MultiArray,
@@ -53,6 +52,29 @@ class EffortPID(Node):
             self.position_feedback_callback,
             10
         )
+
+        #***************Tunning Subscribers******************
+
+        self.pid_p_new_values = self.create_subscription(
+            Float64MultiArray,
+            'effortPID/peff',
+            self.P_values_callback,
+            10
+        )    
+
+        self.pid_i_new_values = self.create_subscription(
+            Float64MultiArray,
+            'effortPID/ieff',
+            self.I_values_callback,
+            10
+        )   
+
+        self.pid_d_new_values = self.create_subscription(
+            Float64MultiArray,
+            'effortPID/deff',
+            self.D_values_callback,
+            10
+        )     
 
         #***********Publishers***************
         self.effort_publisher = self.create_publisher(
@@ -86,6 +108,16 @@ class EffortPID(Node):
             self.ordered_current_pose[i] = self.currentPosition[self.joint_order[i]]
 
          self.poseToVel(self.ordered_current_pose)
+
+    #************Tunning Subcriber Callbacks*************
+    def P_values_callback(self, msg):
+        self.k_vel_p = msg.data
+
+    def I_values_callback(self, msg):
+        self.k_vel_i = msg.data
+
+    def D_values_callback(self, msg):
+        self.k_vel_d = msg.data
 
     #*******************Timed Callbacks********************
 
@@ -141,10 +173,4 @@ def main(args=None):
     rclpy.shutdown()
 
 if __name__ == '__main__':
-
-
-
-    for i in range(0,4):
-        print("hello")
-
     main()
