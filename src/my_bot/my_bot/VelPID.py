@@ -54,6 +54,29 @@ class VelPID(Node):
             10
         )
 
+        #***************Tunning Subscribers******************
+
+        self.pid_p_new_values = self.create_subscription(
+            Float64MultiArray,
+            'effortPID/pvel',
+            self.P_values_callback,
+            10
+        )    
+
+        self.pid_i_new_values = self.create_subscription(
+            Float64MultiArray,
+            'effortPID/ivel',
+            self.I_values_callback,
+            10
+        )   
+
+        self.pid_d_new_values = self.create_subscription(
+            Float64MultiArray,
+            'effortPID/dvel',
+            self.D_values_callback,
+            10
+        )   
+
         #***********Publishers***************
         self.velocity_publisher = self.create_publisher(
             Float64MultiArray,
@@ -86,6 +109,16 @@ class VelPID(Node):
             self.currentPosition = msg.position        
             for i in range(0,5):
                 self.ordered_current_pose[i] = self.currentPosition[self.joint_order[i]]
+
+    #************Tunning Subcriber Callbacks*************
+    def P_values_callback(self, msg):
+        self.k_vel_p = msg.data
+
+    def I_values_callback(self, msg):
+        self.k_vel_i = msg.data
+
+    def D_values_callback(self, msg):
+        self.k_vel_d = msg.data
 
     #*******************Timed Callbacks********************
 
