@@ -58,21 +58,21 @@ class VelPID(Node):
 
         self.pid_p_new_values = self.create_subscription(
             Float64MultiArray,
-            'effortPID/pvel',
+            'velocityPID/pvel',
             self.P_values_callback,
             10
         )    
 
         self.pid_i_new_values = self.create_subscription(
             Float64MultiArray,
-            'effortPID/ivel',
+            'velocityPID/ivel',
             self.I_values_callback,
             10
         )   
 
         self.pid_d_new_values = self.create_subscription(
             Float64MultiArray,
-            'effortPID/dvel',
+            'velocityPID/dvel',
             self.D_values_callback,
             10
         )   
