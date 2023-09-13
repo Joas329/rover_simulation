@@ -15,7 +15,7 @@ flag = False
 class MyNode(Node):
 
     def __init__(self):
-        super().__init__('my_node')
+        super().__init__('pid_node')
         self.timer = self.create_timer(0.02,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.timer2 = self.create_timer(0.1,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.time_variable = 0.1
@@ -34,7 +34,7 @@ class MyNode(Node):
         self.d_factor = [0.0,0.0,0.0,0.0,0.0,0.0]
 
         self.i = 0
-        self.k_p =[1.0,12.0,6.0,5.0,7.0,1.0]
+        self.k_p =[5.0,15.0,6.0,5.0,7.0,1.0]
         self.k_i = [0.0,0.1,0.05,0.0,0.2,0.0]
         self.k_d =[0.0,1.0,0.0,0.0,0.0,0.0]
 

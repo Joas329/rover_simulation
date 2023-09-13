@@ -27,8 +27,8 @@ class EffortPID(Node):
         self.stack  = [None]
 
         self.readingTime = 0.0
-        self.ordered_current_pose, self.curr_vel, self.prev_curr_vel, self.jointDesiredVelocity = [0.0] * joints_number
-        self.current_vel_error, self.previous_vel_error, self.p_vel_factor, self.i_vel_factor , self.d_vel_factor, self.effort_sum, self.effort= [0.0] * joints_number
+        self.ordered_current_pose = self.curr_vel = self.prev_curr_vel = self.jointDesiredVelocity = [0.0] * joints_number
+        self.current_vel_error = self.previous_vel_error = self.p_vel_factor = self.i_vel_factor = self.d_vel_factor = self.effort_sum = self.effort= [0.0] * joints_number
     
         self.joint_order = [5,4,2,1,0,3]
 
@@ -49,7 +49,7 @@ class EffortPID(Node):
         self.joint_state_subscriber = self.create_subscription(
             JointState,
             'joint_states',
-            self.position_feedback_callback,
+            self.position_feedback,
             10
         )
 

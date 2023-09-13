@@ -29,8 +29,8 @@ class VelPID(Node):
         self.timer = self.create_timer(0.02,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.timer2 = self.create_timer(0.1,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         
-        self.ordered_current_pose , self.current_pose_error, self.currentPosition, self.velocity_sum, self.desired_joint_positions  = [0.0] * joints_number
-        self.p_pose_factor, self.i_pose_factor, self.d_pose_factor, self.previous_pose_error, self.velocity  = [0.0] * joints_number
+        self.ordered_current_pose = self.current_pose_error = self.currentPosition = self.velocity_sum = self.desired_joint_positions  = [0.0] * joints_number
+        self.p_pose_factor= self.i_pose_factor = self.d_pose_factor = self.previous_pose_error = self.velocity  = [0.0] * joints_number
 
         self.joint_order = [5,4,2,1,0,3]
         self.k_pose_p =[1.0,12.0,6.0,5.0,7.0,1.0]

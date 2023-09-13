@@ -32,6 +32,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "velPID = my_bot.VelPID:main",
+            "effortPID = my_bot.EffortPID:main",
             "PID = my_bot.PID:main",
             "udp_conv = my_bot.udp_conv:main"
         ],
