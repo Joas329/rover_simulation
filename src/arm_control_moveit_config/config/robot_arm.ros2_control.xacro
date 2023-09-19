@@ -2,55 +2,57 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:macro name="robot_arm_ros2_control" params="name initial_positions_file">
         <xacro:property name="initial_positions" value="${load_yaml(initial_positions_file)['initial_positions']}"/>
-
-  <ros2_control name="GazeboSystem" type="system">
+<!---->
+  <!-- <ros2_control name="GazeboSystem" type="system">
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
     </hardware>
     <joint name="arm_j1">
-      <command_interface name="effort"/>
+      <command_interface name="effort"/> -->
       <!-- <state_interface name="position">
         <param name="initial_value">180</param>
       </state_interface> -->
       <!-- <state_interface name="velocity"/> -->
-    </joint>
+    <!-- </joint>
     <joint name="arm_j2">
-      <command_interface name="effort"/>
+      <command_interface name="effort"/> -->
       <!-- <state_interface name="position">
         <param name="initial_value">-1</param>
       </state_interface> -->
       <!-- <state_interface name="velocity"/> -->
-    </joint>
+    <!-- </joint>
     <joint name="arm_j3">
-      <command_interface name="effort"/>
+      <command_interface name="effort"/> -->
       <!-- <state_interface name="position">
         <param name="initial_value">-120</param>
       </state_interface> -->
       <!-- <state_interface name="velocity"/> -->
-    </joint>
+    <!-- </joint>
     <joint name="arm_j4">
-      <command_interface name="effort"/>
+      <command_interface name="effort"/> -->
       <!-- <state_interface name="position">
         <param name="initial_value">1</param>
       </state_interface> -->
       <!-- <state_interface name="velocity"/> -->
-    </joint>
+    <!-- </joint>
     <joint name="arm_j5">
-      <command_interface name="effort"/>
+      <command_interface name="effort"/> -->
       <!-- <state_interface name="position">
         <param name="initial_value">-11</param>
       </state_interface> -->
       <!-- <state_interface name="velocity"/> -->
-    </joint>
+    <!-- </joint>
     <joint name="arm_j6">
-      <command_interface name="effort"/>
+      <command_interface name="effort"/> -->
       <!-- <state_interface name="position">
         <param name="initial_value">3</param>
       </state_interface> -->
       <!-- <state_interface name="velocity"/> -->
-    </joint>
-  </ros2_control>
-       <!-- <ros2_control name="yurs_motor" type="actuator">
+    <!-- </joint>
+  </ros2_control> -->
+
+
+  <ros2_control name="yurs_motor" type="actuator">
         <hardware>
           <plugin>yurs_hardware/yurs_motor</plugin>
           <param name="can_interface">can0</param>
@@ -80,11 +82,11 @@
           <param name="device_id">11</param>
           <param name="counts_per_rev">1512</param>
         </joint>
-        <joint name="arm_j7">
+        <!-- <joint name="arm_j7">
           <param name="device_id">12</param>
           <param name="counts_per_rev">1512</param>
-        </joint>
-	</ros2_control> -->
+        </joint> -->
+	</ros2_control>
 
     </xacro:macro>
 </robot>

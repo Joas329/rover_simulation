@@ -22,7 +22,7 @@
 	<!--Dummy Link-->
 	<link name="base_link"/>
 	<joint name="dummy_joint" type="fixed">
-		<origin xyz="0 1-0 0" rpy="0 0 0"/>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<parent link="base_link"/>   
 		<child link="arm_a1"/>
 	</joint>
@@ -54,7 +54,7 @@
 		velocity_limit = "300000.0"
 		joint_X = "-3.50000000"
 		joint_Y = "0.51712500"
-		joint_Z = "0"
+		joint_Z = "0.0"
 	/>
 
 
@@ -68,8 +68,8 @@
 		mass="3.6524"
 		axis = "0 1 0"
 		Lxx="21.53"
-		Lxy="0"
-		Lxz="0"
+		Lxy="0.0"
+		Lxz="0.0"
 		Lyy="10.896"
 		Lyz="0.14287"
 		Lzz="14.594"
@@ -81,9 +81,9 @@
 		lower_limit = "${radians(-135)}"
 		upper_limit = "${radians(15)}"
 		velocity_limit = "300000.0"
-		joint_X = "0"
+		joint_X = "0.0"
 		joint_Y = "3.75000000"
-		joint_Z = "0"
+		joint_Z = "0.0"
 	/>
 
 	<!--Arm 3-->
@@ -110,8 +110,8 @@
 		upper_limit = "${radians(120)}"
 		velocity_limit = "300000.0"
 		joint_X = "18.00000000"
-		joint_Y = "0"
-		joint_Z = "0"
+		joint_Y = "0.0"
+		joint_Z = "0.0"
 	/>
 
 	<!--Arm 4-->
@@ -138,8 +138,8 @@
 		upper_limit = "${radians(180)}"
 		velocity_limit = "300000.0"
 		joint_X = "4.48622047"
-		joint_Y = "0"
-		joint_Z = "0"
+		joint_Y = "0.0"
+		joint_Z = "0.0"
 	/>
 
 
@@ -167,8 +167,8 @@
 		upper_limit = "${radians(90)}"
 		velocity_limit = "300000.0"
 		joint_X = "17.25000000"
-		joint_Y = "0"
-		joint_Z = "0"
+		joint_Y = "0.0"
+		joint_Z = "0.0"
 	/>
 
 	<!--Arm 6-->
@@ -195,8 +195,8 @@
 		upper_limit = "${radians(90)}"
 		velocity_limit = "300000.0"
 		joint_X = "2.98622047"
-		joint_Y = "0"
-		joint_Z = "0"
+		joint_Y = "0.0"
+		joint_Z = "0.0"
 	/>
 
 	<!--Arm 7-->	
@@ -300,4 +300,3 @@
     </gazebo> -->
 
 </robot>
-

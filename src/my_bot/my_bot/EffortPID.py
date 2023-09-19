@@ -26,15 +26,16 @@ class EffortPID(Node):
 
         self.stack  = [None]
 
+        self.timer = self.create_timer(0.02,self.timercallback) 
         self.readingTime = 0.0
         self.ordered_current_pose = self.curr_vel = self.prev_curr_vel = self.jointDesiredVelocity = [0.0] * joints_number
         self.current_vel_error = self.previous_vel_error = self.p_vel_factor = self.i_vel_factor = self.d_vel_factor = self.effort_sum = self.effort= [0.0] * joints_number
     
         self.joint_order = [5,4,2,1,0,3]
 
-        self.k_vel_p =[1.0,12.0,6.0,5.0,7.0,1.0]
-        self.k_vel_i = [0.0,0.1,0.05,0.0,0.2,0.0]
-        self.k_vel_d =[0.0,1.0,0.0,0.0,0.0,0.0]
+        self.k_vel_p =[0.1,0.1,0.1,0.1,1.0, 0.1]
+        self.k_vel_i = [0.0,0.0,0.0,0.0,0.0, 0.0]
+        self.k_vel_d =[0.0,0.0,0.0,0.0,0.0,0.0]
 
 
         #**************Subscribers*************
@@ -79,7 +80,7 @@ class EffortPID(Node):
         #***********Publishers***************
         self.effort_publisher = self.create_publisher(
             Float64MultiArray,
-            'arm_group_controller/effort',
+            'arm_group_controller/commands',
             10
         )
 
@@ -97,15 +98,16 @@ class EffortPID(Node):
     #**********Subcriber Callbacks***********
 
     def velocity_callback(self, msg):
-        self.stack = msg.trajectory
+        self.stack = msg.data
+        print(self.stack)
         self.jointDesiredVelocity = self.stack
         self.i = 0
 
     def position_feedback(self, msg):
          self.currentPosition = msg.position
          self.readingTime = time.time()
-         for i in range(0,5):
-            self.ordered_current_pose[i] = self.currentPosition[self.joint_order[i]]
+         for x in range(0,5):
+            self.ordered_current_pose[x] = self.currentPosition[self.joint_order[x]]
 
          self.poseToVel(self.ordered_current_pose)
 
@@ -155,7 +157,7 @@ class EffortPID(Node):
             newmsg.data.append(self.effort[joint])
 
             joint += 1
-
+            print(newmsg)
             return newmsg
 
 

@@ -33,9 +33,9 @@ class VelPID(Node):
         self.p_pose_factor= self.i_pose_factor = self.d_pose_factor = self.previous_pose_error = self.velocity  = [0.0] * joints_number
 
         self.joint_order = [5,4,2,1,0,3]
-        self.k_pose_p =[1.0,12.0,6.0,5.0,7.0,1.0]
-        self.k_pose_i = [0.0,0.1,0.05,0.0,0.2,0.0]
-        self.k_pose_d =[0.0,1.0,0.0,0.0,0.0,0.0]
+        self.k_pose_p =[0.1,0.1,0.1,0.1,10.0, 0.1]
+        self.k_pose_i = [0.0,0.0,0.0,0.0,0.0, 0.0]
+        self.k_pose_d =[0.0,0.0,0.0,0.0,0.0, 0.0]
 
 
         #********Subscribers********
@@ -80,7 +80,7 @@ class VelPID(Node):
         #***********Publishers***************
         self.velocity_publisher = self.create_publisher(
             Float64MultiArray,
-            'arm_group_controller/velocity',
+            'arm_group_controller/commands',
             10
         )
         
@@ -127,8 +127,7 @@ class VelPID(Node):
 
         if  not self.stack[0] == None:
             
-            velocities = self.pidCalc(self.desired_joint_positions)
-            print(self.desired_joint_positions)
+            velocities = self.pidVelocityCalc(self.desired_joint_positions)
 
             #Publish Tunning Values
 
@@ -136,11 +135,11 @@ class VelPID(Node):
             
             desired = Float64MultiArray()
             desired.data = self.desired_joint_positions
-            self.pid_debug_desired_pose.publish(desired)
+            self.debug_desired_pose.publish(desired)
 
             current = Float64MultiArray()
             current.data = self.ordered_current_pose
-            self.pid_debug_current_pose.publish(current)
+            self.debug_current_pose.publish(current)
 
     def timercallback2(self):
         #This indexes through array
@@ -173,7 +172,7 @@ class VelPID(Node):
             self.velocity[joint] = self.p_pose_factor[joint] + self.i_pose_factor[joint] + self.d_pose_factor[joint]
             newmsg.data.append(self.velocity[joint])
             joint+= 1
-        return self.pidEffortCalc(newmsg)
+        return newmsg
 
 
 def main(args=None):
