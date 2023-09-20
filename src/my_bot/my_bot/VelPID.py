@@ -23,20 +23,11 @@ class VelPID(Node):
         #*****Declare Node Variables Here******* 
 
         self.i = 0
-        joints_number = 6 #Change this based on the number of joints that we have
         self.stack  = [None] 
-
+        self.flag = False
         self.timer = self.create_timer(0.02,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.timer2 = self.create_timer(0.1,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
-        
-        self.ordered_current_pose = self.current_pose_error = self.currentPosition = self.velocity_sum = self.desired_joint_positions  = [0.0] * joints_number
-        self.p_pose_factor= self.i_pose_factor = self.d_pose_factor = self.previous_pose_error = self.velocity  = [0.0] * joints_number
-
-        self.joint_order = [5,4,2,1,0,3]
-        self.k_pose_p =[0.1,0.1,0.1,0.1,10.0, 0.1]
-        self.k_pose_i = [0.0,0.0,0.0,0.0,0.0, 0.0]
-        self.k_pose_d =[0.0,0.0,0.0,0.0,0.0, 0.0]
-
+       
 
         #********Subscribers********
 
@@ -106,8 +97,20 @@ class VelPID(Node):
         self.i = 0
 
     def position_feedback_callback(self, msg):
+            
+            if self.flag == False:                  # Runs once at the beginning of the code as the joint states are published immidiatly.
+                self.joints_number = len(msg.position) +1
+                self.ordered_current_pose = self.current_pose_error = self.currentPosition = self.velocity_sum = self.desired_joint_positions  = [0.0] * self.joints_number
+                self.p_pose_factor= self.i_pose_factor = self.d_pose_factor = self.previous_pose_error = self.velocity  = [0.0] * self.joints_number
+                self.k_pose_p =[0.1] * self.joints_number
+                self.k_pose_i = [0.1] * self.joints_number
+                self.k_pose_d =[0.1] * self.joints_number
+                self.dynamicJointCheck(self, msg.position)
+                self.clipub = self.create_timer(1,self.clipublisher) 
+                self.flag = True
+            
             self.currentPosition = msg.position        
-            for i in range(0,5):
+            for i in range(0,self.joints_number -1):
                 self.ordered_current_pose[i] = self.currentPosition[self.joint_order[i]]
 
     #************Tunning Subcriber Callbacks*************
@@ -151,6 +154,14 @@ class VelPID(Node):
 
                 self.desired_joint_positions = holder2[self.i].positions
 
+    def clipublisher(self):
+        print("number of detected joints: " + self.joints_number)
+        print("detected joints: " + self.desired_joint_positions)
+        print("P values: " + self.k_pose_p)
+        print("I values: " + self.k_pose_i)
+        print("D values: " + self.k_pose_d)
+
+
 
     #******************PID Calculation**********************
 
@@ -175,12 +186,22 @@ class VelPID(Node):
         return newmsg
 
 
+    #************Dynamically get order joints array**************
+    def dynamicJointCheck(self, jointStates):
+        counter = 0
+        for joint in jointStates:
+            self.joint_order[int(joint[len(joint)-1])-1] = counter
+            counter += 1
+
 def main(args=None):
+    print("Initialiazing velocity PID")
     rclpy.init(args=args)
     node = VelPID()
     rclpy.spin(node)
     node.timer.cancel()
     rclpy.shutdown()
+
+    print()
 
 if __name__ == '__main__':
     main()

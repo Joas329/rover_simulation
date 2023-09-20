@@ -22,16 +22,15 @@ class EffortPID(Node):
 
         #*****Declare Node Variables Here******* 
 
-        joints_number = 6  #Change this based on the number of joints that we have
+        #joints_number = 6  Change this based on the number of joints that we have
 
         self.stack  = [None]
 
         self.timer = self.create_timer(0.02,self.timercallback) 
         self.readingTime = 0.0
-        self.ordered_current_pose = self.curr_vel = self.prev_curr_vel = self.jointDesiredVelocity = [0.0] * joints_number
-        self.current_vel_error = self.previous_vel_error = self.p_vel_factor = self.i_vel_factor = self.d_vel_factor = self.effort_sum = self.effort= [0.0] * joints_number
-    
-        self.joint_order = [5,4,2,1,0,3]
+        self.flag = False
+        
+        # self.joint_order = [5,4,2,1,0,3]
 
         self.k_vel_p =[0.1,0.1,0.1,0.1,1.0, 0.1]
         self.k_vel_i = [0.0,0.0,0.0,0.0,0.0, 0.0]
@@ -104,9 +103,18 @@ class EffortPID(Node):
         self.i = 0
 
     def position_feedback(self, msg):
+         
+         if self.flag == False:
+            self.dynamicJointCheck(self, msg.position)
+            self.ordered_current_pose = self.curr_vel = self.prev_curr_vel = self.jointDesiredVelocity = [0.0] * len(msg.data)
+            self.current_vel_error = self.previous_vel_error = self.p_vel_factor = self.i_vel_factor = self.d_vel_factor = self.effort_sum = self.effort= [0.0] * len(msg.data)
+            self.clipub = self.create_timer(1,self.clipublisher) 
+            self.flag = True
+    
+
          self.currentPosition = msg.position
          self.readingTime = time.time()
-         for x in range(0,5):
+         for x in range(0,len(msg.data) -1 ):
             self.ordered_current_pose[x] = self.currentPosition[self.joint_order[x]]
 
          self.poseToVel(self.ordered_current_pose)
@@ -133,6 +141,13 @@ class EffortPID(Node):
             self.prev_curr_vel = self.curr_vel
 
             self.effort_publisher.publish(velocities)
+
+    def clipublisher(self):
+        print("number of detected joints: " + self.joints_number)
+        print("detected joints: " + self.desired_joint_positions)
+        print("P values: " + self.k_pose_p)
+        print("I values: " + self.k_pose_i)
+        print("D values: " + self.k_pose_d)
 
 
     #******************PID Calculation**********************
@@ -167,7 +182,16 @@ class EffortPID(Node):
         for i in range(0,5):
             self.curr_vel[i] = (self.curr_vel[i] - self.prev_curr_vel[i]) / t
 
+
+    #************Dynamically get order joints array**************
+    def dynamicJointCheck(self, jointStates):
+        counter = 0
+        for joint in jointStates:
+            self.joint_order[int(joint[len(joint)-1])-1] = counter
+            counter += 1
+
 def main(args=None):
+    print("Initialiazing effort PID")
     rclpy.init(args=args)
     node = EffortPID()
     rclpy.spin(node)
