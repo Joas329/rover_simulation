@@ -33,11 +33,4 @@ arm_group_controller:
       - arm_j5
       - arm_j6
       # - arm_j7
-    # command_interfaces:
-    #   - effort
-    # state_interfaces:
-    #   - effort
-    #   - position
     interface_name: effort
-    #   - position
-      # - velocity
