@@ -1,4 +1,0 @@
-Invoking command in '/home/joas329/Desktop/rover_simulation/build/control_msgs': /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/control_msgs -- -j8 -l8
-Invoked command in '/home/joas329/Desktop/rover_simulation/build/control_msgs' returned '0': /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/control_msgs -- -j8 -l8
-Invoking command in '/home/joas329/Desktop/rover_simulation/build/control_msgs': /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/control_msgs
-Invoked command in '/home/joas329/Desktop/rover_simulation/build/control_msgs' returned '0': /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/control_msgs

@@ -1,5 +1,0 @@
-  File "/home/joas329/Desktop/rover_simulation/install/my_bot/lib/python3.10/site-packages/my_bot/PID.py", line 87
-    '/joint_states,
-    ^
-SyntaxError: unterminated string literal (detected at line 87)
-

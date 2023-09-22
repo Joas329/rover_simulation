@@ -1,4 +1,0 @@
-Invoking command in '/home/joas329/Desktop/rover_simulation/build/realtime_tools': /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/realtime_tools -- -j8 -l8
-Invoked command in '/home/joas329/Desktop/rover_simulation/build/realtime_tools' returned '0': /usr/bin/cmake --build /home/joas329/Desktop/rover_simulation/build/realtime_tools -- -j8 -l8
-Invoking command in '/home/joas329/Desktop/rover_simulation/build/realtime_tools': /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/realtime_tools
-Invoked command in '/home/joas329/Desktop/rover_simulation/build/realtime_tools' returned '0': /usr/bin/cmake --install /home/joas329/Desktop/rover_simulation/build/realtime_tools
