@@ -255,43 +255,6 @@
 
 	</ros2_control>
 
-
-	<!-- <ros2_control name="yurs_motor" type="actuator">
-		<hardware>
-			<plugin>yurs_hardware/yurs_motor</plugin>
-			<param name="can_interface">can0</param>
-		</hardware>
-
- 		<joint name="arm_j1">
-			<param name="device_id">6</param>
-			<param name="counts_per_rev">1512</param>
-		</joint>
-		<joint name="arm_j2">
-			<param name="device_id">7</param>
-			<param name="counts_per_rev">1512</param>
-		</joint>
-		<joint name="arm_j3">
-			<param name="device_id">8</param>
-			<param name="counts_per_rev">1512</param>
-		</joint>
-		<joint name="arm_j4">
-			<param name="device_id">9</param>
-			<param name="counts_per_rev">1512</param>
-		</joint>
-		<joint name="arm_j5">
-			<param name="device_id">10</param>
-			<param name="counts_per_rev">1512</param>
-		</joint>
-		<joint name="arm_j6">
-			<param name="device_id">11</param>
-			<param name="counts_per_rev">1512</param>
-		</joint>
-		<joint name="arm_j7">
-			<param name="device_id">12</param>
-			<param name="counts_per_rev">1512</param>
-		</joint>
-	</ros2_control> -->
-
 	<gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
             <parameters> $(find my_bot)/config/arm_gazebo_controllers.yaml</parameters>

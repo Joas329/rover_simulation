@@ -27,7 +27,7 @@ class VelPID(Node):
         self.flag = False
         self.timer = self.create_timer(0.02,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.timer2 = self.create_timer(0.1,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
-       
+        self.clipub = self.create_timer(3,self.clipublisher) 
 
         #********Subscribers********
 
@@ -71,7 +71,7 @@ class VelPID(Node):
         #***********Publishers***************
         self.velocity_publisher = self.create_publisher(
             Float64MultiArray,
-            'arm_group_controller/commands',
+            'arm_group_controller/velocity',
             10
         )
         
@@ -99,14 +99,15 @@ class VelPID(Node):
     def position_feedback_callback(self, msg):
             
             if self.flag == False:                  # Runs once at the beginning of the code as the joint states are published immidiatly.
-                self.joints_number = len(msg.position) +1
+                self.joints_number = len(msg.name)
+                self.joint_names = msg.name
                 self.ordered_current_pose = self.current_pose_error = self.currentPosition = self.velocity_sum = self.desired_joint_positions  = [0.0] * self.joints_number
                 self.p_pose_factor= self.i_pose_factor = self.d_pose_factor = self.previous_pose_error = self.velocity  = [0.0] * self.joints_number
+                self.joint_order = [0] * self.joints_number
                 self.k_pose_p =[0.1] * self.joints_number
                 self.k_pose_i = [0.1] * self.joints_number
                 self.k_pose_d =[0.1] * self.joints_number
-                self.dynamicJointCheck(self, msg.position)
-                self.clipub = self.create_timer(1,self.clipublisher) 
+                self.dynamicJointCheck(msg.name)
                 self.flag = True
             
             self.currentPosition = msg.position        
@@ -115,13 +116,16 @@ class VelPID(Node):
 
     #************Tunning Subcriber Callbacks*************
     def P_values_callback(self, msg):
-        self.k_vel_p = msg.data
+        print("p updated")
+        self.k_pose_p = (msg.data).tolist()
 
     def I_values_callback(self, msg):
-        self.k_vel_i = msg.data
+        print("i updated")
+        self.k_pose_i = (msg.data).tolist()
 
     def D_values_callback(self, msg):
-        self.k_vel_d = msg.data
+        print("d updated")
+        self.k_pose_d = (msg.data).tolist()
 
     #*******************Timed Callbacks********************
 
@@ -153,13 +157,15 @@ class VelPID(Node):
                 holder2 = holder.points
 
                 self.desired_joint_positions = holder2[self.i].positions
+                self.i +=1
 
     def clipublisher(self):
-        print("number of detected joints: " + self.joints_number)
-        print("detected joints: " + self.desired_joint_positions)
-        print("P values: " + self.k_pose_p)
-        print("I values: " + self.k_pose_i)
-        print("D values: " + self.k_pose_d)
+        if self.flag == True:
+            print("number of detected joints: " + str(self.joints_number))
+            print("detected joints: " + str(self.joint_names)) #need to cahnge this to names instead of values
+            print("P values: " + str(self.k_pose_p))
+            print("I values: " + str(self.k_pose_i))
+            print("D values: " + str(self.k_pose_d))
 
 
 

@@ -57,63 +57,6 @@ def generate_launch_description():
 
     package_name='arm_control_moveit_config'
 
-    # rsp = IncludeLaunchDescription(
-    #             PythonLaunchDescriptionSource([os.path.join(
-    #                 get_package_share_directory(package_name),'launch','rsp.launch.py'
-    #             )]), launch_arguments={'use_sim_time': 'false'}.items()
-    # )
-    # pkg_path = os.path.join(
-    #     get_package_share_directory('my_bot'))
-    # xacro_file = os.path.join(pkg_path,'description','arm.urdf.xacro')
-    # robot_description_config = xacro.process_file(xacro_file)
-    # robot_description = {'robot_description': robot_description_config.toxml()}
-
-    # robot_state_publisher = Node(
-    #     package='robot_state_publisher',
-    #     executable='robot_state_publisher',
-    #     output='both',
-    #     parameters=[
-    #         robot_description,
-    #         {"use_sim_time": True}
-    #     ]
-    # )
-
-
-
-    # robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
-
-    # controller_params_file = os.path.join(get_package_share_directory(package_name),'config','arm_controllers.yaml')
-
-    # controller_manager = Node(
-    #     package="controller_manager",
-    #     executable="ros2_control_node",
-    #     parameters=[{'robot_description': '/robot_state_publisher'},
-    #                 controller_params_file]
-    # )
-
-    # delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
-
-    # joint_state_broadcaster = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
-    # )
-
-    # # Arm Group Controller
-    # arm_group_controller = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["arm_group_controller", "-c", "/controller_manager"],
-    # )
-
-
-    # delayed_arm_group_controler = RegisterEventHandler(
-    #     event_handler=OnProcessStart(
-    #         target_action=controller_manager,
-    #         on_start=[arm_group_controller, joint_state_broadcaster ],
-    #     )
-    # )
-
 
     pkg_path = os.path.join(
     get_package_share_directory('my_bot'))
@@ -121,19 +64,6 @@ def generate_launch_description():
     robot_description_config = xacro.process_file(xacro_file)
     robot_description = {'robot_description': robot_description_config.toxml()}
 
-    # pkg_path = os.path.join(
-    #     get_package_share_directory('my_bot'))
-    # xacro_file = os.path.join(pkg_path,'description','arm.urdf.xacro')
-    # robot_description_config = xacro.process_file(xacro_file)
-    # robo
-
-    robot_controllers = PathJoinSubstitution(
-        [
-            FindPackageShare("my_bot"),
-            "config",
-            "arm_controllers.yaml",
-        ]
-    )
     controller_params_file = os.path.join(get_package_share_directory("my_bot"),'config','arm_controllers.yaml')
     control_node = Node(
         package="controller_manager",
@@ -175,17 +105,6 @@ def generate_launch_description():
     # Kinematics.yaml file:
     kinematics_yaml = load_yaml("arm_control_moveit_config", "config/kinematics.yaml")
     robot_description_kinematics = {"robot_description_kinematics": kinematics_yaml}
-
-    # Move group: OMPL Planning.
-    # ompl_planning_pipeline_config = {
-    #     "move_group": {
-    #         "planning_plugin": "ompl_interface/OMPLPlanner",
-    #         "request_adapters": """default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints""",
-    #         "start_state_max_bounds_error": 0.1,
-    #     }
-    # }
-    # ompl_planning_yaml = load_yaml("arm_control_moveit_config", "config/ompl_planning.yaml")
-    # ompl_planning_pipeline_config["move_group"].update(ompl_planning_yaml)
 
     move_group_configuration = {
         "publish_robot_description_semantic": True,

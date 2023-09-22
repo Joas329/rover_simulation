@@ -22,20 +22,12 @@ class EffortPID(Node):
 
         #*****Declare Node Variables Here******* 
 
-        #joints_number = 6  Change this based on the number of joints that we have
-
         self.stack  = [None]
 
         self.timer = self.create_timer(0.02,self.timercallback) 
+        self.clipub = self.create_timer(3,self.clipublisher) 
         self.readingTime = 0.0
         self.flag = False
-        
-        # self.joint_order = [5,4,2,1,0,3]
-
-        self.k_vel_p =[0.1,0.1,0.1,0.1,1.0, 0.1]
-        self.k_vel_i = [0.0,0.0,0.0,0.0,0.0, 0.0]
-        self.k_vel_d =[0.0,0.0,0.0,0.0,0.0,0.0]
-
 
         #**************Subscribers*************
 
@@ -98,36 +90,39 @@ class EffortPID(Node):
 
     def velocity_callback(self, msg):
         self.stack = msg.data
-        print(self.stack)
         self.jointDesiredVelocity = self.stack
         self.i = 0
 
     def position_feedback(self, msg):
          
          if self.flag == False:
-            self.dynamicJointCheck(self, msg.position)
-            self.ordered_current_pose = self.curr_vel = self.prev_curr_vel = self.jointDesiredVelocity = [0.0] * len(msg.data)
-            self.current_vel_error = self.previous_vel_error = self.p_vel_factor = self.i_vel_factor = self.d_vel_factor = self.effort_sum = self.effort= [0.0] * len(msg.data)
-            self.clipub = self.create_timer(1,self.clipublisher) 
+            self.joints_number = len(msg.name)
+            self.joint_names = msg.name
+            self.ordered_current_pose = self.curr_vel = self.prev_curr_vel = self.jointDesiredVelocity = [0.0] * len(msg.name)
+            self.current_vel_error = self.previous_vel_error = self.p_vel_factor = self.i_vel_factor = self.d_vel_factor = self.effort_sum = self.effort= [0.0] * len(msg.name)
+            self.joint_order = [0] * self.joints_number
+            self.k_vel_p =[0.1] * self.joints_number
+            self.k_vel_i = [0.1] * self.joints_number
+            self.k_vel_d =[0.1] * self.joints_number
+            self.dynamicJointCheck(msg.name)
             self.flag = True
     
-
          self.currentPosition = msg.position
          self.readingTime = time.time()
-         for x in range(0,len(msg.data) -1 ):
+         for x in range(0,self.joints_number -1):
             self.ordered_current_pose[x] = self.currentPosition[self.joint_order[x]]
 
          self.poseToVel(self.ordered_current_pose)
 
     #************Tunning Subcriber Callbacks*************
     def P_values_callback(self, msg):
-        self.k_vel_p = msg.data
+        self.k_vel_p = (msg.data).tolist()
 
     def I_values_callback(self, msg):
-        self.k_vel_i = msg.data
+        self.k_vel_i = (msg.data).tolist()
 
     def D_values_callback(self, msg):
-        self.k_vel_d = msg.data
+        self.k_vel_d = (msg.data).tolist()
 
     #*******************Timed Callbacks********************
 
@@ -143,11 +138,12 @@ class EffortPID(Node):
             self.effort_publisher.publish(velocities)
 
     def clipublisher(self):
-        print("number of detected joints: " + self.joints_number)
-        print("detected joints: " + self.desired_joint_positions)
-        print("P values: " + self.k_pose_p)
-        print("I values: " + self.k_pose_i)
-        print("D values: " + self.k_pose_d)
+        if self.flag == True:
+            print("number of detected joints: " + str(self.joints_number))
+            print("detected joints: " + str(self.joint_names))
+            print("P values: " + str(self.k_vel_p))
+            print("I values: " + str(self.k_vel_i))
+            print("D values: " + str(self.k_vel_d))
 
 
     #******************PID Calculation**********************
@@ -172,7 +168,6 @@ class EffortPID(Node):
             newmsg.data.append(self.effort[joint])
 
             joint += 1
-            print(newmsg)
             return newmsg
 
 
