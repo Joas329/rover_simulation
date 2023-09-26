@@ -24,10 +24,13 @@ class VelPID(Node):
 
         self.i = 0
         self.stack  = [None] 
+        self.readingTime = 0.0
         self.flag = False
-        self.timer = self.create_timer(0.02,self.timercallback) #TODO YOU CAN CHANGE THE TIMER TIME HERE
-        self.timer2 = self.create_timer(0.1,self.timercallback2) #TODO YOU CAN CHANGE THE TIMER TIME HERE
+        self.velocityPIDTimer = self.create_timer(0.02,self.velocityPID) #TODO YOU CAN CHANGE THE TIMER TIME HERE
+        self.trajectoryIndexingTImer = self.create_timer(0.1,self.trajectoryIndexing) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.clipub = self.create_timer(3,self.clipublisher) 
+
+        self.effortTimer = self.create_timer(0.02,self.effortCallback) 
 
         #********Subscribers********
 
@@ -68,10 +71,31 @@ class VelPID(Node):
             10
         )   
 
-        #***********Publishers***************
-        self.velocity_publisher = self.create_publisher(
+        self.effort_p_new_values = self.create_subscription(
             Float64MultiArray,
-            'arm_group_controller/velocity',
+            'effortPID/peff',
+            self.P_effort_values_callback,
+            10
+        )    
+
+        self.effort_i_new_values = self.create_subscription(
+            Float64MultiArray,
+            'effortPID/ieff',
+            self.I_effort_values_callback,
+            10
+        )   
+
+        self.effort_d_new_values = self.create_subscription(
+            Float64MultiArray,
+            'effortPID/deff',
+            self.D_effort_values_callback,
+            10
+        )  
+
+        #***********Publishers***************
+        self.effort_publisher = self.create_publisher(
+            Float64MultiArray,
+            'arm_group_controller/commands',
             10
         )
         
@@ -84,6 +108,17 @@ class VelPID(Node):
         self.debug_current_pose = self.create_publisher(
             Float64MultiArray,
             'velocityPID/current_pose',
+            10
+        )
+
+        self.debug_desired_velocity = self.create_publisher(
+            Float64MultiArray,
+            'effortPID/desired_velocity',
+            10
+        )
+        self.debug_current_velocity = self.create_publisher(
+            Float64MultiArray,
+            'effortPID/current_velocity',
             10
         )
 
@@ -101,20 +136,35 @@ class VelPID(Node):
             if self.flag == False:                  # Runs once at the beginning of the code as the joint states are published immidiatly.
                 self.joints_number = len(msg.name)
                 self.joint_names = msg.name
+                self.joint_order = [0] * self.joints_number
+                
+                # Velocity                
                 self.ordered_current_pose = self.current_pose_error = self.currentPosition = self.velocity_sum = self.desired_joint_positions  = [0.0] * self.joints_number
                 self.p_pose_factor= self.i_pose_factor = self.d_pose_factor = self.previous_pose_error = self.velocity  = [0.0] * self.joints_number
-                self.joint_order = [0] * self.joints_number
                 self.k_pose_p =[0.1] * self.joints_number
                 self.k_pose_i = [0.1] * self.joints_number
                 self.k_pose_d =[0.1] * self.joints_number
+
+                # Effort
+                self.ordered_current_pose = self.curr_vel = self.prev_curr_vel = self.jointDesiredVelocity = [0.0] * len(msg.name)
+                self.current_vel_error = self.previous_vel_error = self.p_vel_factor = self.i_vel_factor = self.d_vel_factor = self.effort_sum = self.effort= [0.0] * len(msg.name)
+                self.k_vel_p =[0.1] * self.joints_number
+                self.k_vel_i = [0.1] * self.joints_number
+                self.k_vel_d =[0.1] * self.joints_number
                 self.dynamicJointCheck(msg.name)
+                
+
                 self.flag = True
+                self.dynamicJointCheck(msg.name)
             
+            self.readingTime = time.time()
             self.currentPosition = msg.position        
             for i in range(0,self.joints_number -1):
                 self.ordered_current_pose[i] = self.currentPosition[self.joint_order[i]]
 
     #************Tunning Subcriber Callbacks*************
+    # Velocity
+
     def P_values_callback(self, msg):
         print("p updated")
         self.k_pose_p = (msg.data).tolist()
@@ -127,9 +177,19 @@ class VelPID(Node):
         print("d updated")
         self.k_pose_d = (msg.data).tolist()
 
+    # Effort
+    def P_effort_values_callback(self, msg):
+        self.k_vel_p = (msg.data).tolist()
+
+    def I_effort_values_callback(self, msg):
+        self.k_vel_i = (msg.data).tolist()
+
+    def D_effort_values_callback(self, msg):
+        self.k_vel_d = (msg.data).tolist()
+
     #*******************Timed Callbacks********************
 
-    def timercallback(self):
+    def velocityPID(self):
         #This performs pid
 
         if  not self.stack[0] == None:
@@ -148,7 +208,7 @@ class VelPID(Node):
             current.data = self.ordered_current_pose
             self.debug_current_pose.publish(current)
 
-    def timercallback2(self):
+    def trajectoryIndexing(self):
         #This indexes through array
         if  not self.stack[0] == None:
             if  len(self.stack[0].joint_trajectory.points) -1 > self.i:
@@ -159,20 +219,37 @@ class VelPID(Node):
                 self.desired_joint_positions = holder2[self.i].positions
                 self.i +=1
 
+    def effortCallback(self):
+        #This performs pid
+
+        if  not self.stack[0] == None:
+                
+            velocities = self.pidEffortCalc(self.stack)
+
+            self.prev_curr_vel = self.curr_vel
+
+            self.effort_publisher.publish(velocities)
+
     def clipublisher(self):
         if self.flag == True:
             print("number of detected joints: " + str(self.joints_number))
             print("detected joints: " + str(self.joint_names)) #need to cahnge this to names instead of values
+            print("***********Velocity**********")
             print("P values: " + str(self.k_pose_p))
             print("I values: " + str(self.k_pose_i))
             print("D values: " + str(self.k_pose_d))
+            print("")
+            print("***********Effort**********")
+            print("P values: " + str(self.k_vel_p))
+            print("I values: " + str(self.k_vel_i))
+            print("D values: " + str(self.k_vel_d))
 
 
 
     #******************PID Calculation**********************
 
     def pidVelocityCalc(self, jointDesiredPositions):
-        newmsg = Float64MultiArray()
+        velocityCommand = Float64MultiArray()
         joint = 0
 
         for desiredPose in jointDesiredPositions:
@@ -187,9 +264,40 @@ class VelPID(Node):
             self.previous_pose_error[joint] = self.current_pose_error[joint]
             #publish this value to the respective joint
             self.velocity[joint] = self.p_pose_factor[joint] + self.i_pose_factor[joint] + self.d_pose_factor[joint]
-            newmsg.data.append(self.velocity[joint])
+            velocityCommand.data.append(self.velocity[joint])
             joint+= 1
-        return newmsg
+        return self.pidEffortCalc(velocityCommand)
+
+
+
+    def pidEffortCalc(self, jointDesiredVelocity):
+        effortCommand= Float64MultiArray()
+
+        joint = 0
+
+        for joint in range(0,self.joints_number -1):
+            self.current_vel_error[joint] = jointDesiredVelocity[joint] - self.curr_vel[joint]
+
+            self.p_vel_factor[joint] = self.k_vel_p[joint] * (self.current_vel_error[joint])
+
+            self.i_vel_factor[joint] = self.k_vel_i[joint] *  (self.effort_sum[joint] + self.current_vel_error[joint])
+            self.effort_sum[joint] += self.current_vel_error[joint]
+
+            self.d_vel_factor[joint] = self.k_vel_p[joint] * (self.current_vel_error[joint] - self.previous_vel_error[joint])
+            self.previous_vel_error[joint] = self.current_vel_error[joint]
+
+            self.effort[joint] = self.p_vel_factor[joint] + self.i_vel_factor[joint] + self. d_vel_factor[joint]
+            effortCommand.data.append(self.effort[joint])
+
+            joint += 1
+            return effortCommand
+
+    #*************Velocity derivative***************
+    def poseToVel(self,pose):
+        t = time.time() - self.readingTime
+
+        for i in range(0,5):
+            self.curr_vel[i] = (self.curr_vel[i] - self.prev_curr_vel[i]) / t
 
 
     #************Dynamically get order joints array**************
@@ -200,7 +308,7 @@ class VelPID(Node):
             counter += 1
 
 def main(args=None):
-    print("Initialiazing velocity PID")
+    print("Initialiazing PID")
     rclpy.init(args=args)
     node = VelPID()
     rclpy.spin(node)
