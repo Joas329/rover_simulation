@@ -1,7 +1,7 @@
 #include <memory>
 
 #include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/String.hpp>
+#include "std_msgs/msg/string.hpp"
 #include <moveit/move_group_interface/move_group_interface.h>
 
 int main(int argc, char * argv[])
