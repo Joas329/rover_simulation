@@ -1,0 +1,23 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: my_bot
+    relative_path: description/arm_hardware.urdf
+  srdf:
+    relative_path: config/robot_arm.srdf
+  package_settings:
+    author_name: Joaquin Philco
+    author_email: joaquinphilco@gmail.com
+    generated_timestamp: 1695964178
+  control_xacro:
+    command:
+      - effort
+    state:
+      - position
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - effort
+    state:
+      - position
