@@ -24,13 +24,14 @@ class VelPID(Node):
 
         self.i = 0
         self.stack  = [None] 
+        self.trajectoryFlag = False
         self.readingTime = 0.0
         self.flag = False
         self.velocityPIDTimer = self.create_timer(0.02,self.velocityPID) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.trajectoryIndexingTImer = self.create_timer(0.1,self.trajectoryIndexing) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.clipub = self.create_timer(3,self.clipublisher) 
 
-        self.effortTimer = self.create_timer(0.02,self.effortCallback) 
+        # self.effortTimer = self.create_timer(0.02,self.effortCallback) 
 
         #********Subscribers********
 
@@ -129,6 +130,7 @@ class VelPID(Node):
 
     def joint_trajectory_callback(self, msg):
         self.stack = msg.trajectory
+        self.trajectoryFlag = False
         self.i = 0
 
     def position_feedback_callback(self, msg):
@@ -151,13 +153,13 @@ class VelPID(Node):
                 self.k_vel_p =[0.1] * self.joints_number
                 self.k_vel_i = [0.1] * self.joints_number
                 self.k_vel_d =[0.1] * self.joints_number
-                self.dynamicJointCheck(msg.name)
-                
 
                 self.flag = True
+                
                 self.dynamicJointCheck(msg.name)
             
             self.readingTime = time.time()
+            self.poseToVel()
             self.currentPosition = msg.position        
             for i in range(0,self.joints_number -1):
                 self.ordered_current_pose[i] = self.currentPosition[self.joint_order[i]]
@@ -195,10 +197,12 @@ class VelPID(Node):
         if  not self.stack[0] == None:
             
             velocities = self.pidVelocityCalc(self.desired_joint_positions)
+            #print(velocities)
+            self.effort_publisher.publish(velocities)
 
             #Publish Tunning Values
 
-            self.velocity_publisher.publish(velocities)
+            # self.velocity_publisher.publish(velocities)
             
             desired = Float64MultiArray()
             desired.data = self.desired_joint_positions
@@ -211,6 +215,9 @@ class VelPID(Node):
     def trajectoryIndexing(self):
         #This indexes through array
         if  not self.stack[0] == None:
+            if self.trajectoryFlag == False:
+                print("Received Trajectory")
+                self.trajectoryFlag = True
             if  len(self.stack[0].joint_trajectory.points) -1 > self.i:
                 trajectories = self.stack[0]
                 holder = trajectories.joint_trajectory
@@ -219,16 +226,16 @@ class VelPID(Node):
                 self.desired_joint_positions = holder2[self.i].positions
                 self.i +=1
 
-    def effortCallback(self):
-        #This performs pid
+    # def effortCallback(self):
+    #     #This performs pid
 
-        if  not self.stack[0] == None:
+    #     if  not self.stack[0] == None:
                 
-            velocities = self.pidEffortCalc(self.stack)
+    #         velocities = self.pidEffortCalc(self.stack)
 
-            self.prev_curr_vel = self.curr_vel
+    #         self.prev_curr_vel = self.curr_vel
 
-            self.effort_publisher.publish(velocities)
+    #         self.effort_publisher.publish(velocities)
 
     def clipublisher(self):
         if self.flag == True:
@@ -266,7 +273,11 @@ class VelPID(Node):
             self.velocity[joint] = self.p_pose_factor[joint] + self.i_pose_factor[joint] + self.d_pose_factor[joint]
             velocityCommand.data.append(self.velocity[joint])
             joint+= 1
-        return self.pidEffortCalc(velocityCommand)
+        print("P factor "+str(self.p_pose_factor))
+        print("I factor " +str(self.i_pose_factor))
+        print("D factor " +str(self.d_pose_factor))
+        return velocityCommand
+        #return self.pidEffortCalc(velocityCommand.data)
 
 
 
@@ -275,25 +286,26 @@ class VelPID(Node):
 
         joint = 0
 
-        for joint in range(0,self.joints_number -1):
-            self.current_vel_error[joint] = jointDesiredVelocity[joint] - self.curr_vel[joint]
+        for desiredVelocity in jointDesiredVelocity:
+            self.current_vel_error[joint] = desiredVelocity - self.curr_vel[joint]
 
             self.p_vel_factor[joint] = self.k_vel_p[joint] * (self.current_vel_error[joint])
 
             self.i_vel_factor[joint] = self.k_vel_i[joint] *  (self.effort_sum[joint] + self.current_vel_error[joint])
             self.effort_sum[joint] += self.current_vel_error[joint]
 
-            self.d_vel_factor[joint] = self.k_vel_p[joint] * (self.current_vel_error[joint] - self.previous_vel_error[joint])
+            self.d_vel_factor[joint] = self.k_vel_d[joint] * (self.current_vel_error[joint] - self.previous_vel_error[joint])
             self.previous_vel_error[joint] = self.current_vel_error[joint]
 
             self.effort[joint] = self.p_vel_factor[joint] + self.i_vel_factor[joint] + self. d_vel_factor[joint]
             effortCommand.data.append(self.effort[joint])
 
             joint += 1
-            return effortCommand
+            
+        return effortCommand
 
     #*************Velocity derivative***************
-    def poseToVel(self,pose):
+    def poseToVel(self):
         t = time.time() - self.readingTime
 
         for i in range(0,5):
