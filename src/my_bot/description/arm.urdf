@@ -214,7 +214,7 @@
     </collision>
   </link>
   <!--Defining ROS2 Control Joints-->
-  <!-- <ros2_control name="GazeboSystem" type="system">
+  <ros2_control name="GazeboSystem" type="system">
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
     </hardware>
@@ -259,8 +259,8 @@
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
       <parameters> /home/joas329/Desktop/rover_simulation/install/my_bot/share/my_bot/config/arm_controllers.yaml</parameters>
     </plugin>
-  </gazebo> -->
-
+  </gazebo>
+<!-- 
    <ros2_control name="yurs_motor" type="actuator">
         <hardware>
           <plugin>yurs_hardware/yurs_motor</plugin>
@@ -290,10 +290,10 @@
         <joint name="arm_j6">
           <param name="device_id">11</param>
           <param name="counts_per_rev">1512</param>
-        </joint>
+        </joint> -->
         <!-- <joint name="arm_j7">
           <param name="device_id">12</param>
           <param name="counts_per_rev">1512</param>
         </joint> -->
-	</ros2_control>
+	<!-- </ros2_control> -->
 </robot>

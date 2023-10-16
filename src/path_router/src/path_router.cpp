@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 
   // Create the MoveIt MoveGroup Interface
   using moveit::planning_interface::MoveGroupInterface;
-  auto move_group_interface = MoveGroupInterface(node, "manipulator");
+  auto move_group_interface = MoveGroupInterface(node, "arm_group");
 
   // Construct and initialize MoveItVisualTools
   auto moveit_visual_tools =
@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
   };
   auto const prompt = [&moveit_visual_tools](auto text) { moveit_visual_tools.prompt(text); };
   auto const draw_trajectory_tool_path =
-      [&moveit_visual_tools, jmg = move_group_interface.getRobotModel()->getJointModelGroup("manipulator")](
+      [&moveit_visual_tools, jmg = move_group_interface.getRobotModel()->getJointModelGroup("arm_group")](
           auto const trajectory) { moveit_visual_tools.publishTrajectoryLine(trajectory, jmg); };
 
   // Set a target Pose
