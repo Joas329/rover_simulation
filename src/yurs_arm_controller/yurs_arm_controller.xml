@@ -1,0 +1,8 @@
+<library path="yurs_arm_controller">
+  <class name="yurs_arm_controller/YursArmController"
+         type="yurs_arm_controller::YursArmController" base_class_type="controller_interface::ControllerInterface">
+  <description>
+    YursArmController ros2_control controller.
+  </description>
+  </class>
+</library>
