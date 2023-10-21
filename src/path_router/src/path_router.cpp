@@ -49,10 +49,10 @@ int main(int argc, char* argv[])
   // Set a target Pose
   auto const target_pose = [] {
     geometry_msgs::msg::Pose msg;
-    msg.orientation.w = 1.0;
-    msg.position.x = 0.28;
-    msg.position.y = -0.2;
-    msg.position.z = 0.5;
+    msg.orientation.w = 0.0;
+    msg.position.x = 0.0;
+    msg.position.y = 0.0;
+    msg.position.z = 0.0;
     return msg;
   }();
   move_group_interface.setPoseTarget(target_pose);

@@ -8,6 +8,8 @@ from launch.conditions import IfCondition, UnlessCondition
 from launch.event_handlers import OnProcessExit
 from moveit_configs_utils import MoveItConfigsBuilder
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_ros.actions import ComposableNodeContainer
+from launch_ros.descriptions import ComposableNode
 import xacro
 import yaml
 
@@ -189,6 +191,54 @@ def generate_launch_description():
     )
 
 
+    # *******************JOY**********************#
+    # Launch as much as possible in components
+    container = ComposableNodeContainer(
+        name="moveit_servo_demo_container",
+        namespace="/",
+        package="rclcpp_components",
+        executable="component_container_mt",
+        composable_node_descriptions=[
+            # Example of launching Servo as a node component
+            # Assuming ROS2 intraprocess communications works well, this is a more efficient way.
+            # ComposableNode(
+            #     package="moveit_servo",
+            #     plugin="moveit_servo::ServoServer",
+            #     name="servo_server",
+            #     parameters=[
+            #         servo_params,
+            #         moveit_config.robot_description,
+            #         moveit_config.robot_description_semantic,
+            #     ],
+            # ),
+            ComposableNode(
+                package="robot_state_publisher",
+                plugin="robot_state_publisher::RobotStatePublisher",
+                name="robot_state_publisher",
+                parameters=[moveit_config.robot_description],
+            ),
+            # ComposableNode(
+            #     package="tf2_ros",
+            #     plugin="tf2_ros::StaticTransformBroadcasterNode",
+            #     name="static_tf2_broadcaster",
+            #     parameters=[{"child_frame_id": "/panda_link0", "frame_id": "/world"}],
+            # ),
+            ComposableNode(
+                package="moveit_servo",
+                plugin="moveit_servo::JoyToServoPub",
+                name="controller_to_servo_node",
+            ),
+            ComposableNode(
+                package="joy",
+                plugin="joy::Joy",
+                name="joy_node",
+            ),
+        ],
+        output="screen",
+    )
+
+
+
     return LaunchDescription(
         [
 
@@ -234,7 +284,8 @@ def generate_launch_description():
                             period=5.0,
                             actions=[
                                 rviz_node_full,
-                                move_group_node
+                                move_group_node,
+                                container
                             ]
                         ),
 
