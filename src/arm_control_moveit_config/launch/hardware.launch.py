@@ -51,20 +51,16 @@ def load_yaml(package_name, file_path):
 
 def generate_launch_description():
 
-
-    # Include the robot_state_publisher launch file, provided by our own package. Force sim time to be enabled
-    # !!! MAKE SURE YOU SET THE PACKAGE NAME CORRECTLY !!!
-
     package_name='arm_control_moveit_config'
 
 
     pkg_path = os.path.join(
-    get_package_share_directory('my_bot'))
-    xacro_file = os.path.join(pkg_path,'description','arm_hardware.urdf.xacro')
+    get_package_share_directory('arm_control_moveit_config'))
+    xacro_file = os.path.join(pkg_path,'config','arm_hardware.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_description = {'robot_description': robot_description_config.toxml()}
 
-    controller_params_file = os.path.join(get_package_share_directory("my_bot"),'config','arm_controllers.yaml')
+    controller_params_file = os.path.join(get_package_share_directory("arm_control_moveit_config"),'config','ros2_controllers.yaml')
     control_node = Node(
         package="controller_manager",
         executable="ros2_control_node",
@@ -126,9 +122,9 @@ def generate_launch_description():
         MoveItConfigsBuilder("arm_control")
         .robot_description(
             file_path="config/robot_arm.urdf.xacro",
-            mappings={
-                "ros2_control_hardware_type": LaunchConfiguration("ros2_control_hardware_type")
-            },
+            # mappings={
+            #     "ros2_control_hardware_type": LaunchConfiguration("ros2_control_hardware_type")
+            # },
         )
         .robot_description_semantic(file_path="config/robot_arm.srdf")
         .trajectory_execution(file_path="config/moveit_controllers.yaml")
