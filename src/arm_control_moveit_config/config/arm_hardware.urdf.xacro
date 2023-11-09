@@ -30,7 +30,6 @@
 	<!--Arm Links-->
 
 	<!--Arm 1-->
-
 	<xacro:arm_component 
 		component_number ="1"
 		type = "revolute"
@@ -59,7 +58,6 @@
 
 
 	<!--Arm 2-->
-
 	<xacro:arm_component 
 		component_number ="2"
 		type = "revolute"
@@ -87,7 +85,6 @@
 	/>
 
 	<!--Arm 3-->
-
 	<xacro:arm_component 
 		component_number ="3"
 		type = "revolute"
@@ -115,7 +112,6 @@
 	/>
 
 	<!--Arm 4-->
-
 	<xacro:arm_component 
 		component_number ="4"
 		type = "continuous"
@@ -144,7 +140,6 @@
 
 
 	<!--Arm 5-->
-
 	<xacro:arm_component 
 		component_number ="5"
 		type = "revolute"
@@ -172,7 +167,6 @@
 	/>
 
 	<!--Arm 6-->
-
 	<xacro:arm_component 
 		component_number ="6"
 		type = "revolute"
@@ -200,7 +194,6 @@
 	/>
 
 	<!--Arm 7-->	
-
 	<link name="arm_a7">
 		<inertial>
 		<mass value="0.454"/>
