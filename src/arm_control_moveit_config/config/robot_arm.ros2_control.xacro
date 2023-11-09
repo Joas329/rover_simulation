@@ -3,7 +3,7 @@
     <xacro:macro name="robot_arm_ros2_control" params="name initial_positions_file">
         <xacro:property name="initial_positions" value="${load_yaml(initial_positions_file)['initial_positions']}"/>
 
-  <ros2_control name="GazeboSystem" type="system">
+  <!-- <ros2_control name="GazeboSystem" type="system">
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
     </hardware>
@@ -43,11 +43,11 @@
         <param name="initial_value">3</param>
       </state_interface>
     </joint>
-  </ros2_control>
+  </ros2_control> -->
 
 
-  <!-- <ros2_control name="yurs_motor" type="actuator"> -->
-        <!-- <hardware>
+  <ros2_control name="yurs_motor" type="actuator">
+        <hardware>
           <plugin>yurs_hardware/yurs_motor</plugin>
           <param name="can_interface">can0</param>
         </hardware>
@@ -75,12 +75,12 @@
         <joint name="arm_j6">
           <param name="device_id">11</param>
           <param name="counts_per_rev">1512</param>
-        </joint> -->
+        </joint>
         <!-- <joint name="arm_j7">
           <param name="device_id">12</param>
           <param name="counts_per_rev">1512</param>
         </joint> -->
-	<!-- </ros2_control> -->
+	</ros2_control>
 
     </xacro:macro>
 </robot>
