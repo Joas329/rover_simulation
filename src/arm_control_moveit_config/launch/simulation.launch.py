@@ -1,17 +1,4 @@
 import os
-
-from ament_index_python.packages import get_package_share_directory
-
-
-from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import Command
-from launch_ros.substitutions import FindPackageShare
-import launch_ros.actions
-import launch
-from launch.actions import RegisterEventHandler
-from launch.substitutions import PathJoinSubstitution
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
@@ -23,10 +10,6 @@ from moveit_configs_utils import MoveItConfigsBuilder
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 import xacro
 import yaml
-import xacro
-from launch.event_handlers import OnProcessStart
-
-from launch_ros.actions import Node
 
 # LOAD FILE:
 def load_file(package_name, file_path):
@@ -51,46 +34,76 @@ def load_yaml(package_name, file_path):
 
 def generate_launch_description():
 
-    package_name='arm_control_moveit_config'
 
+    # *********************** GAZEBO *********************** # 
+    
+    # DECLARE Gazebo LAUNCH file:
+    gazebo = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
+             )
 
+    # *************** ROBOT DESCRIPTION *************** #
+
+    # PANDA ROBOT Description file package:
     pkg_path = os.path.join(
-    get_package_share_directory('arm_control_moveit_config'))
-    xacro_file = os.path.join(pkg_path,'config','arm_hardware.urdf.xacro')
+        get_package_share_directory('arm_control_moveit_config'))
+    xacro_file = os.path.join(pkg_path,'config','arm_gazebo.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_description = {'robot_description': robot_description_config.toxml()}
 
-    controller_params_file = os.path.join(get_package_share_directory("arm_control_moveit_config"),'config','ros2_controllers.yaml')
-    control_node = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[robot_description, controller_params_file],
-        output="both",
+
+    # SPAWN ROBOT TO GAZEBO:
+    spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
+                        arguments=['-topic', 'robot_description',
+                                   '-entity', 'arm_bot'],
+                        output='screen')
+    
+    # *************** STATIC TRANSFORM *************** #
+
+    # NODE -> Static TF:
+    static_tf = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="static_transform_publisher",
+        output="log",
+        arguments=["0.0", "0.0", "0,0","0.0", "0.0", "0.0", "world", "base_link"],
+    )
+    # Publish TF:
+    robot_state_publisher = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        output='both',
+        parameters=[
+            robot_description,
+            {"use_sim_time": True}
+        ]
     )
 
-    robot_state_pub_node = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
-        parameters=[robot_description],
-        output="both",
-    )
+    # *************** ROS2_CONTROLLERS *************** #
 
-    joint_state_broadcaster_spawner = Node(
+     # Joint State Broadcaster
+    joint_state_broadcaster = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
-        output="both",
     )
 
-    arm_controller_spawner = Node(
+    # Arm Group Controller
+    arm_group_controller = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["arm_group_controller", "--controller-manager", "/controller_manager"],
-        output="both",
+        arguments=["arm_group_controller", "-c", "/controller_manager"],
     )
 
+    # # Hand Controller
+    # hand_controller = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     arguments=["hand_controller", "-c", "/controller_manager"],
+    # )
 
-     # *********************** MoveIt!2 *********************** # 
+    # *********************** MoveIt!2 *********************** # 
 
     # *** PLANNING CONTEXT *** #
 
@@ -101,6 +114,17 @@ def generate_launch_description():
     # Kinematics.yaml file:
     kinematics_yaml = load_yaml("arm_control_moveit_config", "config/kinematics.yaml")
     robot_description_kinematics = {"robot_description_kinematics": kinematics_yaml}
+
+    # Move group: OMPL Planning.
+    # ompl_planning_pipeline_config = {
+    #     "move_group": {
+    #         "planning_plugin": "ompl_interface/OMPLPlanner",
+    #         "request_adapters": """default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints""",
+    #         "start_state_max_bounds_error": 0.1,
+    #     }
+    # }
+    # ompl_planning_yaml = load_yaml("arm_control_moveit_config", "config/ompl_planning.yaml")
+    # ompl_planning_pipeline_config["move_group"].update(ompl_planning_yaml)
 
     move_group_configuration = {
         "publish_robot_description_semantic": True,
@@ -123,7 +147,9 @@ def generate_launch_description():
         .robot_description(
             file_path="config/robot_arm.urdf.xacro",
             # mappings={
-            #     "ros2_control_hardware_type": LaunchConfiguration("ros2_control_hardware_type")
+            #     "ros2_control_hardware_type": LaunchConfiguration(
+            #         "ros2_control_hardware_type"
+            #     )
             # },
         )
         .robot_description_semantic(file_path="config/robot_arm.srdf")
@@ -143,7 +169,8 @@ def generate_launch_description():
     )
 
 
-     # ******************* RVIZ2 *******************#
+
+    # ******************* RVIZ2 *******************#
     
     rviz_base = os.path.join(get_package_share_directory("arm_control_moveit_config"), "config")
     rviz_full_config = os.path.join(rviz_base, "moveit.rviz")
@@ -162,19 +189,43 @@ def generate_launch_description():
     )
 
 
+    return LaunchDescription(
+        [
 
-    nodes = [
-        control_node,
-        robot_state_pub_node,
-        joint_state_broadcaster_spawner,
-        arm_controller_spawner,
-
-        RegisterEventHandler(
+            gazebo, 
+            spawn_entity,
+            static_tf,
+            robot_state_publisher,
+            
+            # ROS2 Controllers:
+            RegisterEventHandler(
                 OnProcessExit(
-                    target_action = arm_controller_spawner,
+                    target_action = spawn_entity,
                     on_exit = [
-
-                        # MoveIt!2:
+                        joint_state_broadcaster,
+                    ]
+                )
+            ),
+            RegisterEventHandler(
+                OnProcessExit(
+                    target_action = joint_state_broadcaster,
+                    on_exit = [
+                        arm_group_controller,
+                    ]
+                )
+            ),
+            # RegisterEventHandler(
+            #     OnProcessExit(
+            #         target_action = arm_group_controller,
+            #         on_exit = [
+            #             hand_controller,
+            #         ]
+            #     )
+            # ),
+            RegisterEventHandler(
+                OnProcessExit(
+                    target_action = arm_group_controller,
+                    on_exit = [
                         TimerAction(
                             period=5.0,
                             actions=[
@@ -186,7 +237,5 @@ def generate_launch_description():
                     ]
                 )
             )
-        
-    ]
-
-    return LaunchDescription(nodes)
+        ]
+    )

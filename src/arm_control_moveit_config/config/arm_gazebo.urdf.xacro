@@ -19,17 +19,17 @@
         <color rgba="0 0 0 1"/>
     </material>
 
-	<!--Dummy Link-->
-	<link name="base_link"/>
-	<joint name="dummy_joint" type="fixed">
-		<origin xyz="0 0 0" rpy="0 0 0"/>
-		<parent link="base_link"/>   
-		<child link="arm_a1"/>
-	</joint>
+	 <link name="world"/>
 
+
+        <joint name="fix" type="fixed">
+            <parent link="world"/>
+            <child link="arm_a1"/>
+        </joint>
 	<!--Arm Links-->
 
 	<!--Arm 1-->
+
 	<xacro:arm_component 
 		component_number ="1"
 		type = "revolute"
@@ -53,21 +53,22 @@
 		velocity_limit = "300000.0"
 		joint_X = "-3.50000000"
 		joint_Y = "0.51712500"
-		joint_Z = "0.0"
+		joint_Z = "0"
 	/>
 
 
 	<!--Arm 2-->
+
 	<xacro:arm_component 
 		component_number ="2"
 		type = "revolute"
 		parent_link = "arm_a2"
 		child_link = "arm_a3"
 		mass="3.6524"
-		axis = "0 1 0"
+		axis = "0 -1 0"
 		Lxx="21.53"
-		Lxy="0.0"
-		Lxz="0.0"
+		Lxy="0"
+		Lxz="0"
 		Lyy="10.896"
 		Lyz="0.14287"
 		Lzz="14.594"
@@ -76,15 +77,16 @@
 		inertiaY = "2.7203"
 		inertiaZ = "0.03799"
 		effort_limit = "125000.0"
-		lower_limit = "${radians(-135)}"
-		upper_limit = "${radians(15)}"
+		lower_limit = "${radians(-15)}"
+		upper_limit = "${radians(135)}"
 		velocity_limit = "300000.0"
-		joint_X = "0.0"
+		joint_X = "0"
 		joint_Y = "3.75000000"
-		joint_Z = "0.0"
+		joint_Z = "0"
 	/>
 
 	<!--Arm 3-->
+
 	<xacro:arm_component 
 		component_number ="3"
 		type = "revolute"
@@ -107,11 +109,12 @@
 		upper_limit = "${radians(120)}"
 		velocity_limit = "300000.0"
 		joint_X = "18.00000000"
-		joint_Y = "0.0"
-		joint_Z = "0.0"
+		joint_Y = "0"
+		joint_Z = "0"
 	/>
 
 	<!--Arm 4-->
+
 	<xacro:arm_component 
 		component_number ="4"
 		type = "continuous"
@@ -134,12 +137,13 @@
 		upper_limit = "${radians(180)}"
 		velocity_limit = "300000.0"
 		joint_X = "4.48622047"
-		joint_Y = "0.0"
-		joint_Z = "0.0"
+		joint_Y = "0"
+		joint_Z = "0"
 	/>
 
 
 	<!--Arm 5-->
+
 	<xacro:arm_component 
 		component_number ="5"
 		type = "revolute"
@@ -162,11 +166,12 @@
 		upper_limit = "${radians(90)}"
 		velocity_limit = "300000.0"
 		joint_X = "17.25000000"
-		joint_Y = "0.0"
-		joint_Z = "0.0"
+		joint_Y = "0"
+		joint_Z = "0"
 	/>
 
 	<!--Arm 6-->
+
 	<xacro:arm_component 
 		component_number ="6"
 		type = "revolute"
@@ -189,11 +194,12 @@
 		upper_limit = "${radians(90)}"
 		velocity_limit = "300000.0"
 		joint_X = "2.98622047"
-		joint_Y = "0.0"
-		joint_Z = "0.0"
+		joint_Y = "0"
+		joint_Z = "0"
 	/>
 
 	<!--Arm 7-->	
+
 	<link name="arm_a7">
 		<inertial>
 		<mass value="0.454"/>
@@ -234,41 +240,26 @@
 
 
 	<!--Defining ROS2 Control Joints-->
+	
+	<ros2_control name="GazeboSystem" type="system">
+        <hardware>
+        	<plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
 
-	<ros2_control name="yurs_motor" type="actuator">
-		<hardware>
-			<plugin>yurs_hardware/yurs_motor</plugin>
-			<param name="can_interface">can0</param>
-		</hardware>
+		<xacro:arm_joint_creator name="arm_j1"/>
+		<xacro:arm_joint_creator name="arm_j2"/>
+		<xacro:arm_joint_creator name="arm_j3"/>
+		<xacro:arm_joint_creator name="arm_j4"/>
+        <xacro:arm_joint_creator name="arm_j5"/>    
+		<xacro:arm_joint_creator name="arm_j6"/>
+		<!-- <xacro:arm_joint_creator name="arm_j7"/> -->
 
- 		<joint name="arm_j1">
-			<param name="device_id">6</param>
-			<param name="counts_per_rev">1050</param>
-		</joint>
-		<joint name="arm_j2">
-			<param name="device_id">7</param>
-			<param name="counts_per_rev">5250</param>
-		</joint>
-		<joint name="arm_j3">
-			<param name="device_id">8</param>
-			<param name="counts_per_rev">5250</param>
-		</joint>
-		<joint name="arm_j4">
-			<param name="device_id">9</param>
-			<param name="counts_per_rev">1149.1597</param>
-		</joint>
-		<joint name="arm_j5">
-			<param name="device_id">10</param>
-			<param name="counts_per_rev">1149.1597</param>
-		</joint>
-		<joint name="arm_j6">
-			<param name="device_id">11</param>
-			<param name="counts_per_rev">1149.1597</param>
-		</joint>
-		<!-- <joint name="arm_j7">
-			<param name="device_id">12</param>
-			<param name="counts_per_rev">1512</param>
-		</joint> -->
 	</ros2_control>
+
+	<gazebo>
+        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+            <parameters> $(find arm_control_moveit_config)/config/ros2_controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
 
 </robot>
