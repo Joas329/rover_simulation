@@ -32,7 +32,7 @@ public:
         std::bind(&DoublePID::positionFeedbackCallback, this, std::placeholders::_1));
 
     // Publishers
-    effortPublisher = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+    effort_publisher = this->create_publisher<std_msgs::msg::Float64MultiArray>(
         "arm_group_controller/commands",
         10);
 
@@ -76,7 +76,7 @@ private:
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr jointStateSubscriber;
 
   // Publishers
-  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr effortPublisher;
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr effort_publisher;
   rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debugDesiredPose;
   rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debugCurrentPose;
   rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debugDesiredVelocity;
@@ -327,7 +327,8 @@ private:
 
     void poseToVel()
     {
-        double t = std::chrono::duration<double>(std::chrono::system_clock::now() - readingTime).count();
+        auto current_time = std::chrono::duration<double>(std::chrono::system_clock::now().time_since_epoch()).count();
+        double t = current_time - readingTime;
 
         for (size_t i = 0; i < 5; ++i)
         {
