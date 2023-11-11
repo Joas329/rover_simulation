@@ -253,8 +253,7 @@ private:
 
     std_msgs::msg::Float64MultiArray pidVelocityCalc(
         const std::vector<double> &jointDesiredPositions,
-        int joints_number,
-        const rclcpp::Node::SharedPtr &node)  // Pass the node reference to access get_parameter
+        int joints_number)
     {
         std_msgs::msg::Float64MultiArray velocityCommand;
 

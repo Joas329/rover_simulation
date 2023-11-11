@@ -262,8 +262,7 @@ class VelPID : public rclcpp::Node
 
     std_msgs::msg::Float64MultiArray pid_velocity_calc(
         const std::vector<double> &joint_desired_positions,
-        int joints_number,
-        const rclcpp::Node::SharedPtr &node)  // Pass the node reference to access get_parameter
+        int joints_number)
     {
         std_msgs::msg::Float64MultiArray velocity_command;
 
