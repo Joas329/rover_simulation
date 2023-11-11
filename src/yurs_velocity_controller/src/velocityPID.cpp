@@ -18,7 +18,7 @@ class VelPID : public rclcpp::Node
         reading_time = 0.0;
         trajectory_flag = false;
         flag = false;
-        stack = std::vector();
+        stack = std::vector<moveit_msgs::msg::DisplayTrajectory>();
 
         // ********Timers********
         velocity_PID_timer = create_wall_timer(std::chrono::milliseconds(20), std::bind(&VelPID::velocity_PID, this))
