@@ -141,7 +141,7 @@ private:
     {
         if (!stack.empty())
         {
-            auto velocities = pidVelocityCalc(desired_joint_positions, joints_number);
+            auto velocities = pidVelocityCalc(desired_joint_positions);
             effort_publisher->publish(velocities);
             command = velocities;
 
@@ -251,9 +251,7 @@ private:
     }
 
 
-    std_msgs::msg::Float64MultiArray pidVelocityCalc(
-        const std::vector<double> &jointDesiredPositions,
-        int joints_number)
+    std_msgs::msg::Float64MultiArray pidVelocityCalc(const std::vector<double> &jointDesiredPositions)
     {
         std_msgs::msg::Float64MultiArray velocityCommand;
 
@@ -290,10 +288,7 @@ private:
         return velocityCommand;
     }
 
-    std_msgs::msg::Float64MultiArray pidEffortCalc(
-        const std::vector<double> &jointDesiredVelocity,
-        int joints_number
-        )
+    std_msgs::msg::Float64MultiArray pidEffortCalc(const std::vector<double> &jointDesiredVelocity)
     {
         std_msgs::msg::Float64MultiArray effortCommand;
 

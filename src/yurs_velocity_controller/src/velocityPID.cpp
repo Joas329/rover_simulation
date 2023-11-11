@@ -260,9 +260,7 @@ class VelPID : public rclcpp::Node
     }
 
 
-    std_msgs::msg::Float64MultiArray pid_velocity_calc(
-        const std::vector<double> &joint_desired_positions,
-        int joints_number)
+    std_msgs::msg::Float64MultiArray pid_velocity_calc(const std::vector<double> &joint_desired_positions)
     {
         std_msgs::msg::Float64MultiArray velocity_command;
 
@@ -299,10 +297,7 @@ class VelPID : public rclcpp::Node
         return velocity_command;
     }
 
-    std_msgs::msg::Float64MultiArray pid_effort_calc(
-        const std::vector<double> &joint_desired_velocity,
-        int joints_number
-        )
+    std_msgs::msg::Float64MultiArray pid_effort_calc(const std::vector<double> &joint_desired_velocity)
     {
         std_msgs::msg::Float64MultiArray effort_command;
 
