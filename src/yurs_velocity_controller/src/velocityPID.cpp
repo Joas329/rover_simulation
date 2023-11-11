@@ -51,11 +51,11 @@ class VelPID : public rclcpp::Node
             10);
 
         debug_desired_velocity = create_publisher<std_msgs::msg::Float64MultiArray>(
-            "effortPID/desired_velocity",
+            "effort_PID/desired_velocity",
             10);
 
         debug_current_velocity = create_publisher<std_msgs::msg::Float64MultiArray>(
-            "effortPID/current_velocity",
+            "effort_PID/current_velocity",
             10);
         
     }
