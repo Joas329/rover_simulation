@@ -174,7 +174,7 @@ class VelPID : public rclcpp::Node
     void trajectory_indexing()
     {
         // This indexes through the trajectory array
-        if (!stack.empty() && stack[0] != nullptr)
+        if (!stack.empty())
         {
             if (!trajectory_flag)
             {
@@ -197,7 +197,7 @@ class VelPID : public rclcpp::Node
     void effort_callback()
     {
         // This performs pid
-        if (!stack.empty() && stack[0] != nullptr)
+        if (!stack.empty())
         {
             auto velocities = pid_effort_calc(stack);
 

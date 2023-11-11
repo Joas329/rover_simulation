@@ -163,7 +163,7 @@ private:
     void trajectoryIndexing()
     {
         // This indexes through the trajectory array
-        if (!stack.empty() && stack[0] != nullptr)
+        if (!stack.empty())
         {
             if (!trajectoryFlag)
             {
@@ -186,7 +186,7 @@ private:
     void effortCallback()
     {
         // This performs pid
-        if (!stack.empty() && stack[0] != nullptr)
+        if (!stack.empty())
         {
             auto velocities = pidEffortCalc(stack);
 
