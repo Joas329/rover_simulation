@@ -18,7 +18,7 @@ class VelPID : public rclcpp::Node
         reading_time = 0.0;
         trajectory_flag = false;
         flag = false;
-        stack = std::vector<moveit_msgs::msg::DisplayTrajectory>();
+        stack = std::vector<moveit_msgs::msg::RobotTrajectory>();
 
         // ********Timers********
         velocity_PID_timer = create_wall_timer(std::chrono::milliseconds(20), std::bind(&VelPID::velocity_PID, this))
@@ -98,7 +98,7 @@ class VelPID : public rclcpp::Node
     // **********Subcriber Callbacks***********
     void joint_trajectory_callback(const moveit_msgs::msg::DisplayTrajectory::SharedPtr msg)
     {
-        stack = msg->trajectory;
+        stack = std::vector(std::begin(msg->trajectory), std::end(msg->trajectory));
         trajectory_flag = false;
         i = 0;
     }
