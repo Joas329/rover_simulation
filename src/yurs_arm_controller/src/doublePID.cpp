@@ -292,7 +292,7 @@ private:
 
     std_msgs::msg::Float64MultiArray pidEffortCalc(
         const std::vector<double> &jointDesiredVelocity,
-        const int& joints_number
+        int joints_number
         )
     {
         std_msgs::msg::Float64MultiArray effortCommand;

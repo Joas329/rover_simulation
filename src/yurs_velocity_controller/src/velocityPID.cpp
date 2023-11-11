@@ -301,7 +301,7 @@ class VelPID : public rclcpp::Node
 
     std_msgs::msg::Float64MultiArray pid_effort_calc(
         const std::vector<double> &joint_desired_velocity,
-        const int& joints_number
+        int joints_number
         )
     {
         std_msgs::msg::Float64MultiArray effort_command;
