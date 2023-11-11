@@ -13,7 +13,7 @@ public:
   DoublePID() : Node("DoublePID"), i(0), trajectoryFlag(false), readingTime(0.0), flag(false)
   {
     // Declare Node Variables Here
-    stack.push_back(nullptr);
+    stack = std::vector<moveit_msgs::msg::DisplayTrajectory>();
 
     // Timers
     velocityPIDTimer = this->create_wall_timer(std::chrono::milliseconds(20), std::bind(&DoublePID::velocityPID, this));
