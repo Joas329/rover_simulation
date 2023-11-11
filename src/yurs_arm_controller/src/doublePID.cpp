@@ -18,37 +18,37 @@ public:
     // Timers
     velocityPIDTimer = this->create_wall_timer(std::chrono::milliseconds(20), std::bind(&DoublePID::velocityPID, this));
     trajectoryIndexingTimer = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&DoublePID::trajectoryIndexing, this));
-    clipPublisher = this->create_wall_timer(std::chrono::seconds(3), std::bind(&DoublePID::clipPublisherCallback, this));
+    clipPublisher = this->create_wall_timer(std::chrono::seconds(3), std::bind(&DoublePID::cli_publisher_callback, this));
 
     // Subscribers
     jointTrajectorySubscriber = this->create_subscription<moveit_msgs::msg::DisplayTrajectory>(
         "display_planned_path",
         10,
-        std::bind(&DoublePID::jointTrajectoryCallback, this, std::placeholders::_1));
+        std::bind(&DoublePID::joint_trajectory_callback, this, std::placeholders::_1));
 
     jointStateSubscriber = this->create_subscription<sensor_msgs::msg::JointState>(
         "joint_states",
         10,
-        std::bind(&DoublePID::positionFeedbackCallback, this, std::placeholders::_1));
+        std::bind(&DoublePID::position_feedback_callback, this, std::placeholders::_1));
 
     // Publishers
     effort_publisher = this->create_publisher<std_msgs::msg::Float64MultiArray>(
         "arm_group_controller/commands",
         10);
 
-    debugDesiredPose = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+    debug_desired_pose = this->create_publisher<std_msgs::msg::Float64MultiArray>(
         "veloctiyPID/desired_pose",
         10);
 
-    debugCurrentPose = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+    debug_current_pose = this->create_publisher<std_msgs::msg::Float64MultiArray>(
         "velocityPID/current_pose",
         10);
 
-    debugDesiredVelocity = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+    debug_desired_velocity = this->create_publisher<std_msgs::msg::Float64MultiArray>(
         "effortPID/desired_velocity",
         10);
 
-    debugCurrentVelocity = this->create_publisher<std_msgs::msg::Float64MultiArray>(
+    debug_current_velocity = this->create_publisher<std_msgs::msg::Float64MultiArray>(
         "effortPID/current_velocity",
         10);
   }
@@ -57,7 +57,14 @@ private:
   // Declare class variables here
   int i;
   std::vector<moveit_msgs::msg::DisplayTrajectory> stack;
-  std::vector<double> ordered_current_pose, currentPosition, desired_joint_positions, command, velocity, curr_vel, prev_curr_vel, jointDesiredVelocity;
+  std::vector<double> ordered_current_pose,
+                      currentPosition, 
+                      desired_joint_positions, 
+                      command, 
+                      velocity, 
+                      curr_vel, 
+                      prev_curr_vel, 
+                      jointDesiredVelocity;
   std::vector<double> effort;
   bool trajectoryFlag;
   double readingTime;
@@ -77,10 +84,10 @@ private:
 
   // Publishers
   rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr effort_publisher;
-  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debugDesiredPose;
-  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debugCurrentPose;
-  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debugDesiredVelocity;
-  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debugCurrentVelocity;
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debug_desired_pose;
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debug_current_pose;
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debug_desired_velocity;
+  rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr debug_current_velocity;
 
   // Callbacks
     void joint_trajectory_callback(const moveit_msgs::msg::DisplayTrajectory::SharedPtr msg)
@@ -191,7 +198,7 @@ private:
 
 
 
-    void clipublisher()
+    void cli_publisher_callback()
     {
         if (flag)
         {
@@ -286,6 +293,7 @@ private:
 
     std_msgs::msg::Float64MultiArray pidEffortCalc(
         const std::vector<double> &jointDesiredVelocity,
+        const int& joints_number
         )
     {
         std_msgs::msg::Float64MultiArray effortCommand;
