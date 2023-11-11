@@ -13,7 +13,7 @@ public:
   DoublePID() : Node("DoublePID"), i(0), trajectoryFlag(false), readingTime(0.0), flag(false)
   {
     // Declare Node Variables Here
-    stack = std::vector<moveit_msgs::msg::DisplayTrajectory>();
+    stack = std::vector<moveit_msgs::msg::RobotTrajectory>();
 
     // Timers
     velocityPIDTimer = this->create_wall_timer(std::chrono::milliseconds(20), std::bind(&DoublePID::velocityPID, this));
@@ -56,7 +56,7 @@ public:
 private:
   // Declare class variables here
   int i;
-  std::vector<moveit_msgs::msg::DisplayTrajectory> stack;
+  std::vector<moveit_msgs::msg::RobotTrajectory> stack;
   std::vector<double> ordered_current_pose,
                       currentPosition, 
                       desired_joint_positions, 
@@ -92,7 +92,7 @@ private:
   // Callbacks
     void joint_trajectory_callback(const moveit_msgs::msg::DisplayTrajectory::SharedPtr msg)
     {
-        stack = msg->trajectory;
+        stack = std::vector(std::begin(msg->trajectory), std::end(msg->trajectory));
         trajectoryFlag = false;
         i = 0;
     }
