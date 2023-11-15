@@ -103,11 +103,13 @@ private:
             // Runs once at the beginning of the code as the joint states are published immediately.
             joints_number = msg->name.size(); //checks for number of detected joints
             joint_names = msg->name;
-            joint_order = std::vector<int>(joints_number, 0);
+            joint_order = std::vector<int>(joints_number, 0.0);
 
             // Velocity
             ordered_current_pose = currentPosition = desired_joint_positions = std::vector<double>(joints_number, 0.0);
             command = velocity = std_msgs::msg::Float64MultiArray();
+            command.data.resize(joints_number, 0.0);
+            velocity.data.resize(joints_number, 0.0);
             // std::make_shared<std_msgs::msg::Float64MultiArray>(joints_number, 0.0);
 
             // Effort
@@ -230,7 +232,7 @@ private:
             RCLCPP_INFO(get_logger(), "I values: %s", vectorToString(k_vel_i).c_str());
             RCLCPP_INFO(get_logger(), "D values: %s", vectorToString(k_vel_d).c_str());
             RCLCPP_INFO(get_logger(), "***********Commands**********");
-            // RCLCPP_INFO(get_logger(), "commands: %s", vectorToString(command).c_str());
+            RCLCPP_INFO(get_logger(), "commands: %s", float64MultiArrayToString(command).c_str());
             RCLCPP_INFO(get_logger(), "**********Current Position*************");
             RCLCPP_INFO(get_logger(), "%s", vectorToString(currentPosition).c_str());
             RCLCPP_INFO(get_logger(), "**********Desired Position*************");
@@ -250,6 +252,20 @@ private:
         return oss.str();
     }
 
+    std::string float64MultiArrayToString(const std_msgs::msg::Float64MultiArray& array) {
+        std::stringstream ss;
+        ss << "[";
+        
+        for (size_t i = 0; i < array.data.size(); ++i) {
+            ss << array.data[i];
+            if (i < array.data.size() - 1) {
+                ss << ", ";
+            }
+        }
+
+        ss << "]";
+        return ss.str();
+    }
 
     std_msgs::msg::Float64MultiArray pidVelocityCalc(const std::vector<double> &jointDesiredPositions)
     {
