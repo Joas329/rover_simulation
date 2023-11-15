@@ -33,7 +33,7 @@ if(BUILD_TESTING)
 endif()
 
 install(TARGETS
-    doublePID
+  TARGETS doublePID
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
