@@ -1,0 +1,7 @@
+test_arm_controller.cpp:
+  ros__parameters:
+
+    joints:
+      - joint1
+
+    interface_name: acceleration

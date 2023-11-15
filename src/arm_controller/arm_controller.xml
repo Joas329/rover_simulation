@@ -1,0 +1,8 @@
+<library path="arm_controller">
+  <class name="arm_controller/ArmController.cpp"
+         type="arm_controller::ArmController.cpp" base_class_type="controller_interface::ControllerInterface">
+  <description>
+    ArmController.cpp ros2_control controller.
+  </description>
+  </class>
+</library>
