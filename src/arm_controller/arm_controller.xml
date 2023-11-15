@@ -1,8 +1,0 @@
-<library path="arm_controller">
-  <class name="arm_controller/ArmController"
-         type="arm_controller::ArmController" base_class_type="controller_interface::ControllerInterface">
-  <description>
-    ArmController ros2_control controller.
-  </description>
-  </class>
-</library>
