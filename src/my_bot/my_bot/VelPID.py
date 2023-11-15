@@ -28,7 +28,7 @@ class VelPID(Node):
         self.readingTime = 0.0
         self.flag = False
 
-        #********TImers********
+        #********Timers********
 
         self.velocityPIDTimer = self.create_timer(0.02,self.velocityPID) #TODO YOU CAN CHANGE THE TIMER TIME HERE
         self.trajectoryIndexingTImer = self.create_timer(0.1,self.trajectoryIndexing) #TODO YOU CAN CHANGE THE TIMER TIME HERE

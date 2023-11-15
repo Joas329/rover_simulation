@@ -57,11 +57,10 @@ private:
   // Declare class variables here
   int i;
   std::vector<moveit_msgs::msg::RobotTrajectory> stack;
+  std_msgs::msg::Float64MultiArray command, velocity;
   std::vector<double> ordered_current_pose,
                       currentPosition, 
                       desired_joint_positions, 
-                      command, 
-                      velocity, 
                       curr_vel, 
                       prev_curr_vel, 
                       jointDesiredVelocity;
@@ -108,7 +107,8 @@ private:
 
             // Velocity
             ordered_current_pose = currentPosition = desired_joint_positions = std::vector<double>(joints_number, 0.0);
-            command = velocity = std::vector<double>(joints_number, 0.0);
+            command = velocity = std_msgs::msg::Float64MultiArray();
+            // std::make_shared<std_msgs::msg::Float64MultiArray>(joints_number, 0.0);
 
             // Effort
             ordered_current_pose = curr_vel = prev_curr_vel = jointDesiredVelocity = std::vector<double>(msg->name.size(), 0.0);
@@ -171,10 +171,10 @@ private:
                 trajectoryFlag = true;
             }
 
-            if (stack[0]->joint_trajectory.points.size() - 1 > i)
+            if (stack[0].joint_trajectory.points.size() - 1 > (unsigned)i)
             {
                 auto trajectories = stack[0];
-                auto holder = trajectories->joint_trajectory;
+                auto holder = trajectories.joint_trajectory;
                 auto holder2 = holder.points;
 
                 desired_joint_positions = holder2[i].positions;
@@ -183,18 +183,18 @@ private:
         }
     }
 
-    void effortCallback()
-    {
-        // This performs pid
-        if (!stack.empty())
-        {
-            auto velocities = pidEffortCalc(stack);
+    // void effortCallback()
+    // {
+    //     // This performs pid
+    //     if (!stack.empty())
+    //     {
+    //         auto velocities = pidEffortCalc(stack);
 
-            prev_curr_vel = curr_vel;
+    //         prev_curr_vel = curr_vel;
 
-            effort_publisher->publish(velocities);
-        }
-    }
+    //         effort_publisher->publish(velocities);
+    //     }
+    // }
 
 
 
@@ -223,14 +223,14 @@ private:
             RCLCPP_INFO(get_logger(), "P values: %s", vectorToString(k_pose_p).c_str());
             RCLCPP_INFO(get_logger(), "I values: %s", vectorToString(k_pose_i).c_str());
             RCLCPP_INFO(get_logger(), "D values: %s", vectorToString(k_pose_d).c_str());
-            RCLCPP_INFO(get_logger(), "");
+            // RCLCPP_INFO(get_logger(), "");
 
             RCLCPP_INFO(get_logger(), "***********Effort**********");
             RCLCPP_INFO(get_logger(), "P values: %s", vectorToString(k_vel_p).c_str());
             RCLCPP_INFO(get_logger(), "I values: %s", vectorToString(k_vel_i).c_str());
             RCLCPP_INFO(get_logger(), "D values: %s", vectorToString(k_vel_d).c_str());
             RCLCPP_INFO(get_logger(), "***********Commands**********");
-            RCLCPP_INFO(get_logger(), "commands: %s", vectorToString(command).c_str());
+            // RCLCPP_INFO(get_logger(), "commands: %s", vectorToString(command).c_str());
             RCLCPP_INFO(get_logger(), "**********Current Position*************");
             RCLCPP_INFO(get_logger(), "%s", vectorToString(currentPosition).c_str());
             RCLCPP_INFO(get_logger(), "**********Desired Position*************");
@@ -280,8 +280,8 @@ private:
             d_pose_factor[joint] = k_pose_d[joint] * (current_pose_error[joint] - previous_pose_error[joint]);
             previous_pose_error[joint] = current_pose_error[joint];
             // publish this value to the respective joint
-            velocity[joint] = p_pose_factor[joint] + i_pose_factor[joint] + d_pose_factor[joint];
-            velocityCommand.data.push_back(velocity[joint]);
+            velocity.data[joint] = p_pose_factor[joint] + i_pose_factor[joint] + d_pose_factor[joint];
+            velocityCommand.data.push_back(velocity.data[joint]);
             ++joint;
         }
 
