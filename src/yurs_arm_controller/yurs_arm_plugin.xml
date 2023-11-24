@@ -1,0 +1,7 @@
+<library path="yurs_arm_controller">
+    <class name="yurs_arm_controller/ForwardCommandController" type="yurs_arm_controller::ForwardCommandController" base_class_type="controller_interface::ControllerInterface">
+    <description>
+      The forward command controller commands a group of joints in a given interface
+    </description>
+    </class>
+</library>

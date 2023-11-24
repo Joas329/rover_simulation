@@ -1,78 +1,55 @@
+#include <algorithm>
+#include <memory>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "rclcpp/logging.hpp"
+#include "rclcpp/qos.hpp"
+
 #include "yurs_arm_controller/yurs_arm_controller.hpp"
-#include "pluginlib/class_list_macros.hpp"
 
 namespace yurs_arm_controller
 {
-  YursArmController::YursArmController() : controller_interface::ControllerInterface() 
+YursArmController::YursArmController() : YursArmControllersBase() {}
+
+void YursArmController::declare_parameters()
+{
+  param_listener_ = std::make_shared<ParamListener>(get_node());
+}
+
+controller_interface::CallbackReturn YursArmController::read_parameters()  //reading paramters from yml file
+{
+  if (!param_listener_)
   {
-    // Optional: Initialize member variables in the constructor if needed.
+    RCLCPP_ERROR(get_node()->get_logger(), "Error encountered during init");
+    return controller_interface::CallbackReturn::ERROR;
+  }
+  params_ = param_listener_->get_params();
+
+  if (params_.joints.empty())
+  {
+    RCLCPP_ERROR(get_node()->get_logger(), "'joints' parameter was empty"); // joints are dynamically read from joint_states (we need to get rid of this)
+    return controller_interface::CallbackReturn::ERROR;
   }
 
-  controller_interface::return_type YursArmController::init(const std::string& controller_name,
-                                                            const hardware_interface::HWResourceManager& resources)
+  if (params_.interface_name.empty())
   {
-    // Call the parent init method
-    const auto result = ControllerInterface::init(controller_name, resources);
-    if (result != controller_interface::return_type::OK)
-    {
-      // Handle initialization error
-      return result;
-    }
-
-    // Optional: Initialize variables, reserve memory, declare node parameters, etc.
-
-    return controller_interface::return_type::OK;
+    RCLCPP_ERROR(get_node()->get_logger(), "'interface_name' parameter was empty"); //??????
+    return controller_interface::CallbackReturn::ERROR;
   }
 
-  controller_interface::return_type YursArmController::on_configure(const controller_interface::ControllerConfiguration& config,
-                                                                     const hardware_interface::HWResourceManager& resources)
+  for (const auto & joint : params_.joints)
   {
-    // Read parameters and configure the controller
-    // Prepare the controller to be started
-
-    return controller_interface::return_type::OK;
+    command_interface_types_.push_back(joint + "/" + params_.interface_name);
   }
 
-  controller_interface::InterfaceConfigurationSharedPtr YursArmController::command_interface_configuration() const
-  {
-    // Define command interface configuration
-    // Options: ALL, INDIVIDUAL, or NONE
-
-    return nullptr; // Modify accordingly
-  }
-
-  controller_interface::InterfaceConfigurationSharedPtr YursArmController::state_interface_configuration() const
-  {
-    // Define state interface configuration
-    // Options: ALL, INDIVIDUAL, or NONE
-
-    return nullptr; // Modify accordingly
-  }
-
-  controller_interface::return_type YursArmController::on_activate()
-  {
-    // Check and potentially sort interfaces
-    // Assign members' initial values
-
-    return controller_interface::return_type::OK;
-  }
-
-  controller_interface::return_type YursArmController::on_deactivate()
-  {
-    // Clean up or reset necessary resources
-
-    return controller_interface::return_type::OK;
-  }
-
-  controller_interface::return_type YursArmController::update(const rclcpp::Time& time, const rclcpp::Duration& period)
-  {
-    // Implement the main update logic with real-time constraints
-    // Read state interfaces and write to command interfaces
-
-    return controller_interface::return_type::OK;
-  }
+  return controller_interface::CallbackReturn::SUCCESS;
+}
 
 }  // namespace yurs_arm_controller
 
-// Add the PLUGINLIB_EXPORT_CLASS macro at the end of the file
-PLUGINLIB_EXPORT_CLASS(yurs_arm_controller::YursArmController, controller_interface::ControllerInterface)
+#include "pluginlib/class_list_macros.hpp"
+
+PLUGINLIB_EXPORT_CLASS(
+  yurs_arm_controller::YursArmController, controller_interface::ControllerInterface)
