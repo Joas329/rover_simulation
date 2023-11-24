@@ -60,7 +60,7 @@ void YursArmControllerTest::TearDown() { controller_.reset(nullptr); }
 
 void YursArmControllerTest::SetUpController()
 {
-  const auto result = controller_->init("yurs_arm_controller", "", 0);
+  const auto result = controller_->init("yurs_arm_controller", "");
   ASSERT_EQ(result, controller_interface::return_type::OK);
 
   std::vector<LoanedCommandInterface> command_ifs;
