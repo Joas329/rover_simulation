@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "controller_interface/controller_interface.hpp"
-#include "yurs_arm_controller/visibility_control.h"
+#include "visibility_control.h"
 #include "rclcpp/subscription.hpp"
 #include "rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp"
 #include "rclcpp_lifecycle/state.hpp"
@@ -18,14 +18,14 @@ namespace yurs_arm_controller
 using CmdType = std_msgs::msg::Float64MultiArray;
 
 /**
- * \brief Forward command controller for a set of joints and interfaces.
+ * \brief YURS Arm controller for a set of joints and interfaces.
  *
  * This class forwards the command signal down to a set of joints or interfaces.
  *
  * Subscribes to:
  * - \b commands (std_msgs::msg::Float64MultiArray) : The commands to apply.
  */
-class ForwardControllersBase : public controller_interface::ControllerInterface
+class YursArmControllersBase : public controller_interface::ControllerInterface
 {
 public:
   YURS_ARM_CONTROLLER_PUBLIC

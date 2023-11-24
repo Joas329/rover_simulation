@@ -6,6 +6,7 @@
 #include <utility>
 #include <vector>
 
+#include "include/yurs_arm_controller/yurs_arm_controllers_base.hpp"
 #include "controller_interface/helpers.hpp"
 #include "hardware_interface/loaned_command_interface.hpp"
 #include "rclcpp/logging.hpp"
@@ -14,7 +15,7 @@
 
 namespace yurs_arm_controller
 {
-  YursArmControllerBase::YursArmControllerBase() 
+  YursArmControllersBase::YursArmControllersBase() 
   : controller_interface::ControllerInterface(),
     rt_command_ptr_(nullptr),
     joints_command_subscriber_(nullptr) 
@@ -47,7 +48,7 @@ namespace yurs_arm_controller
     }
 
     joints_command_subscriber_ = get_node()->create_subscription<CmdType>(
-      "~/commands", rclcpp::SystemDefaultsQoS(),
+      "~/armCommands", rclcpp::SystemDefaultsQoS(),
       [this](const CmdType::SharedPtr msg) { rt_command_ptr_.writeFromNonRT(msg); });
 
     RCLCPP_INFO(get_node()->get_logger(), "configure successful");
