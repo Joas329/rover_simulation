@@ -27,3 +27,9 @@
 #define YURS_ARM_CONTROLLER_LOCAL __attribute__((visibility("hidden")))
 #else
 #define YURS_ARM_CONTROLLER_PUBLIC
+#define YURS_ARM_CONTROLLER_LOCAL
+#endif
+#define YURS_ARM_CONTROLLER_PUBLIC_TYPE
+#endif
+
+#endif  // YURS_ARM_CONTROLLER__VISIBILITY_CONTROL_H_
