@@ -1,5 +1,3 @@
-#include "yurs_arm_controller/yurs_arm_controller.hpp"
-
 #include <algorithm>
 #include <memory>
 #include <string>
@@ -8,6 +6,8 @@
 
 #include "rclcpp/logging.hpp"
 #include "rclcpp/qos.hpp"
+
+#include "include/yurs_arm_controller/yurs_arm_controller.hpp"
 
 namespace yurs_arm_controller
 {
