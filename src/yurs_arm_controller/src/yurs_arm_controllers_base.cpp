@@ -6,7 +6,7 @@
 #include <utility>
 #include <vector>
 
-#include "include/yurs_arm_controller/yurs_arm_controllers_base.hpp"
+#include "yurs_arm_controller/yurs_arm_controllers_base.hpp"
 #include "controller_interface/helpers.hpp"
 #include "hardware_interface/loaned_command_interface.hpp"
 #include "rclcpp/logging.hpp"

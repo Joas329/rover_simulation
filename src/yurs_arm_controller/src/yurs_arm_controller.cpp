@@ -7,7 +7,7 @@
 #include "rclcpp/logging.hpp"
 #include "rclcpp/qos.hpp"
 
-#include "include/yurs_arm_controller/yurs_arm_controller.hpp"
+#include "yurs_arm_controller/yurs_arm_controller.hpp"
 
 namespace yurs_arm_controller
 {
